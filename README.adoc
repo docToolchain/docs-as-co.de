@@ -2,6 +2,7 @@
 
 This repository hosts the source for the https://docs-as-co.de website. 
 It is based on 
+
 * Jekyl as static site generator
 * AsciiDoc as markup language
 * https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[this Java Magazin article] on how to implement it
