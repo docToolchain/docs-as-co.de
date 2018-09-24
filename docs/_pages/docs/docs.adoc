@@ -1,0 +1,9 @@
+= Docs!
+:page-layout: single
+:page-permalink: /docs
+:page-header: { overlay_image: /images/splash/hhgdac-splash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: docs}
+
+= Docs!
+
+content will soon follow

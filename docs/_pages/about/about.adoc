@@ -13,20 +13,3 @@
 
 *Ralf D. Müller* ist ambitionierter Grails-Entwickler und versucht stetig, seine Arbeit weiter zu vereinfachen. Zurzeit beschäftigt er sich insbesondere mit der Verbesserung der ganzheitlichen Dokumentation von Projekten – vor allem mithilfe des arc42-Templates.
 
-== Contact
-
-You have several options to contact us:
-
-* Via Email: icon:envelope[] mailto:info@arc42.org[info-at-arc42-dot-org]
-
-* https://github.com/arc42/HHGDAC/issues[issue tracker], located at
-https://github.com/arc42/hhgdac/issues.
-* On our Twitter accounts:
-** https://twitter.com/docToolchain[@docToolchain]
-** https://twitter.com/RalfDMueller[ @RalfDMueller]
-
-== Imprint
-
-
-
-Please see our link:/imprint[Imprint + Privacy Statement].

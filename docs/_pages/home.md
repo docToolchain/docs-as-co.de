@@ -36,11 +36,11 @@ feature_row:
 
 {% include feature_row id="intro" type="center" %}
 
+{% include feature_row %}
+
 ## Why docs-as-code?
 
 ## Concepts
-
-{% include feature_row %}
 
 
 HHGDAC is based on **practical experience**.
