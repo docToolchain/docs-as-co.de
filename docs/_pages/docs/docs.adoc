@@ -1,7 +1,7 @@
 = Docs!
 :page-layout: single
 :page-permalink: /docs
-:page-header: { overlay_image: /images/splash/hhgdac-splash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-header: { overlay_image: /images/splash/hhgdac-splash.jpg, caption: "[Artem Sapegin](https://unsplash.com/photos/b18TRXc8UPQ)" }
 :page-sidebar: { nav: docs}
 
 = Docs!
