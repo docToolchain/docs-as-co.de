@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
   Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
@@ -9,32 +9,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Contact us - we’re listening! - HHGDAC</title>
-<meta name="description" content="Hitchhikers Guide to Documentation As Code.">
+<!-- begin _includes/seo.html --><title>Further Reading - Docs-as-Code</title>
+<meta name="description" content="Blogs, Articles, Presentations, Books.">
 
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en">
-<meta property="og:site_name" content="HHGDAC">
-<meta property="og:title" content="Contact us - we’re listening!">
-<meta property="og:url" content="http://0.0.0.0:4000/contact">
+<meta property="og:site_name" content="Docs-as-Code">
+<meta property="og:title" content="Further Reading">
+<meta property="og:url" content="http://localhost:4000/furtherreading">
+
+
+  <meta property="og:description" content="Blogs, Articles, Presentations, Books.">
 
 
 
-
-  <meta property="og:image" content="http://0.0.0.0:4000/images/splash/unsplash-contact-pavan-trikutam.jpg">
+  <meta property="og:image" content="http://localhost:4000/images/splash/publications-365898-unsplash.jpg">
 
 
 
   <meta name="twitter:site" content="@DocToolchain">
-  <meta name="twitter:title" content="Contact us - we’re listening!">
-  <meta name="twitter:description" content="Hitchhikers Guide to Documentation As Code.">
-  <meta name="twitter:url" content="http://0.0.0.0:4000/contact">
+  <meta name="twitter:title" content="Further Reading">
+  <meta name="twitter:description" content="Blogs, Articles, Presentations, Books.">
+  <meta name="twitter:url" content="http://localhost:4000/furtherreading">
 
   
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://0.0.0.0:4000/images/splash/unsplash-contact-pavan-trikutam.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/images/splash/publications-365898-unsplash.jpg">
   
 
   
@@ -46,7 +48,7 @@
 
 
 
-<link rel="canonical" href="http://0.0.0.0:4000/contact">
+<link rel="canonical" href="http://localhost:4000/furtherreading">
 
 
 
@@ -58,8 +60,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "arc42",
-      "url": "http://0.0.0.0:4000",
+      "name": "docToolchain",
+      "url": "http://localhost:4000",
       "sameAs": null
     }
   </script>
@@ -73,11 +75,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="HHGDAC Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Docs-as-Code Feed">
 
 <!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -103,6 +103,7 @@
 <![endif]-->
 
 
+
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -121,7 +122,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://0.0.0.0:4000/"><img src="/images/site-logo.png" width="60px" alt="HHGDAC"/></a>
+        <a class="site-title" href="http://localhost:4000/"><img src="/images/site-logo.png" width="60px" alt="Docs-as-Code"/></a>
         <ul class="visible-links">
           
             
@@ -131,7 +132,7 @@
           
             
             <li class="masthead__menu-item">
-              <a href="/faq" >FAQ</a>
+              <a href="/docs" >Docs</a>
             </li>
           
             
@@ -141,12 +142,12 @@
           
             
             <li class="masthead__menu-item">
-              <a href="/publications" >Publications</a>
+              <a href="/furtherreading" >Further Reading</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="/contact" >Contact</a>
+              <a href="/about" >About</a>
             </li>
           
         </ul>
@@ -177,23 +178,27 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: url('/images/splash/unsplash-contact-pavan-trikutam.jpg');"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/splash/publications-365898-unsplash.jpg');"
 >
   
     <div class="wrapper">
-      <h1 class="page__title" itemprop="headline">
+      <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Contact us - we’re listening!
+          Further Reading
 
         
       </h1>
+      
+        <p class="page__lead">Blogs, Articles, Presentations, Books.
+</p>
+      
       
       
       
     </div>
   
   
-    <span class="page__hero-caption"><a href="https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo"><strong>Pavan Trikutam</strong></a>
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/WYd_PkCa1BY"><strong>G.Crescoli</strong></a>
 </span>
   
 </div>
@@ -204,10 +209,77 @@
 
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Further Reading</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/furtherreading/blogs/" class="">Blogs</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/furtherreading/articles" class="">Articles</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/furtherreading/talks" class="">Talks</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/furtherreading/books" class="">Books</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Contact us - we’re listening!">
-    
+    <meta itemprop="headline" content="Further Reading">
+    <meta itemprop="description" content="Blogs, Articles, Presentations, Books.">
     
     
 
@@ -217,34 +289,12 @@
       <section class="page__content" itemprop="text">
         
         <div class="paragraph">
-<p>You have several options to contact us:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Via Email: <span class="icon"><i class="fa fa-envelope"></i></span> <a href="mailto:info@arc42.org">info-at-arc42-dot-org</a></p>
-</li>
-<li>
-<p><a href="https://github.com/arc42/HHGDAC/issues">issue tracker</a>, located at
-<a href="https://github.com/arc42/hhgdac/issues" class="bare">https://github.com/arc42/hhgdac/issues</a>.</p>
-</li>
-<li>
-<p>On our Twitter accounts:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://twitter.com/docToolchain">@docToolchain</a></p>
-</li>
-<li>
-<p><a href="https://twitter.com/RalfDMueller"> @RalfDMueller</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p>Here you find links to publications concerning the <em>docs-as-code</em> approach.
+Contact us if you like your blog/talk/article etc. to be
+included here&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>Please see our <a href="/imprint">Imprint + Privacy Statement</a>.</p>
+<p>Use the navigation on the left to discover all content.</p>
 </div>
         
       </section>
@@ -285,20 +335,15 @@
     
 
     
-      <li><a href="https://github.com/arc42"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/docToolchain"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
 
-    <li><a href="https://www.xing.com/xbp/pages/arc42"><i class="fab fa-fw fa-xing" aria-hidden="true"></i> Xing</a></li>
-
-
-    <li><a href="http://0.0.0.0:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-
-    <li><a href="http://0.0.0.0:4000/imprint"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i> Imprint & privacy</a></li>
-    <li><a href="http://0.0.0.0:4000/image-credits"><i class="fas fa-camera" style="color:" aria-hidden="true"></i> Image credits</a></li>
+    <li><a href="http://localhost:4000/imprint"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i> Imprint & privacy</a></li>
+    <li><a href="http://localhost:4000/image-credits"><i class="fas fa-camera" style="color:" aria-hidden="true"></i> Image credits</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Ralf D. Müller und Gernot Starke.
+<div class="page__footer-copyright">&copy; 2018 Ralf D. Müller and Gernot Starke.
   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
   Supported by <a href="https://INNOQ.com"><b>INNOQ</b></a>.
 
@@ -309,7 +354,7 @@
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 
 

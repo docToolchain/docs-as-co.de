@@ -2,11 +2,32 @@
 main:
   - title: "Get Started"
     url: /getstarted
-  - title: "FAQ"
-    url: /faq
+  - title: "Docs"
+    url: /docs
   - title: "Examples"
     url: /examples
-  - title: "Publications"
-    url: /publications
-  - title: "Contact"
-    url: /contact
+  - title: "Further Reading"
+    url: /furtherreading
+  - title: "About"
+    url: /about
+
+furtherreading:
+  - title: Further Reading
+    children:
+      - title: "Blogs"
+        url: /furtherreading/blogs/
+      - title: "Articles"
+        url: /furtherreading/articles
+      - title: "Talks"
+        url: /furtherreading/talks
+      - title: "Books"
+        url: /furtherreading/books
+
+about:
+  - title: About Us
+    children:
+      - title: "Contact"
+        url: /about/contact
+      - title: "Imprint"
+        url: /about/imprint
+

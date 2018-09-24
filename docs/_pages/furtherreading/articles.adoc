@@ -1,7 +1,7 @@
 ---
-title: "Publications"
+title: "Further Reading - Articles"
 layout: single
-permalink: /publications
+permalink: /furtherreading/articles
 header:
 #  overlay_color: "#fff"
   overlay_filter: "0.5"
@@ -9,16 +9,16 @@ header:
   caption: "Photo credit: [**G.Crescoli**](https://unsplash.com/photos/WYd_PkCa1BY)"
 excerpt: "Blogs, Articles, Presentations, Books."
 
+sidebar:
+    nav: "furtherreading"
+
 ---
-Here you find links to publications concerning the _docs-as-code_ approach.
-Contact us if you like your blog/talk/article etc. to be
-included here...
 
-## Blogs
+# Articles
 
-## Articles
+## Hitchhiker’s Guide to Docs as Code
 
-### Hitchhiker’s Guide to Docs as Code
+A series of articles in a German Java Magazin, written bei Gernot Starke and Ralf Müller:
 
 . https://jaxenter.de/docs-as-code-asciidoctor-62432[Neue Kolumne: Hitchhiker’s Guide to Docs as Code]
 . https://jaxenter.de/documentation-modularisierung-63743[Modulare Dokumentationen: Wie man sie baut und warum sie die Teamarbeit erleichtern]
@@ -32,6 +32,3 @@ included here...
 . https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output]
 . https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll]
 
-## Talks
-
-## Books

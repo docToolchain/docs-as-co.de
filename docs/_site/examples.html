@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
   Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
@@ -9,34 +9,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Docs-As-Code by Example - HHGDAC</title>
+<!-- begin _includes/seo.html --><title>Docs-As-Code by Example - Docs-as-Code</title>
 <meta name="description" content="Seeing is believing.">
 
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en">
-<meta property="og:site_name" content="HHGDAC">
+<meta property="og:site_name" content="Docs-as-Code">
 <meta property="og:title" content="Docs-As-Code by Example">
-<meta property="og:url" content="http://0.0.0.0:4000/examples">
+<meta property="og:url" content="http://localhost:4000/examples">
 
 
   <meta property="og:description" content="Seeing is believing.">
 
 
 
-  <meta property="og:image" content="http://0.0.0.0:4000/images/splash/example-435076-unsplash.jpg">
+  <meta property="og:image" content="http://localhost:4000/images/splash/example-435076-unsplash.jpg">
 
 
 
   <meta name="twitter:site" content="@DocToolchain">
   <meta name="twitter:title" content="Docs-As-Code by Example">
   <meta name="twitter:description" content="Seeing is believing.">
-  <meta name="twitter:url" content="http://0.0.0.0:4000/examples">
+  <meta name="twitter:url" content="http://localhost:4000/examples">
 
   
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://0.0.0.0:4000/images/splash/example-435076-unsplash.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/images/splash/example-435076-unsplash.jpg">
   
 
   
@@ -48,7 +48,7 @@
 
 
 
-<link rel="canonical" href="http://0.0.0.0:4000/examples">
+<link rel="canonical" href="http://localhost:4000/examples">
 
 
 
@@ -60,8 +60,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "arc42",
-      "url": "http://0.0.0.0:4000",
+      "name": "docToolchain",
+      "url": "http://localhost:4000",
       "sameAs": null
     }
   </script>
@@ -75,11 +75,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="HHGDAC Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Docs-as-Code Feed">
 
 <!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -105,6 +103,7 @@
 <![endif]-->
 
 
+
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -123,7 +122,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://0.0.0.0:4000/"><img src="/images/site-logo.png" width="60px" alt="HHGDAC"/></a>
+        <a class="site-title" href="http://localhost:4000/"><img src="/images/site-logo.png" width="60px" alt="Docs-as-Code"/></a>
         <ul class="visible-links">
           
             
@@ -133,7 +132,7 @@
           
             
             <li class="masthead__menu-item">
-              <a href="/faq" >FAQ</a>
+              <a href="/docs" >Docs</a>
             </li>
           
             
@@ -143,12 +142,12 @@
           
             
             <li class="masthead__menu-item">
-              <a href="/publications" >Publications</a>
+              <a href="/furtherreading" >Further Reading</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="/contact" >Contact</a>
+              <a href="/about" >About</a>
             </li>
           
         </ul>
@@ -183,7 +182,7 @@
 >
   
     <div class="wrapper">
-      <h1 class="page__title" itemprop="headline">
+      <h1 id="page-title" class="page__title" itemprop="headline">
         
           Docs-As-Code by Example
 
@@ -192,6 +191,7 @@
       
         <p class="page__lead">Seeing is believing.
 </p>
+      
       
       
       
@@ -269,20 +269,15 @@ Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot 
     
 
     
-      <li><a href="https://github.com/arc42"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/docToolchain"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
 
-    <li><a href="https://www.xing.com/xbp/pages/arc42"><i class="fab fa-fw fa-xing" aria-hidden="true"></i> Xing</a></li>
-
-
-    <li><a href="http://0.0.0.0:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-
-    <li><a href="http://0.0.0.0:4000/imprint"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i> Imprint & privacy</a></li>
-    <li><a href="http://0.0.0.0:4000/image-credits"><i class="fas fa-camera" style="color:" aria-hidden="true"></i> Image credits</a></li>
+    <li><a href="http://localhost:4000/imprint"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i> Imprint & privacy</a></li>
+    <li><a href="http://localhost:4000/image-credits"><i class="fas fa-camera" style="color:" aria-hidden="true"></i> Image credits</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Ralf D. Müller und Gernot Starke.
+<div class="page__footer-copyright">&copy; 2018 Ralf D. Müller and Gernot Starke.
   Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
   Supported by <a href="https://INNOQ.com"><b>INNOQ</b></a>.
 
@@ -293,7 +288,7 @@ Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot 
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 
 

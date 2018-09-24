@@ -1,0 +1,20 @@
+---
+title: "Further Reading"
+layout: single
+permalink: /furtherreading
+header:
+#  overlay_color: "#fff"
+  overlay_filter: "0.5"
+  overlay_image: /images/splash/publications-365898-unsplash.jpg
+  caption: "Photo credit: [**G.Crescoli**](https://unsplash.com/photos/WYd_PkCa1BY)"
+excerpt: "Blogs, Articles, Presentations, Books."
+
+sidebar:
+    nav: "furtherreading"
+
+---
+Here you find links to publications concerning the _docs-as-code_ approach.
+Contact us if you like your blog/talk/article etc. to be
+included here...
+
+Use the navigation on the left to discover all content.

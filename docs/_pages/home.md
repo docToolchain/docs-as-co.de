@@ -19,30 +19,26 @@ feature_row:
     # image_path: /images/communicate-icon.svg
     # alt: "communicate-icon"
     excerpt: "Developer friendly. Supports agile development practices. Based upon AsciiDoctor."
-    url: "/overview"
-    #btn_label: "Read More"
-    #btn_class: "btn--info"
 
   - title: "Practical"
     # image_path: /images/develop-icon.svg
     # alt: "develop-icon"
     excerpt: "Create better documentation. High quality, lean and lightweight."
-    url: "/develop"
-    #btn_label: "Read More"
-    #btn_class: "btn--info"
 
   - title: "Versatile"
     # image_path: /images/workshop-icon.svg
     # alt: "workshop-icon"
     excerpt: "Easily create and maintain various kinds of documentation, from architecture
     overviews, implementation guides to operations manuals."
-    url: "/learn"
-    #btn_label: "Read More"
-    #btn_class: "btn--info"
 
 ---
 
+
 {% include feature_row id="intro" type="center" %}
+
+## Why docs-as-code?
+
+## Concepts
 
 {% include feature_row %}
 

@@ -1,0 +1,32 @@
+= Contact us - we're listening!
+:page-layout: single
+:page-permalink: /about
+:page-header: { overlay_image: /images/splash/unsplash-contact-pavan-trikutam.jpg, caption: "[**Pavan Trikutam**](https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo)" }
+:icons: font
+:page-liquid: true
+:page-sidebar: { nav: about}
+
+= About us
+
+*Gernot Starke* (INNOQ Fellow) ist Coach und Berater für Softwarearchitektur, (Mit-)Gründer von arc42.org, Gründer von aim42.org und Mitgründer des iSAQB e.V.
+ Er hat an Entwurf und Implementierung mittlerer und großer Systeme für Organisationen aus unterschiedlichen Bereichen mitgearbeitet, hauptsächlich im Bereich Finanzen, Versicherungen, Automotive, Logistik und Telekommunikation. Daneben hat er zahlreiche Bücher über Softwarearchitektur und Patterns geschrieben.
+
+*Ralf D. Müller* ist ambitionierter Grails-Entwickler und versucht stetig, seine Arbeit weiter zu vereinfachen. Zurzeit beschäftigt er sich insbesondere mit der Verbesserung der ganzheitlichen Dokumentation von Projekten – vor allem mithilfe des arc42-Templates.
+
+== Contact
+
+You have several options to contact us:
+
+* Via Email: icon:envelope[] mailto:info@arc42.org[info-at-arc42-dot-org]
+
+* https://github.com/arc42/HHGDAC/issues[issue tracker], located at
+https://github.com/arc42/hhgdac/issues.
+* On our Twitter accounts:
+** https://twitter.com/docToolchain[@docToolchain]
+** https://twitter.com/RalfDMueller[ @RalfDMueller]
+
+== Imprint
+
+
+
+Please see our link:/imprint[Imprint + Privacy Statement].
