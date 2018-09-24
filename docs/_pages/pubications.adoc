@@ -1,0 +1,37 @@
+---
+title: "Publications"
+layout: single
+permalink: /publications
+header:
+#  overlay_color: "#fff"
+  overlay_filter: "0.5"
+  overlay_image: /images/splash/publications-365898-unsplash.jpg
+  caption: "Photo credit: [**G.Crescoli**](https://unsplash.com/photos/WYd_PkCa1BY)"
+excerpt: "Blogs, Articles, Presentations, Books."
+
+---
+Here you find links to publications concerning the _docs-as-code_ approach.
+Contact us if you like your blog/talk/article etc. to be
+included here...
+
+## Blogs
+
+## Articles
+
+### Hitchhiker’s Guide to Docs as Code
+
+. https://jaxenter.de/docs-as-code-asciidoctor-62432[Neue Kolumne: Hitchhiker’s Guide to Docs as Code]
+. https://jaxenter.de/documentation-modularisierung-63743[Modulare Dokumentationen: Wie man sie baut und warum sie die Teamarbeit erleichtern]
+. https://jaxenter.de/docs-as-code-65644[So verwandeln Sie AsciiDoc in PDF, DOCX, Confluence und EPUB]
+. https://jaxenter.de/asciidoc-features-66027[AsciiDoc-Features für Pragmatisches]
+. https://jaxenter.de/hitchhikers-guide-docs-code-diagramme-66357[Diagramme, aber richtig…]
+. https://jaxenter.de/docs-to-code-doctoolchain-67524[Diagramme, jetzt wird modelliert!]
+. https://jaxenter.de/the-beautiful-code-69008[Beautiful Code]
+. https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools für AsciiDoc/Asciidoctor]
+. https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Build-Magie]
+. https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output]
+. https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll]
+
+## Talks
+
+## Books
