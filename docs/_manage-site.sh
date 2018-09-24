@@ -3,9 +3,7 @@
 # helper, so you don't need to remember docker-compose syntax...
 
 # what's the site?
-site="hhtdac.org"
-server="some.nice-server.de"
-localdir="zz-production-site"
+site="docs-as-co.de"
 
 # some colors to highlight certain output
 GREEN=`tput setaf 2`
@@ -27,11 +25,6 @@ echo
 echo "${GREEN}(b)build ${RESET} build the required docker image."
 echo
 echo "${GREEN}(r)emove ${RESET} the running docker container."
-echo
-echo "${RED}(p)production ${RESET} produces the site with production configuration,"
-echo "into ./zz-production-site directory."
-echo
-echo "${RED}(u)pload ${RESET} the generated site to $server."
 echo
 echo "=================================================="
 echo
@@ -56,16 +49,6 @@ case "$choice" in
                   docker-compose --file _docker-compose-dev.yml down
                   ;;
 
-  p|P|production)  echo "create production site"
-                   docker-compose --file _docker-compose-prod.yml up
-                   docker-compose --file _docker-compose-prod.yml down
-                   ;;
-
-  u|U|upload)     echo "upload generated site to server"
-                  docker run -it gernotstarke/ftp-uploader:0.2 \
-                    -v $localdir:/$localdir \
-                    $site $server $localdir
-                   ;;
 
   # catchall: abort
   *)               echo "${RED} unknown option $choice ${RESET}, aborted."

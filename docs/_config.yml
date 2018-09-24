@@ -9,13 +9,13 @@ remote_theme: "mmistakes/minimal-mistakes"
 
 # Site Settings
 locale                   : "en"
-title                    : "HHGDAC"
+title                    : "Docs-as-Code"
 title_separator          : "-"
 name                     : "Ralf D. Müller und Gernot Starke"
 description              : "Hitchhikers Guide to Documentation As Code."
-url                      : "arc42.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "docs-as-co.de" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "arc42/hhgdac" # GitHub username/repo-name
+repository               : "docToolchain/docs-as-co.de" # GitHub username/repo-name
 teaser                   : /images/hhgdac-splash.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
@@ -38,7 +38,7 @@ twitter:
 
 social:
   type                   : Organization # Person or Organization (defaults to Person)
-  name                   : arc42 # If the user or organization name differs from the site's name
+  name                   : docToolchain # If the user or organization name differs from the site's name
 
 # Analytics
 analytics:
@@ -52,10 +52,10 @@ author:
       name             : "Ralf D. Müller and Gernot Starke"
       avatar           :  # path of avatar image, e.g. "/images/bio-photo.jpg"
       bio              :
-      location         : "Cologne, Germany"
+      location         : "Frankfurt/Main, Germany"
       email            :
-      uri              : https://arc42.org
-      github           : arc42
+      uri              : https://docs-as-co.de
+      github           : docToolchain
       google_plus      :
       stackoverflow    :
       twitter          : DocToolchain
