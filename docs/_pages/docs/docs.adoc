@@ -3,7 +3,7 @@
 :page-permalink: /docs
 :page-header: { overlay_image: /images/splash/hhgdac-splash.jpg, caption: "[Artem Sapegin](https://unsplash.com/photos/b18TRXc8UPQ)" }
 :page-sidebar: { nav: docs}
+:page-excerpt: "unbelivable wisdom"
 
-= Docs!
+On the submenu you'll find some useful inks to the docs of several tools which you will utilize when you follow the docs-as-code approach.
 
-content will soon follow

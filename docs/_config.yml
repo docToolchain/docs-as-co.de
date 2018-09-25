@@ -5,7 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme: "mmistakes/minimal-mistakes"
+#remote_theme: "mmistakes/minimal-mistakes"
+theme: minimal-mistakes-jekyll
 
 # Site Settings
 locale                   : "en"
@@ -124,6 +125,14 @@ kramdown:
 asciidoc:
   processor: asciidoctor
   ext: asciidoc,adoc,ad
+
+asciidoctor:
+  safe: unsafe
+  attributes:
+  - idseparator=_
+#  - source-highlighter=pygments
+#  - pygments-css=class
+
 
 # Sass/SCSS
 sass:

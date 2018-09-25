@@ -33,3 +33,36 @@ about:
 
 getstarted:
   - title: Get Started
+    children:
+        - title: "Quickstart"
+          url: /getstarted/quickstart
+        - title: "Full Blown Example"
+          url: /getstarted/fullblownexample
+
+docs:
+  - title: AsciiDoc
+    children:
+        - title: "User Manual"
+          url: https://asciidoctor.org/docs/user-manual/
+        - title: "Writer's Guide"
+          url: https://asciidoctor.org/docs/asciidoc-writers-guide/
+        - title: "Syntax Quick Reference"
+          url: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+  - title: docToolchain
+    children:
+        - title: "User Manual"
+          url: https://doctoolchain.github.io/docToolchain
+  - title: htmlSanityCheck
+    children:
+        - title: "Quick Guide"
+          url: https://github.com/aim42/htmlSanityCheck
+        - title: "Architecture"
+          url:  https://rawgit.com/aim42/htmlSanityCheck/gh-pages/hsc_arc42.html
+  - title: PlantUML
+    children:
+        - title: "User Manual"
+          url: http://plantuml.com/
+  - title: Jekyll
+    children:
+        - title: "Homepage"
+          url: https://jekyllrb.com/

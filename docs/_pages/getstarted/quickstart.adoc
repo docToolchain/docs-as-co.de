@@ -1,0 +1,126 @@
+= Ready, Set, Go!
+:page-layout: single
+:page-permalink: /getstarted/quickstart
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: getstarted}
+
+= Quickstart
+
+There are several ways to get quickly started with the Docs-as-Code approach.
+
+The Quickstart basically consists of creating and rendering your first AsciiDoc document.
+
+== The Zero-Dependencies Approach
+
+You jsut want to give AsciiDoc a try without installing anything?
+
+Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with preview.
+
+== The Editor Approach
+
+If you are willing to install an editor or a plugin for your favourite IDE, you can install one of the following editors with the corresponding plugins:
+
+* AsciiDocFX
+* Atom
+* Visual Studio Code
+* Netbeans
+* IntelliJ
+* Eclipse
+
+=> see also Article in JavaMagazin
+
+== The Build-Tool Approach
+
+You are standing west of a white house.
+There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
+
+What will you chose?
+
+=== > use Command-Line-Tool
+
+You install *asciidoctorj* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+You then convert it via
+
+    asciidoctorj test.adoc
+
+=== > use Maven
+
+you are likely to be eaten by a grue.
+
+You install *Maven* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+You then copy and paste the build file, because it is too big to by just typed in:
+
+.maven.pom
+[source,xml]
+----
+----
+
+...and convert you document via
+
+    mvn asciidoc
+
+=== > use Gradle
+
+Good choice!
+A fairy appears and grants you a wish.
+You wish for a very simple build file and the following line of text appears:
+
+.gradle.build
+[source,groovy]
+----
+plugins { id "org.asciidoctor.convert" version "1.5.3" }
+----
+
+you write your very first AsciiDoc document and put it in `/src/docs/asciidoc/`
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+You install Gradle via https://sdkman.io[sdkman]
+and convert the file with
+
+    gradle asciidoc
+
+a nicely styled html file appears in `/build/docs/asciidoc/.`
+

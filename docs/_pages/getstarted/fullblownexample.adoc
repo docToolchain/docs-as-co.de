@@ -1,0 +1,11 @@
+= Ready, Set, Go!
+:page-layout: single
+:page-permalink: /getstarted/fullblownexample
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: getstarted}
+
+= Full Blown Example
+
+still work in progres, but if you want to see some more details, visit our session at W-JAX 2018 in November!
+
+If you can't wait to see a full example - even without a tutorial - then head over to the link:/furstherreading/examples[Examples]-Section

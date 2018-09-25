@@ -3,7 +3,10 @@
 :page-permalink: /getstarted
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
+:page-excerpt: "give someone a fish and she has food for a day\nteach someone how to fish and she has food for a live time"
 
 = How to get started
 
-content will soon follow
+Here you'll soon find a colelction of tutorials ranging from a link:/getstarted/quickstart[Quickstart] up to a link:/getstarted/fullblownexample[Full Blown Example].
+
+Miss something? Take a look at the link:/furtherreading/blogs[blogs section] or submit a pull-request for a new tutorial!
