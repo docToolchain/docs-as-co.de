@@ -58,6 +58,8 @@ You then convert it via
 
     asciidoctorj test.adoc
 
+video::ujKaihjBnAM[youtube, theme=light]
+
 === > use Maven
 
 you are likely to be eaten by a grue.
