@@ -58,7 +58,7 @@ You then convert it via
 
     asciidoctorj test.adoc
 
-video::AxoPZsjCBKY[youtube]
+video::AxoPZsjCBKY[youtube, width=512px, height=384px]
 
 === > use Maven
 
@@ -126,4 +126,4 @@ and convert the file with
 
 a nicely styled html file appears in `/build/asciidoc/html5/.`
 
-video::BLsO_lBxwmU[youtube]
+video::BLsO_lBxwmU[youtube, width=512px, height=384px]
