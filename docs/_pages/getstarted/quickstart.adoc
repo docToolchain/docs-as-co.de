@@ -58,7 +58,7 @@ You then convert it via
 
     asciidoctorj test.adoc
 
-video::ujKaihjBnAM[youtube, theme=light]
+video::AxoPZsjCBKY[youtube]
 
 === > use Maven
 
@@ -124,5 +124,6 @@ and convert the file with
 
     gradle asciidoc
 
-a nicely styled html file appears in `/build/docs/asciidoc/.`
+a nicely styled html file appears in `/build/asciidoc/html5/.`
 
+video::BLsO_lBxwmU[youtube]
