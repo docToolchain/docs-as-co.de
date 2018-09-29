@@ -12,13 +12,13 @@ The Quickstart basically consists of creating and rendering your first AsciiDoc 
 
 == The Zero-Dependencies Approach
 
-You jsut want to give AsciiDoc a try without installing anything?
+You just want to give AsciiDoc a try without installing anything?
 
 Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with preview.
 
 == The Editor Approach
 
-If you are willing to install an editor or a plugin for your favourite IDE, you can install one of the following editors with the corresponding plugins:
+If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
 * AsciiDocFX
 * Atom
@@ -34,7 +34,7 @@ If you are willing to install an editor or a plugin for your favourite IDE, you 
 You are standing west of a white house.
 There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
 
-What will you chose?
+What will you choose?
 
 === > use Command-Line-Tool
 
@@ -87,7 +87,7 @@ You then copy and paste the build file, because it is too big to by just typed i
 ----
 ----
 
-...and convert you document via
+...and convert your document via
 
     mvn asciidoc
 
