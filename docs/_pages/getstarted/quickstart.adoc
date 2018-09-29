@@ -31,7 +31,8 @@ If you are willing to install an editor or a plugin for your favorite IDE, you c
 
 == The Build-Tool Approach
 
-You are standing west of a white house.
+"You are standing in an open field west of a white house, with a boarded front door."footnote:[If you are born after 1980 - this is a famous quote from Zork1, a text adventure created by Infocom]
+
 There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
 
 What will you choose?
