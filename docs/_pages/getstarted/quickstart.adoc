@@ -36,7 +36,11 @@ There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
 
 What will you choose?
 
-=== > use Command-Line-Tool
+.Command-Line
+[role='primary']
+--
+
+.> use Command-Line-Tool
 
 You install *asciidoctorj* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
 
@@ -54,13 +58,19 @@ second paragraph
 a link: https://docs-as-co.de[docs-as-co.de]
 ----
 
+
 You then convert it via
 
     asciidoctorj test.adoc
 
 video::AxoPZsjCBKY[youtube, width=512px, height=384px]
+--
 
-=== > use Maven
+.Maven
+[role='secondary']
+--
+
+.> use Maven
 
 you are likely to be eaten by a grue.
 
@@ -91,7 +101,13 @@ You then copy and paste the build file, because it is too big to by just typed i
 
     mvn asciidoc
 
-=== > use Gradle
+--
+
+.Gradle
+[role='secondary']
+--
+
+.> use Gradle
 
 Good choice!
 A fairy appears and grants you a wish.
@@ -127,3 +143,5 @@ and convert the file with
 a nicely styled html file appears in `/build/asciidoc/html5/.`
 
 video::BLsO_lBxwmU[youtube, width=512px, height=384px]
+
+--
