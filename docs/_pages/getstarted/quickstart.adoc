@@ -20,14 +20,13 @@ Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with prev
 
 If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
-* AsciiDocFX
-* Atom
-* Visual Studio Code
-* Netbeans
-* IntelliJ
-* Eclipse
+* https://asciidocfx.com/[AsciiDocFX]
+* https://atom.io/users/asciidoctor[Atom]
+* https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code]
+* https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ]
+* https://marketplace.eclipse.org/content/asciidoctor-editor[Eclipse]
 
-=> see also Article in JavaMagazin
+=> see also our German article about https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools for AsciiDoc]
 
 === The Build-Tool Approach
 
@@ -91,12 +90,14 @@ second paragraph
 a link: https://docs-as-co.de[docs-as-co.de]
 ----
 
-You then copy and paste the build file, because it is too big to by just typed in:
+You then download the build file from github, because it is too big to be just typed in:
 
-.maven.pom
+.maven.pom footnote:[taken from https://raw.githubusercontent.com/asciidoctor/asciidoctor-maven-examples/master/asciidoc-to-html-example/pom.xml]
 [source,xml]
 ----
+include::maven.pom[]
 ----
+
 
 ...and convert your document via
 
