@@ -95,7 +95,7 @@ You then download the build file from github, because it is too big to be just t
 .maven.pom footnote:[taken from https://raw.githubusercontent.com/asciidoctor/asciidoctor-maven-examples/master/asciidoc-to-html-example/pom.xml]
 [source,xml]
 ----
-include::maven.pom[]
+include::_pages/getstarted/maven.pom[]
 ----
 
 
