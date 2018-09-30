@@ -6,16 +6,19 @@
 :page-liquid: true
 :page-sidebar: { nav: about}
 
-= Contanct
+== Contact
 
 You have several options to contact us:
 
 * Via Email: icon:envelope[] mailto:info@arc42.org[info-at-arc42-dot-org]
 
-* https://github.com/arc42/HHGDAC/issues[issue tracker], located at
-https://github.com/arc42/hhgdac/issues.
-* On our Twitter accounts:
+* Issue trackers:
+** https://github.com/docToolchain/docs-as-co.de/issues for this website
+** https://github.com/docToolchain/docToolchain/issues for everything about docToolchain
+** https://github.com/arc42/hhgdac/issues for the examples of the article series
+* Follow us on Twitter!
 ** https://twitter.com/docToolchain[@docToolchain]
+** https://twitter.com/arc42Tipps[@arc42Tipps]
 ** https://twitter.com/GernotStartke[ @GernotStarke]
 ** https://twitter.com/RalfDMueller[ @RalfDMueller]
 

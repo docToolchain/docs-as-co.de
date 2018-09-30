@@ -4,19 +4,19 @@
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 
-= Quickstart
+== Quickstart
 
 There are several ways to get quickly started with the Docs-as-Code approach.
 
 The Quickstart basically consists of creating and rendering your first AsciiDoc document.
 
-== The Zero-Dependencies Approach
+=== The Zero-Dependencies Approach
 
 You just want to give AsciiDoc a try without installing anything?
 
 Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with preview.
 
-== The Editor Approach
+=== The Editor Approach
 
 If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
@@ -29,7 +29,7 @@ If you are willing to install an editor or a plugin for your favorite IDE, you c
 
 => see also Article in JavaMagazin
 
-== The Build-Tool Approach
+=== The Build-Tool Approach
 
 "You are standing in an open field west of a white house, with a boarded front door."footnote:[If you are born after 1980 - this is a famous quote from Zork1, a text adventure created by Infocom]
 

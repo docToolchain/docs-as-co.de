@@ -14,6 +14,14 @@ sidebar:
 
 ---
 
-# Blogs
+== Blogs
 
-TODO: add Blogs
+Here is a colelction of relevant blogs.
+You know some more? Send us a pull request!
+
+
+* http://andyetter.com/[Andrew Etter]
+* https://justwriteclick.com/[Just Write Click - Anne Gentle]
+* https://www.docslikecode.com/[Docs-like-Code - Anne Gentle]
+* https://idratherbewriting.com/[I'd Rather Be Writing - Tom Johnson]
+* https://rdmueller.github.io[Ralf D. Müller]

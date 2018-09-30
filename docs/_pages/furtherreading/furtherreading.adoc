@@ -13,8 +13,8 @@ sidebar:
     nav: "furtherreading"
 
 ---
-Here you find links to publications concerning the _docs-as-code_ approach.
+Here you find links to publications about the _docs-as-code_ approach.
 Contact us if you like your blog/talk/article etc. to be
 included here...
 
-Use the navigation on the left to discover all content.
+Use the navigation on the left to discover all the content.

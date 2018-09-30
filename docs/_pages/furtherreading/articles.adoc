@@ -18,17 +18,17 @@ sidebar:
 
 ## Hitchhiker’s Guide to Docs as Code
 
-A series of articles in a German Java Magazin, written bei Gernot Starke and Ralf Müller:
+A series of articles in a German Java Magazin, written by Dr. Gernot Starke and Ralf Müller:
 
-. https://jaxenter.de/docs-as-code-asciidoctor-62432[Neue Kolumne: Hitchhiker’s Guide to Docs as Code]
-. https://jaxenter.de/documentation-modularisierung-63743[Modulare Dokumentationen: Wie man sie baut und warum sie die Teamarbeit erleichtern]
-. https://jaxenter.de/docs-as-code-65644[So verwandeln Sie AsciiDoc in PDF, DOCX, Confluence und EPUB]
-. https://jaxenter.de/asciidoc-features-66027[AsciiDoc-Features für Pragmatisches]
-. https://jaxenter.de/hitchhikers-guide-docs-code-diagramme-66357[Diagramme, aber richtig…]
-. https://jaxenter.de/docs-to-code-doctoolchain-67524[Diagramme, jetzt wird modelliert!]
-. https://jaxenter.de/the-beautiful-code-69008[Beautiful Code]
-. https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools für AsciiDoc/Asciidoctor]
-. https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Build-Magie]
-. https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output]
-. https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll]
+. https://jaxenter.de/docs-as-code-asciidoctor-62432[Neue Kolumne: Hitchhiker’s Guide to Docs as Code] => https://github.com/arc42/HHGDAC/tree/master/folge-1[code]
+. https://jaxenter.de/documentation-modularisierung-63743[Modulare Dokumentationen: Wie man sie baut und warum sie die Teamarbeit erleichtern] => https://github.com/arc42/HHGDAC/tree/master/folge-2[code]
+. https://jaxenter.de/docs-as-code-65644[So verwandeln Sie AsciiDoc in PDF, DOCX, Confluence und EPUB] => https://github.com/arc42/HHGDAC/tree/master/folge-3[code]
+. https://jaxenter.de/asciidoc-features-66027[AsciiDoc-Features für Pragmatisches] => https://github.com/arc42/HHGDAC/tree/master/folge-4[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-diagramme-66357[Diagramme, aber richtig…] => https://github.com/arc42/HHGDAC/tree/master/folge-5[code]
+. https://jaxenter.de/docs-to-code-doctoolchain-67524[Diagramme, jetzt wird modelliert!] => https://github.com/arc42/HHGDAC/tree/master/folge-6[code]
+. https://jaxenter.de/the-beautiful-code-69008[Beautiful Code] => https://github.com/arc42/HHGDAC/tree/master/folge-7[code]
+. https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools für AsciiDoc/Asciidoctor] => https://github.com/arc42/HHGDAC/tree/master/folge-8[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Build-Magie] => https://github.com/arc42/HHGDAC/tree/master/folge-9[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output] => https://github.com/arc42/HHGDAC/tree/master/folge-10[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll] => https://github.com/arc42/HHGDAC/tree/master/folge-11[code]
 

@@ -6,7 +6,7 @@
 :page-liquid: true
 :page-sidebar: { nav: about}
 
-= Imprint
+== Imprint
 
 
 

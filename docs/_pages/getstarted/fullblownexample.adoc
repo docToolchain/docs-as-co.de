@@ -4,8 +4,8 @@
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 
-= Full Blown Example
+== Full Blown Example
 
-still work in progres, but if you want to see some more details, visit our session at W-JAX 2018 in November!
+still work in progress, but if you want to see some more details, visit https://jax.de/software-architecture/docs-as-code-anatomie-einer-realen-systemdokumentation/[our session at W-JAX 2018 in November]!
 
-If you can't wait to see a full example - even without a tutorial - then head over to the link:/furstherreading/examples[Examples]-Section
+If you can't wait to see a full example - even without a tutorial - then head over to the link:/examples[Examples]-Section.
