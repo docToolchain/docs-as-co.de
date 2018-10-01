@@ -34,10 +34,12 @@ about:
 getstarted:
   - title: Get Started
     children:
-        - title: "Quickstart"
-          url: /getstarted/quickstart
-        - title: "Full Blown Example"
+        - title: "Full Example"
           url: /getstarted/fullblownexample
+        - title: "Tutorials"
+          url: /getstarted/tutorials
+        - title: "Blogs"
+           url: /furtherreading/blogs
 
 docs:
   - title: AsciiDoc

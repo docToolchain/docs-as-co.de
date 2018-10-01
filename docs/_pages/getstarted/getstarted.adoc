@@ -3,10 +3,153 @@
 :page-permalink: /getstarted
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
-:page-excerpt: "give someone a fish and she has food for a day\nteach someone how to fish and she has food for a live time"
 
-== How to get started
+"Give someone a fish and she has food for a day\nteach someone how to fish and she has food for a live time"
 
-Here you'll soon find a collection of tutorials ranging from a link:/getstarted/quickstart[Quickstart] up to a link:/getstarted/fullblownexample[Full Blown Example].
+== Get Started... Quickly
 
-Miss something? Take a look at the link:/furtherreading/blogs[blogs section] or submit a pull request for a new tutorial!
+There are several ways to getting started with the Docs-as-Code approach.
+
+We'll show you how to create and render a simple AsciiDoc document:
+
+1.) [Zero-Dependency Approach] try it out without installing anything using an online-editor
+2.) The Editor Approach
+3.) The Build Tool Approach: Integrate Docs-As-Code into your build process.
+
+=== The Zero-Dependencies Approach
+
+You just want to give AsciiDoc a try without installing anything?
+
+Go to https://asciidoclive.com/[AsciiDocLIVE] to try an online editor with preview.
+
+=== The Editor Approach
+
+If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following:
+
+* https://asciidocfx.com/[AsciiDocFX], a full blown AsciiDoc editor.
+* https://atom.io/users/asciidoctor[Atom] editor with AsciiDoc plugin.
+* https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code] with AsciiDoc support.
+* https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ] with AsciiDoc support.
+* https://marketplace.eclipse.org/content/asciidoctor-editor[Eclipse] with AsciiDoc support.
+
+=> see also our (German) article about https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools for AsciiDoc]
+
+=== The Build-Tool Approach
+
+"You are standing in an open field west of a white house, with a boarded front door."footnote:[If you are born after 1980 - this is a famous quote from Zork-1, a text adventure created by Infocom]
+
+There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
+
+What will you choose?
+
+.Command-Line
+[role='primary']
+--
+
+.> use Command-Line-Tool
+
+You install *asciidoctorj* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+
+You then convert it via
+
+    asciidoctorj test.adoc
+
+video::AxoPZsjCBKY[youtube, width=512px, height=384px]
+--
+
+.Maven
+[role='secondary']
+--
+
+.> use Maven
+
+You are likely to be eaten by a grue.
+
+You install *Maven* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+You then download the build file from github, because it is too big to be just typed in:
+
+.maven.pom footnote:[taken from https://raw.githubusercontent.com/asciidoctor/asciidoctor-maven-examples/master/asciidoc-to-html-example/pom.xml]
+[source,xml]
+----
+include::_pages/getstarted/maven.pom[]
+----
+
+
+...and convert your document via
+
+    mvn asciidoc
+
+--
+
+.Gradle
+[role='secondary']
+--
+
+.> use Gradle
+
+Good choice!
+A fairy appears and grants you a wish.
+You wish for a very simple build file and the following line of text appears:
+
+.gradle.build
+[source,groovy]
+----
+plugins { id "org.asciidoctor.convert" version "1.5.3" }
+----
+
+you write your very first AsciiDoc document and put it in `/src/docs/asciidoc/`
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+You install Gradle via https://sdkman.io[sdkman]
+and convert the file with
+
+    gradle asciidoc
+
+a nicely styled html file appears in `/build/asciidoc/html5/.`
+
+video::BLsO_lBxwmU[youtube, width=512px, height=384px]
+
+--
