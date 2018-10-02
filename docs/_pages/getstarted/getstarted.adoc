@@ -4,7 +4,10 @@
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 
-"Give someone a fish and she has food for a day\nteach someone how to fish and she has food for a live time"
+
+Give someone a fish and she is hungry again in an hour,
+teach someone how to fish and she has food for a lifetime."
+-- (presumably) Anne Isabella Thackeray Ritchie (1885)
 
 == Get Started... Quickly
 

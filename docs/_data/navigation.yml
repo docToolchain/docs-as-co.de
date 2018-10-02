@@ -39,7 +39,7 @@ getstarted:
         - title: "Tutorials"
           url: /getstarted/tutorials
         - title: "Blogs"
-           url: /furtherreading/blogs
+          url: /furtherreading/blogs
 
 docs:
   - title: AsciiDoc
