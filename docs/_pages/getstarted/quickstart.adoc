@@ -1,46 +1,36 @@
 = Ready, Set, Go!
 :page-layout: single
-:page-permalink: /getstarted
+:page-permalink: /getstarted/quickstart
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 
+== Quickstart
 
-Give someone a fish and she is hungry again in an hour,
-teach someone how to fish and she has food for a lifetime."
--- (presumably) Anne Isabella Thackeray Ritchie (1885)
+There are several ways to get quickly started with the Docs-as-Code approach.
 
-== Get Started... Quickly
-
-There are several ways to getting started with the Docs-as-Code approach.
-
-We'll show you how to create and render a simple AsciiDoc document:
-
-. [Zero-Dependency Approach] +
-try it out without installing anything using an online-editor
-. The Editor Approach
-. The Build Tool Approach: Integrate Docs-As-Code into your build process.
+The Quickstart basically consists of creating and rendering your first AsciiDoc document.
 
 === The Zero-Dependencies Approach
 
 You just want to give AsciiDoc a try without installing anything?
 
-Go to https://asciidoclive.com/[AsciiDocLIVE] to try an online editor with preview.
+Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with preview.
 
 === The Editor Approach
 
-If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following:
+If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
-* https://asciidocfx.com/[AsciiDocFX], a full blown AsciiDoc editor.
-* https://atom.io/users/asciidoctor[Atom] editor with AsciiDoc plugin.
-* https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code] with AsciiDoc support.
-* https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ] with AsciiDoc support.
-* https://marketplace.eclipse.org/content/asciidoctor-editor[Eclipse] with AsciiDoc support.
+* https://asciidocfx.com/[AsciiDocFX]
+* https://atom.io/users/asciidoctor[Atom]
+* https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code]
+* https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ]
+* https://marketplace.eclipse.org/content/asciidoctor-editor[Eclipse]
 
-=> see also our (German) article about https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools for AsciiDoc]
+=> see also our German article about https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools for AsciiDoc]
 
 === The Build-Tool Approach
 
-"You are standing in an open field west of a white house, with a boarded front door."footnote:[If you are born after 1980 - this is a famous quote from Zork-1, a text adventure created by Infocom]
+"You are standing in an open field west of a white house, with a boarded front door."footnote:[If you are born after 1980 - this is a famous quote from Zork1, a text adventure created by Infocom]
 
 There is a *Maven*, a *Gradle* and a *Command-Line-Tool* nearby.
 
@@ -82,7 +72,7 @@ video::ZXYbN8bHq0A[youtube, width=512px, height=384px]
 
 .> use Maven
 
-You are likely to be eaten by a grue.
+you are likely to be eaten by a grue.
 
 You install *Maven* via https://sdkman.io[sdkman] and write your first simple AsciiDoc document
 
@@ -111,9 +101,8 @@ include::_pages/getstarted/maven.pom[]
 
 ...and convert your document via
 
-    mvn
+    mvn asciidoc
 
-video::VCaI8DGb0vU[youtube, width=512px, height=384px]
 --
 
 .Gradle
