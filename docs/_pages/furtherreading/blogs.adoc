@@ -16,7 +16,7 @@ sidebar:
 
 == Blogs
 
-Here is a colelction of relevant blogs.
+Here is a collection of relevant blogs.
 You know some more? Send us a pull request!
 
 
