@@ -5,7 +5,7 @@
 :page-sidebar: { nav: getstarted}
 
 
-Give someone a fish and she is hungry again in an hour,
+"Give someone a fish and she is hungry again in an hour,
 teach someone how to fish and she has food for a lifetime."
 -- (presumably) Anne Isabella Thackeray Ritchie (1885)
 
