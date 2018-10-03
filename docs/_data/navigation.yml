@@ -24,12 +24,14 @@ furtherreading:
         url: /furtherreading/books
 
 about:
-  - title: About Us
+  - title: About
     children:
       - title: "Contact"
         url: /about/contact
       - title: "Imprint"
         url: /about/imprint
+      - title: "This Site"
+        url: /about/site
 
 getstarted:
   - title: Get Started
