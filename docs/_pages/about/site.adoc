@@ -26,3 +26,4 @@ This site...
 
 * was last built on {{ site.time | date: '%c' }}
 * contains {{ site.pages | size }} pages
+* link:report/htmlchecks/index.html[HtmlSanityCheck-Report]
