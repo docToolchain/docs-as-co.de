@@ -1,3 +1,24 @@
+plugins {
+    id 'org.aim42.htmlSanityCheck' version '1.0.0-RC-1'
+}
+
+htmlSanityCheck {
+    sourceDir = new File( "_site" )
+
+    // files to check - in Set-notation
+    def docs = []
+    sourceDir.eachFileRecurse() {
+        if(it.name.endsWith('.html')) {
+            docs << it.canonicalPath-sourceDir.canonicalPath
+        }
+    }
+    sourceDocuments = docs[0..15]
+    // where to put results of sanityChecks...
+    checkingResultsDir = new File( "_site/report/htmlchecks" )
+
+    // fail build on errors?
+    failOnErrors = false
+}
 
 task info () {
     doLast {

@@ -35,7 +35,7 @@ Dr. Gernot Starke, mit Unterstützung von Ralf D. Müller (Frankfurt).
 
 Diese Website sammelt keine personenbezogene Daten.
 #### Geltungsbereich
-Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den verantwortlichen Anbieter Dr. Gernot Starke, Willi-Lauf Allee 43, D-50858 Köln, Deutschland, <a href="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxe" onmouseover="this.href=this.href.replace(/x/g,'');">Email (gegen Spam gesichert)</a>, Tel.: +49 177 7282570 auf dieser Website (im folgenden “Angebot”) auf.<br />
+Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den verantwortlichen Anbieter Dr. Gernot Starke, Willi-Lauf Allee 43, D-50858 Köln, Deutschland, <a hrefenc="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxe" onmouseover="this.href=this.hrefenc.replace(/x/g,'');">Email (gegen Spam gesichert)</a>, Tel.: +49 177 7282570 auf dieser Website (im folgenden “Angebot”) auf.<br />
 <br />
 Die rechtlichen Grundlagen des Datenschutzes finden sich im Bundesdatenschutzgesetz (BDSG) und dem Telemediengesetz (TMG).<br />
 <br />

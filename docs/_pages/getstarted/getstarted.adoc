@@ -24,7 +24,7 @@ try it out without installing anything using an online-editor
 
 You just want to give AsciiDoc a try without installing anything?
 
-Go to https://asciidoclive.com/[AsciiDocLIVE] to try an online editor with preview.
+Go to https://asciidoclive.com[AsciiDocLIVE] to try an online editor with preview.
 
 === The Editor Approach
 

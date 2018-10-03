@@ -28,7 +28,7 @@ A series of articles in a German Java Magazin, written by Dr. Gernot Starke and 
 . https://jaxenter.de/docs-to-code-doctoolchain-67524[Diagramme, jetzt wird modelliert!] => https://github.com/arc42/HHGDAC/tree/master/folge-6[code]
 . https://jaxenter.de/the-beautiful-code-69008[Beautiful Code] => https://github.com/arc42/HHGDAC/tree/master/folge-7[code]
 . https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Tools für AsciiDoc/Asciidoctor] => https://github.com/arc42/HHGDAC/tree/master/folge-8[code]
-. https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Build-Magie] => https://github.com/arc42/HHGDAC/tree/master/folge-9[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Build-Magie] => https://github.com/arc42/HHGDAC/tree/master/folge-09[code]
 . https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output] => https://github.com/arc42/HHGDAC/tree/master/folge-10[code]
-. https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll] => https://github.com/arc42/HHGDAC/tree/master/folge-11[code]
+. https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll] => https://github.com/arc42/HHGDAC/tree/master/folge-11-jekyll[code]
 

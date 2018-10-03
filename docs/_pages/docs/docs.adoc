@@ -29,6 +29,10 @@ a| == docToolchain
 
 * https://doctoolchain.github.io/docToolchain[User Manual]
 
+== arc42
+
+* https://arc42.org
+
 == htmlSanityCheck
 
 * https://github.com/aim42/htmlSanityCheck[Quick Guide]

@@ -12,7 +12,7 @@
 This site is build with
 https://en.wikipedia.org/wiki/Eating_your_own_dog_food[eat-your-own-dogfood]
 philophy in mind: We write and maintain
-all content in AsciiDoc, hosted on Github.
+all content in AsciiDoc, hosted on Github and automatically deployed on update of the master branch.
 
 The site itself is built using the static site generator Jekyll with support
 of some nifty plugins. Hosting is done by Netlify.
@@ -20,7 +20,7 @@ of some nifty plugins. Hosting is done by Netlify.
 For development, we run jekyll within a docker container.
 
 
-#### Page Statistics
+== Page Statistics
 
 This site...
 
