@@ -14,7 +14,7 @@ title                    : "Docs-as-Code"
 title_separator          : "-"
 name                     : "Ralf D. Müller and Gernot Starke"
 description              : "Hitchhikers Guide to Documentation As Code."
-url                      : "https://docs-as-code.netlify.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://docs-as-co.de" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "docToolchain/docs-as-co.de" # GitHub username/repo-name
 teaser                   : /images/hhgdac-splash.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
@@ -130,7 +130,7 @@ asciidoctor:
   safe: unsafe
   attributes:
   - idseparator=_
-#  - source-highlighter=pygments
+  - source-highlighter=coderay
 #  - pygments-css=class
 
 
