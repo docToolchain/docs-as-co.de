@@ -71,15 +71,17 @@ task open () {
     }
 }
 task logs (type: Exec) {
-    def containerId
-    "docker ps".execute().text.eachLine { container ->
-        if (container.contains("jekyll")) {
-            containerId = container.split(" +")[0]
+    doLast {
+        def containerId
+        "docker ps".execute().text.eachLine { container ->
+            if (container.contains("jekyll")) {
+                containerId = container.split(" +")[0]
+            }
         }
+        executable = "docker"
+        args = ["logs", containerId,
+                "--tail", "100",
+                "--follow"]
     }
-    executable = "docker"
-    args = ["logs", containerId,
-            "--tail", "100",
-            "--follow"]
 }
 defaultTasks 'info'
