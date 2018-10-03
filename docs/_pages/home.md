@@ -38,7 +38,8 @@ feature_row:
 
 {% include feature_row %}
 
-Why docs-as-code?
+## Why docs-as-code?
+
 Have you ever been annoyed by having to switch tools when you want to document your code?
 Did you ever wish to update all the diagrams in your documentation easily?
 Did you ever wish to have an easy review process for your documents?
@@ -48,22 +49,33 @@ If you can answer one or more of these questions with "yes", then the docs-as-co
 With docs-as-code, you treat your documentation in the same way as your code. 
 
 You use... 
-your  IDE to write it
-your version control system to store and version it 
-your test-runner to test it
-your build system to build and deploy it
-If this sounds good to you, then read on!
+* your  IDE to write it
+* your version control system to store and version it 
+* your test-runner to test it
+* your build system to build and deploy it
+* If this sounds good to you, then read on!
 
-a note before you begin
-When you read through our pages, articles, presentations, you will soon notice that what you read here is a bit opinionated and from the view of a techie.
-Docs-as-Code is an approach practiced by many people with different tools. One notable group is the group of technical writers whose community can be found at http://writethedocs.org.
+### a side-note before you begin
+
+When you read through our pages, articles and presentations, you will soon notice that it is a bit opinionated and from the view of a techie.
+This is because HHGDAC is based on pracitcal experience. 
+Everything you find on these pages is already tested in projects.
+
+Also notice that Docs-as-Code is an approach practiced by many people with different tools and backgrounds. 
+The main difference in background is that you can appraoch this topic either as a techie/developer or as a writer.
+If you are more interested in the view of a technical writer, you might want to start your journey at http://writethedocs.org.
  
-Concepts
+## Concepts
 
 When you treat your docs as code, you will need to master certain skills and implement specific concepts. But don't worry, these skills and concepts are not new to you. You already know them from your daily coding and now you will also use them for your documents.
 
-A suitable format
+### a suitable format
 
+### versioning system
+
+### automation
+
+### testing 
 
 
 
