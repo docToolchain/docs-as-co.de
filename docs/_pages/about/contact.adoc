@@ -10,7 +10,7 @@
 
 You have several options to contact us:
 
-* Via Email: icon:envelope[] mailto:info@arc42.org[info-at-arc42-dot-org]
+* Via Email: icon:envelope[] mailto:info@docs-as-co.de[info@docs-as-co.de]
 
 * Issue trackers:
 ** https://github.com/docToolchain/docs-as-co.de/issues for this website
