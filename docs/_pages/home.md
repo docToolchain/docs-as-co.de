@@ -49,11 +49,13 @@ If you can answer one or more of these questions with "yes", then the docs-as-co
 With docs-as-code, you treat your documentation in the same way as your code. 
 
 You use... 
+
 * your  IDE to write it
 * your version control system to store and version it 
 * your test-runner to test it
 * your build system to build and deploy it
-* If this sounds good to you, then read on!
+
+If this sounds good to you, then read on!
 
 ### a side-note before you begin
 
