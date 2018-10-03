@@ -130,7 +130,7 @@ asciidoctor:
   safe: unsafe
   attributes:
   - idseparator=_
-#  - source-highlighter=pygments
+  - source-highlighter=coderay
 #  - pygments-css=class
 
 
