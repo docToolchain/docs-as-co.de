@@ -13,6 +13,9 @@ header:
 The following text has to be included in sites provided from Germany by German citicens,
 due to our sometimes strange, inconsistent and user-unfriendly data privacy laws.
 
+At the end of this page you find some information about licenses for various
+products we use to produce and maintain the site!
+
 ## Imprint
 
 #### Anbieter
@@ -23,7 +26,7 @@ gemeinsam mit Ralf D. Müller (Frankfurt/Main)
 #### Kontakt
 
 Telefon: +49-177-728 2570<br>
-e-Mail: gs - at - gernotstarke - dot - de<br>
+e-Mail: <a hrefenc="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxe" onmouseover="this.href=this.hrefenc.replace(/x/g,'');">Email (gegen Spam gesichert)</a><br>
 Website: [gernotstarke.de](http://gernotstarke.de)
 
 #### Verantwortlich nach § 6 Abs.2 MDStV
@@ -33,7 +36,8 @@ Dr. Gernot Starke, mit Unterstützung von Ralf D. Müller (Frankfurt).
 
 ## Privacy Statement (Datenschutzerklärung)
 
-Diese Website sammelt keine personenbezogene Daten.
+Diese Website sammelt **keine personenbezogenen Daten**.
+
 #### Geltungsbereich
 Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den verantwortlichen Anbieter Dr. Gernot Starke, Willi-Lauf Allee 43, D-50858 Köln, Deutschland, <a hrefenc="xmxaxixlxtxo:ixnxfxox@xaxrxcx4x2x.xdxe" onmouseover="this.href=this.hrefenc.replace(/x/g,'');">Email (gegen Spam gesichert)</a>, Tel.: +49 177 7282570 auf dieser Website (im folgenden “Angebot”) auf.<br />
 <br />
@@ -59,3 +63,12 @@ Der Nutzer hat das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über di
 #### Quelle
 Danke an Hr Rechtsanwalt Thomas Schwenke:<br>
 <a href="http://rechtsanwalt-schwenke.de/smmr-buch/datenschutz-muster-generator-fuer-webseiten-blogs-und-social-media/"><strong>Datenschutz-Muster von Rechtsanwalt Thomas Schwenke - I LAW it</strong></a>
+
+
+## Licensing Stuff
+
+This site uses...
+* some of the free [Fontawesome](https://fontawesome.com/license/free) icons.
+* some free images from the awesome [Unsplash](https://unsplash.com) collection,
+you find detailed credits [here]({{ '/image-credits' | absolute_url }}).
+* Youtube to embedd tutorial videos. Youtube might set cookies for better user experience.
