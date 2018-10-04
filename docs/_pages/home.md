@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.5
   #cta_label: "Overview"  # cta (== call-to-action) shows a button
   #cta_url: "/overview"
-  caption: "Photo credit: [**Artem Sapegin**](https://unsplash.com/photos/b18TRXc8UPQ)"
+  caption: "[**Artem Sapegin**](https://unsplash.com/photos/b18TRXc8UPQ)"
 excerpt: "Code and documentation, created and maintained equally.
 developers love it, as it's effective and **takes the pain out of documentation**."
 

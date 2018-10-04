@@ -6,7 +6,7 @@ order: 90
 share: false
 header:
   overlay_image: /images/splash/privacy-274694-unsplash.jpg
-  caption: "Photo credit: [**Scott Webb**](https://unsplash.com/photos/yekGLpc3vro)"
+  caption: "[**Scott Webb**](https://unsplash.com/photos/yekGLpc3vro)"
 
 ---
 
