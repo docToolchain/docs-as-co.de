@@ -1,3 +1,24 @@
+plugins {
+    id 'org.aim42.htmlSanityCheck' version '1.0.0-RC-1'
+}
+
+htmlSanityCheck {
+    sourceDir = new File( "_site" )
+
+    // files to check - in Set-notation
+    def docs = []
+    sourceDir.eachFileRecurse() {
+        if(it.name.endsWith('.html')) {
+            docs << it.canonicalPath-sourceDir.canonicalPath
+        }
+    }
+    sourceDocuments = docs[0..15]
+    // where to put results of sanityChecks...
+    checkingResultsDir = new File( "_site/report/htmlchecks" )
+
+    // fail build on errors?
+    failOnErrors = false
+}
 
 task info () {
     doLast {
@@ -12,19 +33,10 @@ task info () {
              
              gradle ${color 'green', 'develop'} starts a jekyll server on port 0.0.0.0:4000,
              which performs incremental builds and listens for file changes.
-             
              gradle ${color 'green', 'build'} build the required docker image.
-             
              gradle ${color 'green', 'remove'} the running docker container.
-             
              gradle ${color 'green', 'open'} to open site in default browser
-             
              gradle ${color 'green', 'logs'} to show jekyll logs
-             
-             gradle ${color 'red', 'production'} produces the site with production
-             configuration, into ./${localdir} directory.
-
-             ${color 'red', '(u)pload'} the generated site to ${server}.
              
             ================================================================"""
          .stripIndent()
@@ -59,15 +71,17 @@ task open () {
     }
 }
 task logs (type: Exec) {
-    def containerId
-    "docker ps".execute().text.eachLine { container ->
-        if (container.contains("jekyll")) {
-            containerId = container.split(" +")[0]
+    doLast {
+        def containerId
+        "docker ps".execute().text.eachLine { container ->
+            if (container.contains("jekyll")) {
+                containerId = container.split(" +")[0]
+            }
         }
+        executable = "docker"
+        args = ["logs", containerId,
+                "--tail", "100",
+                "--follow"]
     }
-    executable = "docker"
-    args = ["logs", containerId,
-            "--tail", "100",
-            "--follow"]
 }
 defaultTasks 'info'

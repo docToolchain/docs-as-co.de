@@ -4,7 +4,7 @@ layout: single
 permalink: /image-credits
 header:
   overlay_image: /images/splash/image-credits-89441-unsplash.jpg
-  caption: "Photo credit: [**Imani Clovis**](https://unsplash.com/photos/HiO3MRgXJt4)"
+  caption: "[**Imani Clovis**](https://unsplash.com/photos/HiO3MRgXJt4)"
 
 
 gallery:

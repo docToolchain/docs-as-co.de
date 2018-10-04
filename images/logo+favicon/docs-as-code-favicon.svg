@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="198 12.5 320.80804 464.14823" width="320.80804" height="464.14823">
+  <defs>
+    <font-face font-family="Lucida Console" font-size="304" panose-1="2 11 6 9 4 5 4 2 2 4" units-per-em="1000" underline-position="-100.09766" underline-thickness="49.80469" slope="0" x-height="536.1328" cap-height="633.7891" ascent="789.0625" descent="-210.9375" font-weight="400">
+      <font-face-src>
+        <font-face-name name="LucidaConsole"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Lucida Console" font-size="224" panose-1="2 11 6 9 4 5 4 2 2 4" units-per-em="1000" underline-position="-100.09766" underline-thickness="49.80469" slope="0" x-height="536.1328" cap-height="633.7891" ascent="789.0625" descent="-210.9375" font-weight="400">
+      <font-face-src>
+        <font-face-name name="LucidaConsole"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-10-04 15:29:56 +0000</dc:date>
+  </metadata>
+  <g id="Arbeitsfl_che_1" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Arbeitsfläche 1</title>
+    <rect fill="white" x="198" y="12.5" width="320.80804" height="464.14823"/>
+    <g id="Arbeitsfl_che_1: Ebene 1">
+      <title>Ebene 1</title>
+      <g id="Graphic_8">
+        <title>path4530</title>
+        <line x1="681141" y1="344.2231" x2="752851.6" y2="344.2231" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_9">
+        <title>path4532</title>
+        <line x1="730569.7" y1="419.7974" x2="810328.55" y2="419.7974" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_10">
+        <title>path4534</title>
+        <line x1="10764479" y1="493.73224" x2="17496026" y2="493.73224" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_11">
+        <title>path4536</title>
+        <line x1="10764479" y1="569.30654" x2="17496026" y2="569.30654" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_12">
+        <title>path4538</title>
+        <line x1="10764479" y1="644.88084" x2="17496026" y2="644.88084" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_13">
+        <title>path4540</title>
+        <line x1="10764479" y1="720.4152" x2="17496026" y2="720.4152" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_14">
+        <title>path4542</title>
+        <line x1="5784115.5" y1="795.9894" x2="8427814" y2="795.9894" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_15">
+        <title>path4544</title>
+        <line x1="3892568" y1="871.5637" x2="5348584.7" y2="871.5637" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="5.3381844"/>
+      </g>
+      <g id="Graphic_16">
+        <title>path4546</title>
+        <line x1="1737457.4" y1="947.138" x2="2168755.7" y2="947.138" stroke="#a6a6a6" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4.658416"/>
+      </g>
+      <g id="Graphic_23">
+        <text transform="translate(203 18)" fill="black">
+          <tspan font-family="Lucida Console" font-size="304" font-weight="400" fill="black" x=".4140625" y="240">D</tspan>
+        </text>
+      </g>
+      <g id="Graphic_24">
+        <text transform="translate(293.17505 170.5)" fill="black">
+          <tspan font-family="Lucida Console" font-size="224" font-weight="400" fill="black" x=".015625" y="177">A</tspan>
+        </text>
+      </g>
+      <g id="Graphic_26">
+        <text transform="translate(329.80804 22)" fill="black">
+          <tspan font-family="Lucida Console" font-size="304" font-weight="400" fill="black" x=".4140625" y="240">C</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+= Screencasts
+
+This file contains some autoit scripts to automate the generation of screencasts.
+
+If you want to run them, here are some notes:
+
+In order to capture several windows in the same video, they have to be opened as fullscreen.
+Otherwise the might not open in the capture region.
+To achieve this, connect a low res display (1024x768) as second display.
+
+I use camtasia as recorder.
+Before you start the script, open the camtasia recorder and set the capture region to the second screen.
+
+The scripts might be currently a bit fragile.
+The trigger on the existence of a java-process.
+So make sure that no other java process is running when yous tart the script.
+The also expect that the windows will open on the right screen.
+It might be that you have to adjust this.
+
+Disable the gradle deamon in your ubuntu bash: https://docs.gradle.org/current/userguide/gradle_daemon.html#sec:disabling_the_daemon
+

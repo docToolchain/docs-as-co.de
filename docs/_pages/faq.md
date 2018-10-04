@@ -5,7 +5,7 @@ permalink: /faq
 excerpt: "Frequently Asked Questions,<br>answered."
 header:
   overlay_image: /images/splash/faq-daniil-avilov-428715-unsplash.jpg
-  caption: "Photo credit: [**Daniil Avilov**](https://unsplash.com/photos/C4G18Paw0d4)"
+  caption: "[**Daniil Avilov**](https://unsplash.com/photos/C4G18Paw0d4)"
 
 ---
 

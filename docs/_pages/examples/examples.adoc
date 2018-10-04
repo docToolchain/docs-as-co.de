@@ -1,0 +1,26 @@
+= Online Examples
+:page-layout: single
+:page-permalink: /examples
+:page-header: { overlay_image: /images/splash/example-435076-unsplash.jpg, caption: "[Blake Connally](https://unsplash.com/photos/IKUYGCFmfw4)" }
+:page-sidebar: { nav: examples}
+:page-excerpt: "Seeing is believing."
+
+
+Here you find links to public examples of the _docs-as-code_ approach.
+Contact us if you like your system to be
+included here...
+
+http://aim42.github.io/htmlSanityCheck/hsc_arc42.html[HTML Sanity Checker]::
+Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke. +
+[small]#Gradle, AsciiDoc, arc42#
+
+https://doctoolchain.github.io/docToolchain/[docToolchain]::
+Eat-your-own-dogfood example for the user manual of docToolchain, created by Ralf D. Müller. +
+[small]#Gradle, AsciiDoc, Enterprise Architect (UML)#
+
+https://www.keycloak.org/docs/latest/server_installation/index.html[Red Hat - Keycloak Docs]::
+[small]#AsciiDoc#
+
+http://docs.groovy-lang.org/next/html/documentation/[Apache Foundation - Groovy]::
+[small]#AsciiDoc#
+

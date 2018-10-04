@@ -1,0 +1,82 @@
+#include <Constants.au3>
+
+
+Send("{LWIN}bash")
+Sleep(1000)
+Send("{ENTER}")
+Send("{F9}")
+Sleep(500)
+
+WinWaitActive("[CLASS:ConsoleWindowClass]")
+Send("{LWINDOWN}{UP}{LWINUP}")
+;Send("{LWINDOWN}{SHIFTDOWN}{RIGHT}{SHIFTUP}{UP}{LWINUP}")
+
+Sleep(1500)
+
+AutoItSetOption("SendKeyDelay", 50)
+Send("mkdir quickstart_gradle{ENTER}")
+Send("cd quickstart_gradle{ENTER}")
+Send("ls{ENTER}")
+Sleep(1000)
+Send("vi build.gradle{ENTER}")
+Send("{LWINDOWN}{UP}{LWINUP}")
+Sleep(1000)
+Send("i")
+Send("plugins {ASC 123} id 'org.asciidoctor.convert' version '1.5.3' {ASC 125}{ENTER}")
+Sleep(1000)
+Send("{ESC}:wq{ENTER}")
+Sleep(500)
+
+Send("mkdir -p src/docs/asciidoc{ENTER}")
+
+Send("vi src/docs/asciidoc/test.adoc{ENTER}")
+Send("{LWINDOWN}{UP}{LWINUP}")
+Sleep(1000)
+Send("i")
+Send("= Headline{ENTER}")
+Send("{ENTER}")
+Send("Paragraph one{ENTER}")
+Send("{ENTER}")
+Send("Paragraph two{ENTER}")
+Send("{ENTER}")
+Send("== Second Headline{ENTER}")
+Send("{ENTER}")
+Send("a link to https://docs-as-co.de{ASC 091}docs-as-co.de{ASC 093}{ENTER}")
+Sleep(1000)
+Send("{ESC}:wq{ENTER}")
+Sleep(500)
+
+Send("gradle asciidoc{ENTER}")
+ProcessWait("java")
+ConsoleWrite("java found"+@CRLF)
+Sleep(5000)
+ProcessWaitClose("java")
+ConsoleWrite("java closed"+@CRLF)
+Sleep(6000)
+ProcessWaitClose("java")
+ConsoleWrite("java closed"+@CRLF)
+Send("find build{ENTER}")
+Sleep(1000)
+Send("firefox build/asciidoc/html5/test.html &{ENTER}")
+WinWaitActive("[CLASS:vcxsrv/x X rl]")
+Send("{ALT TAB}")
+Sleep(1000)
+Send("{LWINDOWN}{SHIFTDOWN}{RIGHT}{SHIFTUP}{UP}{LWINUP}")
+Sleep(2000)
+Send("{F10}")
+Sleep(1000)
+WinClose("[CLASS:vcxsrv/x X rl]")
+WinWaitClose("[CLASS:vcxsrv/x X rl]")
+;Send("{ALT TAB}")
+Sleep(2500)
+Send("cd ..{ENTER}")
+Send("rm -r quickstart_gradle{ENTER}")
+Send("exit{ENTER}")
+
+; Now quit by sending a "close" request to the calculator window using the classname
+; WinClose("[CLASS:ConsoleWindowClass]")
+
+; Now wait for the calculator to close before continuing
+; WinWaitClose("[CLASS:ConsoleWindowClass]")
+
+; Finished!

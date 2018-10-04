@@ -1,0 +1,65 @@
+#include <Constants.au3>
+
+
+Send("{LWIN}bash")
+Sleep(1000)
+Send("{ENTER}")
+Send("{F9}")
+Sleep(500)
+
+WinWaitActive("[CLASS:ConsoleWindowClass]")
+Send("{LWINDOWN}{UP}{LWINUP}")
+;Send("{LWINDOWN}{SHIFTDOWN}{RIGHT}{SHIFTUP}{UP}{LWINUP}")
+
+Sleep(1500)
+
+AutoItSetOption("SendKeyDelay", 50)
+Send("mkdir quickstart{ENTER}")
+Send("cd quickstart{ENTER}")
+Send("ls{ENTER}")
+Sleep(1000)
+Send("vi test.adoc{ENTER}")
+Send("{LWINDOWN}{UP}{LWINUP}")
+Sleep(1000)
+Send("i")
+Send("= Headline{ENTER}")
+Send("{ENTER}")
+Send("Paragraph one{ENTER}")
+Send("{ENTER}")
+Send("Paragraph two{ENTER}")
+Send("{ENTER}")
+Send("== Second Headline{ENTER}")
+Send("{ENTER}")
+Send("a link to https://docs-as-co.de{ASC 091}docs-as-co.de{ASC 093}{ENTER}")
+Sleep(1000)
+Send("{ESC}:wq{ENTER}")
+Sleep(500)
+Send("asciidoctorj test.adoc{ENTER}")
+ProcessWait("java")
+Sleep(5000)
+ProcessWaitClose("java")
+Send("ls{ENTER}")
+Sleep(1000)
+Send("firefox test.html &{ENTER}")
+WinWaitActive("[CLASS:vcxsrv/x X rl]")
+Send("{ALT TAB}")
+Sleep(1000)
+Send("{LWINDOWN}{SHIFTDOWN}{RIGHT}{SHIFTUP}{UP}{LWINUP}")
+Sleep(5000)
+Send("{F10}")
+Sleep(1000)
+WinClose("[CLASS:vcxsrv/x X rl]")
+WinWaitClose("[CLASS:vcxsrv/x X rl]")
+;Send("{ALT TAB}")
+Sleep(2500)
+Send("cd ..{ENTER}")
+Send("rm -r quickstart{ENTER}")
+Send("exit{ENTER}")
+
+; Now quit by sending a "close" request to the calculator window using the classname
+; WinClose("[CLASS:ConsoleWindowClass]")
+
+; Now wait for the calculator to close before continuing
+WinWaitClose("[CLASS:ConsoleWindowClass]")
+
+; Finished!
