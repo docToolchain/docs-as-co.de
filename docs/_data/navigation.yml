@@ -27,11 +27,11 @@ about:
   - title: About
     children:
       - title: "Contact"
-        url: contact
+        url: /about/contact
       - title: "Imprint"
-        url: imprint
+        url: /about/imprint
       - title: "This Site"
-        url: site
+        url: /about/site
 
 getstarted:
   - title: Get Started
