@@ -31,7 +31,10 @@ a| == docToolchain
 
 == arc42
 
-* https://arc42.org
+* https://arc42.org[arc42.org]
+* https://docs.arc42.org[arc42 documentation]
+* https://faq.arc42.org[FAQ for arc42]
+* https://leanpub.com/arc42byexample[eBook with arc42 examples]
 
 == htmlSanityCheck
 
