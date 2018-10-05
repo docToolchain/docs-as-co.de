@@ -59,27 +59,41 @@ If this sounds good to you, then read on!
 
 ### a side-note before you begin
 
-When you read through our pages, articles and presentations, you will soon notice that it is a bit opinionated and from the view of a techie.
-This is because HHGDAC is based on pracitcal experience. 
+When you read through our pages, articles, and presentations, you will soon notice that it is a bit opinionated and from the view of a techie.
+This is because HHGDAC is based on practical experience. 
 Everything you find on these pages is already tested in projects.
 
 Also notice that Docs-as-Code is an approach practiced by many people with different tools and backgrounds. 
-The main difference in background is that you can appraoch this topic either as a techie/developer or as a writer.
+The main difference in background is that you can approach this topic either as a techie/developer or as a writer.
 If you are more interested in the view of a technical writer, you might want to start your journey at http://writethedocs.org.
  
 ## Concepts
 
-When you treat your docs as code, you will need to master certain skills and implement specific concepts. But don't worry, these skills and concepts are not new to you. You already know them from your daily coding and now you will also use them for your documents.
+When you treat your docs as code, you will need to master specific skills and implement specific concepts. But don't worry, these skills and concepts are not new to you. You already know them from your daily coding and now you will also use them for your documents.
 
-### a suitable format
+### A suitable Format
 
-### versioning system
+To treat your docs-as-code, you need your docs in a format which can be easily versioned and transformed.
+Binary or otherwise complex formats are not suitable.
+Plain-text formats are the right way to go and there are plenty of them available.
+We've chosen AsciiDoc as the most flexible.
 
-### automation
+### Versioning System
 
-### testing 
+Apparently, you use a modern versioning system like git for your code.
+You should do the same with your documents.
+No longer append a date or version number to a file name 😁.
+
+It is time also to train non-developers on how to use a versioning system.
+
+### Automation
+
+You do it all the time with your code - why not with your documents?
+Develop the habit to think more about the automation of your documentation steps!
+
+### Testing 
+
+Not only is it possible to automatically test some aspects (like broken links) of your documentation, you can also extract metrics like "readability".
+Best results are even achieved when you combine the tests of your code with your documentation.
 
 
-
-
-HHGDAC is based on **practical experience**.
