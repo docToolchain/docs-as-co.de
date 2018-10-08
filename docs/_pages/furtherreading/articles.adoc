@@ -16,6 +16,10 @@ sidebar:
 
 # Articles
 
+* https://blog.jdriven.com/2018/10/lightweight-architecture-decision-records/[Lightweight Architecture Decision Records]
+* https://twitter.com/dataandme/status/1047471853021876224/photo/1[What nobody tells you about documentation]
+
+
 ## Hitchhiker’s Guide to Docs as Code
 
 A series of articles in a German Java Magazin, written by Dr. Gernot Starke and Ralf Müller:
