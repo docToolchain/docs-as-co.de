@@ -1,0 +1,9 @@
+# The Docker image to run your workspace in. Defaults to gitpod/workspace-full
+# image: "<your-workspace-image>"
+# Command to start on workspace startup (optional)
+tasks:
+  - command: "cd docs && bundle install && jekyll serve"
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 4000
+    protocol: "http"

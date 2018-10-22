@@ -15,6 +15,7 @@ title_separator          : "-"
 name                     : "Ralf D. Müller and Gernot Starke"
 description              : "Hitchhikers Guide to Documentation As Code."
 url                      : "https://docs-as-co.de" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+host                     : 0.0.0.0
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "docToolchain/docs-as-co.de" # GitHub username/repo-name
 teaser                   : /images/hhgdac-splash.jpg # path of fallback teaser image, e.g. "/images/500x300.png"
