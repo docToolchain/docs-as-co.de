@@ -1,6 +1,6 @@
 = Ready, Set, Go!
 :page-layout: single
-:page-permalink: /tutorials
+:page-permalink: /getstarted/tutorials
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 

@@ -18,6 +18,10 @@ https://doctoolchain.github.io/docToolchain/[docToolchain]::
 Eat-your-own-dogfood example for the user manual of docToolchain, created by Ralf D. Müller. +
 [small]#Gradle, AsciiDoc, Enterprise Architect (UML)#
 
+https://docs.microsoft.com/en-us/teamblog/a-new-feedback-system-is-coming-to-docs[Microsoft Docs]::
+Great example for going even further: take a look at the list of contributors and the feedback-collector!
+
+
 https://www.keycloak.org/docs/latest/server_installation/index.html[Red Hat - Keycloak Docs]::
 [small]#AsciiDoc#
 

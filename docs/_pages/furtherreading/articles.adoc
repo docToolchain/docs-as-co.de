@@ -16,6 +16,10 @@ sidebar:
 
 # Articles
 
+* https://blog.jdriven.com/2018/10/lightweight-architecture-decision-records/[Lightweight Architecture Decision Records]
+* https://twitter.com/dataandme/status/1047471853021876224/photo/1[What nobody tells you about documentation]
+
+
 ## Hitchhiker’s Guide to Docs as Code
 
 A series of articles in a German Java Magazin, written by Dr. Gernot Starke and Ralf Müller:
@@ -32,3 +36,7 @@ A series of articles in a German Java Magazin, written by Dr. Gernot Starke and 
 . https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[PDF-Output] => https://github.com/arc42/HHGDAC/tree/master/folge-10[code]
 . https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[Websites mit AsciiDoctor & Jekyll] => https://github.com/arc42/HHGDAC/tree/master/folge-11-jekyll[code]
 
+## Writing Style Guides
+
+* https://docs.microsoft.com/en-us/style-guide/welcome/[Microsoft Writing Style Guide]
+* https://developers.google.com/style/[Google Developer Documentation Style Guide]
