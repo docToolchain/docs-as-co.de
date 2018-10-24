@@ -1,0 +1,266 @@
+:imagesdir: images
+
+= Tutorial: add docToolchain as submodule
+
+// numbering from here on
+:numbered:
+
+This short tutorial will show you how to add docToolchain as git submodule.
+
+== Motivation
+
+Git submodules are references to a certain commit of another git repository.
+This makes submodules perferct to include repositories -- on which your own project depends -- into your project without copying them.
+Since a submodule is a pointer to a certain commit, it is also easy to update this pointer when a newer version is available.
+
+== What you'll build
+
+In this tutorial, you will create a simple gradle project with a single `.adoc` file.
+To this project, you'll add docToolchain to generate an HTML file and a PDF.
+
+== What you'll need
+
+* 20(?) minutes
+* a windows or *nix based machine
+* a text editor or IDE
+* jdk 1.8 installed
+* git installed
+* gradle installed
+
+the commands needed to go through this tutorial will be bash based.
+So if you are on a windows environment, please make sure that you start a bash
+or translate the commands for yourself - I am sure this will be a no-brainer.
+
+== Create a simple project to start with
+
+create a new folder and switch to it
+
+    mkdir tutorial1
+    cd tutorial
+
+init git (it's a new project!) and create a simple folder structure for your documents
+
+    git init
+    mkdir src
+    mkdir src/docs
+
+create a simple `.adoc` file.
+To make it simple, just fetch one from the net via curl
+
+    curl -o src/docs/test.adoc https://gist.githubusercontent.com/mojavelinux/4402636/raw/b8b02adc3c0ddb92df505ba3eb8e625952615b7a/test.asciidoc.txt
+
+and since this great test document includes another document, let's fetch this also
+
+    curl -o src/docs/include.asciidoc.txt https://gist.githubusercontent.com/mojavelinux/4402636/raw/b8b02adc3c0ddb92df505ba3eb8e625952615b7a/include.asciidoc.txt
+
+The main file `./src/docs/test.adoc` contains a reference to a stylesheet which is not available, so please open it in your favourite editor (vi?) and remove the reference (`:stylesheet: asciidoc.css` in line 17)
+
+    vi src/docs/test.adoc
+
+Since we like Gradle projects, let's initialize the toplevel project (`tutorial1`) as gradle project.
+This will make docToolchain a subproject.
+
+    gradle init
+
+and
+
+    gradle wrapper
+
+for convenience.
+That's it!
+
+.use the wrapper, luke!
+****
+
+Don't have gradle installed?
+
+Just first add docToolchain as submodule (next step) and then do
+
+    cd docToolchain
+    ./gradlew -p .. init
+
+ This will use the gradle wrapper contained in docToolchain to initialize your main project.
+
+Alternativly use https://sdkman.io[sdkman]
+****
+
+For a real project, you now would add some source code and more build instructions.
+To render the document with docToolchain, we only need the document itself.
+
+== add docToolchain as submodule
+
+In order to add docToolchain as submodule, you just have to execute the following command
+
+    git submodule add https://github.com/docToolchain/docToolchain.git
+
+TIP: use https and not the ssh to clone the submodule. This enables anonymous clones.
+
+To checkout the first release version of docToolchain, switch to the submodule and checkout the tag `V1.0.0`
+
+    cd docToolchain
+    git checkout tags/V1.0.0
+    cd ..
+
+add docToolchain as sub-project to your main project by adding an include to the `settings.gradle` file
+
+    echo "include 'docToolchain'" > settings.gradle
+
+If you now list all tasks of your project, gradle will pic up the docToolchain build file from the subproject,
+download all dependencies and output the list of available tasks and fail with an exception:
+
+    ./gradlew tasks
+
+    FAILURE: Build failed with an exception.
+    * Where:
+    Script '/home/docToolchain/tutorial1/docToolchain/scripts/AsciiDocBasics.gradle' line: 25
+    * What went wrong:
+    A problem occurred evaluating script.
+    > ./Config.groovy (No such file or directory)
+
+That's correct -- docToolchain needs a configuration file!
+
+Let's create an empty one and see how this works:
+
+[source, bash, role="primary"]
+----
+    touch Config.groovy
+    ./gradlew tasks
+----
+
+et voilá, you get a list of all available tasks:
+
+[source]
+----
+> Task :tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles test classes.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Check tasks
+-----------
+htmlSanityCheck - performs semantic checks on html files
+
+DocToolchain tasks
+------------------
+convertToDocx
+convertToEpub
+exportChangeLog - exports the change log from a git subpath
+exportEA - exports all diagrams and some texts from EA files
+exportExcel - exports all excelsheets to csv and AsciiDoc
+exportJiraIssues - exports all jira issues from a given search
+exportMarkdown - exports all markdown files to AsciiDoc
+exportPPT - exports all slides and some texts from PPT files
+exportVisio - exports all diagrams and notes from visio files
+generateDeck - use revealJs as asciidoc backend to create a presentation
+generateDocbook - use docbook as asciidoc backend
+generateHTML - use html5 as asciidoc backend
+generatePDF - use pdf as asciidoc backend
+publishToConfluence - publishes the HTML rendered output to confluence
+
+Documentation tasks
+-------------------
+asciidoctor - Converts AsciiDoc files and copies the output files and related resources to the build directory.
+groovydoc - Generates Groovydoc API documentation for the main source code.
+javadoc - Generates Javadoc API documentation for the main source code.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'tutorial1'.
+components - Displays the components produced by root project 'tutorial1'. [incubating]
+dependencies - Displays all dependencies declared in root project 'tutorial1'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'tutorial1'.
+dependencyUpdates - Displays the dependency updates for the project.
+dependentComponents - Displays the dependent components of components in root project 'tutorial1'. [incubating]
+help - Displays a help message.
+model - Displays the configuration model of root project 'tutorial1'. [incubating]
+projects - Displays the sub-projects of root project 'tutorial1'.
+properties - Displays the properties of root project 'tutorial1'.
+tasks - Displays the tasks runnable from root project 'tutorial1' (some of the displayed tasks may belong to subprojects).
+
+Verification tasks
+------------------
+check - Runs all checks.
+test - Runs the unit tests.
+
+To see all tasks and more detail, run gradle tasks --all
+
+To see more detail about a task, run gradle help --task <task>
+
+BUILD SUCCESSFUL in 40s
+1 actionable task: 1 executed
+~/tutorial1$
+
+----
+
+As you can see, you now have already a lot of documentation tasks at hand.
+
+== setting up the configuration
+
+create a simple `Config.groovy` file to start with:
+
+[source, groovy]
+----
+outputPath = 'build/docs'
+
+// Path where the docToolchain will search for the input files.
+// This path is appended to the docDir property specified in gradle.properties
+// or in the command line, and therefore must be relative to it.
+inputPath = 'src/docs'
+
+inputFiles = [
+              [file: 'test.adoc',            formats: ['html','pdf']],
+             ]
+
+taskInputsDirs = ["${inputPath}/images"]
+
+taskInputsFiles = []
+
+----
+
+And since we want to use our main project to be the source of the documentation, we have to tell docToolchain where it can find it. Since we don't want to touch the original docToolchain sources, we override the config via the `build.gradle` file.
+Just add the following line to your `build.gradle`.
+Since we have an empty main project in this tutorial, you can even overwrite the whole `build.gradle` with the following line:
+
+(it instructs docToolchain to use the main project as starting point for all other configurations (like the one we just defined in `Config.groovy`))
+
+.build.gradle
+[source, groovy, role="primary"]
+----
+//configure docToolchain to use the main project's config
+project('docToolchain') {                   // <1>
+    if (project.hasProperty('docDir')) {    // <2>
+        docDir = '../.'                     // <4>
+        mainConfigFile = 'Config.groovy'    // <5>
+    } else {
+        println "="*80                      // <3>
+        println "  please initialize the docToolchain submodule by executing"
+        println "  git submodule update -i"
+        println "="*80
+    }
+}
+----
+
+<1> changes the scope to docToolchain as subproject
+<2> checks if the subproject has been initialized
+<3> outputs a hint if subproject has not been initialized
+<4> moves the base fodler for docToolchain to the main project folder
+<5> this enables you to point docToolchain to your own config file
+
+
