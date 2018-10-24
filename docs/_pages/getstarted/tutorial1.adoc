@@ -1,3 +1,9 @@
+= Tutorial
+:page-layout: single
+:page-permalink: /getstarted/tutorial1
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: getstarted}
+
 :imagesdir: images
 
 = Tutorial: add docToolchain as submodule
