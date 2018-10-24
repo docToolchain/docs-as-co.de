@@ -127,6 +127,7 @@ That's correct -- docToolchain needs a configuration file!
 
 Let's create an empty one and see how this works:
 
+.bash
 [source, bash, role="primary"]
 ----
     touch Config.groovy
@@ -135,7 +136,8 @@ Let's create an empty one and see how this works:
 
 et voilá, you get a list of all available tasks:
 
-[source]
+.bash
+[source, bash, role="primary"]
 ----
 > Task :tasks
 
@@ -145,23 +147,8 @@ All tasks runnable from root project
 
 Build tasks
 -----------
-assemble - Assembles the outputs of this project.
-build - Assembles and tests this project.
-buildDependents - Assembles and tests this project and all projects that depend on it.
-buildNeeded - Assembles and tests this project and all projects it depends on.
-classes - Assembles main classes.
-clean - Deletes the build directory.
-jar - Assembles a jar archive containing the main classes.
-testClasses - Assembles test classes.
 
-Build Setup tasks
------------------
-init - Initializes a new Gradle build.
-wrapper - Generates Gradle wrapper files.
-
-Check tasks
------------
-htmlSanityCheck - performs semantic checks on html files
+...
 
 DocToolchain tasks
 ------------------
@@ -186,24 +173,7 @@ asciidoctor - Converts AsciiDoc files and copies the output files and related re
 groovydoc - Generates Groovydoc API documentation for the main source code.
 javadoc - Generates Javadoc API documentation for the main source code.
 
-Help tasks
-----------
-buildEnvironment - Displays all buildscript dependencies declared in root project 'tutorial1'.
-components - Displays the components produced by root project 'tutorial1'. [incubating]
-dependencies - Displays all dependencies declared in root project 'tutorial1'.
-dependencyInsight - Displays the insight into a specific dependency in root project 'tutorial1'.
-dependencyUpdates - Displays the dependency updates for the project.
-dependentComponents - Displays the dependent components of components in root project 'tutorial1'. [incubating]
-help - Displays a help message.
-model - Displays the configuration model of root project 'tutorial1'. [incubating]
-projects - Displays the sub-projects of root project 'tutorial1'.
-properties - Displays the properties of root project 'tutorial1'.
-tasks - Displays the tasks runnable from root project 'tutorial1' (some of the displayed tasks may belong to subprojects).
-
-Verification tasks
-------------------
-check - Runs all checks.
-test - Runs the unit tests.
+...
 
 To see all tasks and more detail, run gradle tasks --all
 
@@ -221,7 +191,8 @@ As you can see, you now have already a lot of documentation tasks at hand.
 
 create a simple `Config.groovy` file to start with:
 
-[source, groovy]
+.Config.groovy
+[source, groovy, role="primary"]
 ----
 outputPath = 'build/docs'
 
@@ -250,14 +221,14 @@ Since we have an empty main project in this tutorial, you can even overwrite the
 [source, groovy, role="primary"]
 ----
 //configure docToolchain to use the main project's config
-project('docToolchain') {                   // <1>
-    if (project.hasProperty('docDir')) {    // <2>
-        docDir = '../.'                     // <4>
-        mainConfigFile = 'Config.groovy'    // <5>
+project('docToolchain') {                                   // <1>
+    if (project.hasProperty('docDir')) {                    // <2>
+        docDir = '../.'                                     // <4>
+        mainConfigFile = 'Config.groovy'                    // <5>
     } else {
-        println "="*80                      // <3>
-        println "  please initialize the docToolchain submodule by executing"
-        println "  git submodule update -i"
+        println "="*80                                      // <3>
+        println "  please initialize the docToolchain submodule"
+        println "  by executing git submodule update -i"
         println "="*80
     }
 }
