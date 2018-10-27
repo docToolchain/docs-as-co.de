@@ -13,31 +13,36 @@
     {% include head.html %}
     {% include head/custom.html %}
     <style>
-    #toc.toc {
-        position: fixed;
-        left: 0px;
-        width: 20em;
-        font-size: small;
-        overflow: auto;
-        z-index: 1000;
-        padding: 0.5em;
-        border: 0;
-        padding-top: -20px;
-    }
-    div.masthead {
-        width: 100%;
-        position: fixed;
-        z-index: 1500;
-        background-color: white;
-    }
-    div.initial-content {
-    }
-    div#main-content {
-        font-size: small;
-        padding-left: 22em;
-        padding-right: 2em;
-        padding-top: 80px;
-    }
+        @media only screen and (min-width:768px) {
+            #toc.toc {
+                position: fixed;
+                left: 0px;
+                width: 20em;
+                font-size: small;
+                overflow: auto;
+                z-index: 1000;
+                padding: 0.5em;
+                border: 0;
+                padding-top: -20px;
+            }
+
+            div.masthead {
+                width: 100%;
+                position: fixed;
+                z-index: 1500;
+                background-color: white;
+            }
+
+            div.initial-content {
+            }
+
+            div#main-content {
+                font-size: small;
+                padding-left: 22em;
+                padding-right: 2em;
+                padding-top: 80px;
+            }
+        }
     .masthead__inner-wrap {
         padding: 5px;
     }
