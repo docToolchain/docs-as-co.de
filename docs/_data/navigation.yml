@@ -37,7 +37,7 @@ getstarted:
   - title: Get Started
     children:
         - title: "Full Example"
-          url: /getstarted/fullblownexample
+          url: /getstarted/tutorial2
         - title: "Tutorials"
           url: /getstarted/tutorials
         - title: "Blogs"
