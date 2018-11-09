@@ -16,7 +16,7 @@ This short tutorial will show you how to add docToolchain as git submodule.
 == Motivation
 
 Git submodules are references to a certain commit of another git repository.
-This makes submodules perferct to include repositories -- on which your own project depends -- into your project without copying them.
+This makes submodules perfect to include repositories -- on which your own project depends -- into your project without copying them.
 Since a submodule is a pointer to a certain commit, it is also easy to update this pointer when a newer version is available.
 
 == What you'll build
@@ -42,7 +42,7 @@ or translate the commands for yourself - I am sure this will be a no-brainer.
 create a new folder and switch to it
 
     mkdir tutorial1
-    cd tutorial
+    cd tutorial1
 
 init git (it's a new project!) and create a simple folder structure for your documents
 
@@ -87,7 +87,7 @@ Just first add docToolchain as submodule (next step) and then do
 
  This will use the gradle wrapper contained in docToolchain to initialize your main project.
 
-Alternativly use https://sdkman.io[sdkman]
+Alternatively use https://sdkman.io[sdkman]
 ****
 
 For a real project, you now would add some source code and more build instructions.
@@ -109,9 +109,9 @@ To checkout the first release version of docToolchain, switch to the submodule a
 
 add docToolchain as sub-project to your main project by adding an include to the `settings.gradle` file
 
-    echo "include 'docToolchain'" > settings.gradle
+    echo "include 'docToolchain'" >> settings.gradle
 
-If you now list all tasks of your project, gradle will pic up the docToolchain build file from the subproject,
+If you now list all tasks of your project, gradle will pick up the docToolchain build file from the subproject,
 download all dependencies and output the list of available tasks and fail with an exception:
 
     ./gradlew tasks
@@ -212,8 +212,8 @@ taskInputsFiles = []
 ----
 
 And since we want to use our main project to be the source of the documentation, we have to tell docToolchain where it can find it. Since we don't want to touch the original docToolchain sources, we override the config via the `build.gradle` file.
-Just add the following line to your `build.gradle`.
-Since we have an empty main project in this tutorial, you can even overwrite the whole `build.gradle` with the following line:
+Just add the following lines to your `build.gradle`.
+Since we have an empty main project in this tutorial, you can even overwrite the whole `build.gradle` with the following lines:
 
 (it instructs docToolchain to use the main project as starting point for all other configurations (like the one we just defined in `Config.groovy`))
 
@@ -237,7 +237,7 @@ project('docToolchain') {                                   // <1>
 <1> changes the scope to docToolchain as subproject
 <2> checks if the subproject has been initialized
 <3> outputs a hint if subproject has not been initialized
-<4> moves the base fodler for docToolchain to the main project folder
+<4> moves the base folder for docToolchain to the main project folder
 <5> this enables you to point docToolchain to your own config file
 
 
