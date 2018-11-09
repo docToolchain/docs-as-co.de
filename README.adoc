@@ -1,7 +1,7 @@
 = Docs-as-Code
 
-This repository hosts the source for the https://docs-as-co.de website. 
-It is based on 
+This repository hosts the source for the https://docs-as-co.de website.
+It is based on
 
 * Jekyl as static site generator
 * AsciiDoc as markup language
@@ -9,3 +9,4 @@ It is based on
 
 Since github does not support AsciiDoc for github pages, the website is hosted at https://netlify.com .
 
+Start in https://gitpod.io#https://github.com/docToolchain/docs-as-co.de[gitpod.io]
