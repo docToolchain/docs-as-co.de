@@ -24,6 +24,8 @@ sidebar:
 <script async class="speakerdeck-embed" data-id="3514c2f722c64e97958e060f114498c0" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 ++++
 
+video::HRa3bbaUpSc[youtube]
+
 video::GkXpe-tZtNg[youtube]
 
 video::EnB8GtPuauw[youtube]
