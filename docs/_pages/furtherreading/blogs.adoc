@@ -1,5 +1,5 @@
 ---
-title: "Furhter Reading - Blogs"
+title: "Further Reading - Blogs"
 layout: single
 permalink: /furtherreading/blogs
 header:
