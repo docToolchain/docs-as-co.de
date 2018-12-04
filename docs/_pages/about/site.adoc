@@ -11,7 +11,7 @@
 
 This site is build with
 https://en.wikipedia.org/wiki/Eating_your_own_dog_food[eat-your-own-dogfood]
-philophy in mind: We write and maintain
+philosophy in mind: We write and maintain
 all content in AsciiDoc, hosted on Github and automatically deployed on update of the master branch.
 
 The site itself is built using the static site generator Jekyll with support

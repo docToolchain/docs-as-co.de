@@ -152,9 +152,10 @@ Build tasks
 
 DocToolchain tasks
 ------------------
-convertToDocx
-convertToEpub
+convertToDocx - converts file to .docx via pandoc. Needs pandoc installed.
+convertToEpub - converts file to .epub via pandoc. Needs pandoc installed.
 exportChangeLog - exports the change log from a git subpath
+exportContributors - exports all contributors for all asciidoc files
 exportEA - exports all diagrams and some texts from EA files
 exportExcel - exports all excelsheets to csv and AsciiDoc
 exportJiraIssues - exports all jira issues from a given search
@@ -239,5 +240,3 @@ project('docToolchain') {                                   // <1>
 <3> outputs a hint if subproject has not been initialized
 <4> moves the base folder for docToolchain to the main project folder
 <5> this enables you to point docToolchain to your own config file
-
-
