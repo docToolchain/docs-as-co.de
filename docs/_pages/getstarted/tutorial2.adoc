@@ -3,7 +3,7 @@
 :page-permalink: /getstarted/tutorial2
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :toc: right
-
+:incons: font
 :imagesdir: images
 
 = Tutorial: add docToolchain as submodule
