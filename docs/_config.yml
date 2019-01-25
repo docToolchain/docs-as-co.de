@@ -202,7 +202,6 @@ compress_html:
     envs: development
 
 
-# Defaults
 defaults:
   # _posts
   - scope:
@@ -212,6 +211,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
