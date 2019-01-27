@@ -8,6 +8,8 @@ main:
     url: /examples
   - title: "Further Reading"
     url: /furtherreading
+  - title: "News"
+    url: /news
   - title: "About"
     url: /about
 
