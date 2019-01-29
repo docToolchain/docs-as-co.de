@@ -132,9 +132,10 @@ asciidoc:
 asciidoctor:
   safe: unsafe
   attributes:
-  - idseparator=_
-  - source-highlighter=coderay
-#  - pygments-css=class
+    - imagesdir=/images
+    - imagesoutdir=images
+    - idseparator=_
+    - source-highlighter=coderay
 
 
 # Sass/SCSS
