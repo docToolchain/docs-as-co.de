@@ -2,7 +2,7 @@
 :page-layout: single
 :page-author: ralf
 :page-liquid: true
-:page-permalink: /news/OOP2019/
+:page-permalink: /news/maven-asciidoc-build/
 :page-tags: [asciidoc, doc, maven]
 :imagesdir: /images
 

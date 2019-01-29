@@ -2,9 +2,8 @@
 :page-layout: single
 :page-author: ralf
 :page-liquid: true
-:page-permalink: /news/OOP2019/
+:page-permalink: /news/gradle-asciidoc-build/
 :page-tags: [asciidoc, doc, gradle]
-:imagesdir: /images
 
 
 So I told you to use AsciiDoc to write technical documents because of all the great features.
