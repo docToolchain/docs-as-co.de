@@ -1,2 +1,6 @@
 /assets/js/lunr/*
   cache-control: public, max-age=3600
+/assets/css/*
+  cache-control: public, max-age=3600
+/css/*
+  cache-control: public, max-age=3600
