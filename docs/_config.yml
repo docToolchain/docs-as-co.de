@@ -69,7 +69,9 @@ author:
 include:
   - .htaccess
   - _pages
+  - _headers
 exclude:
+  - gradle
   - vendor
   - .asset-cache
   - .bundle
