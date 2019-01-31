@@ -12,10 +12,15 @@ Someone is willing to pay for a plantUML diagram.
 That's something I haven't seen before, so I checked what it was all about:
 the following diagram needed to be implemented as plantUML…
 
+image::oldblog/ActionFPS-architecture.png[]
+
 The money caught my attention, but what made me to do the work was the following.
 When I advise about plantUML, I always tell people that - because you don't have control over the layout - is great for sequence diagrams but hard to use for complex diagrams of other types.
 
 Now, here it was - a complex architecture diagram and the chance to give it a try for the value of three beers! 🍺🍺🍺
+
+image::oldblog/ActionFPS.png[]
+image::oldblog/ActionFPS2.png[]
 
 Here is what I've learned from this:
 

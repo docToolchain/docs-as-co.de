@@ -1,6 +1,6 @@
 ralf:
   name        : "Ralf D. Müller"
-  bio         : "Groovy enthusiast"
+  bio         : "Groovy enthusiast, arc42 contributor, docToolchain maintainer"
   avatar      : "/images/Ralf-Mueller.jpg"
   links:
     - label: "Email"
@@ -9,6 +9,9 @@ ralf:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/ralfdmueller"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/rdmueller"
 
 gernot:
   name        : "Dr. Gernot Starke"
