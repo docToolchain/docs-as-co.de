@@ -1,5 +1,7 @@
 = Docs-as-Code
 
+image::https://app.netlify.com/sites/docs-as-code/deploys[Netlify Status]
+
 This repository hosts the source for the https://docs-as-co.de website.
 It is based on
 
