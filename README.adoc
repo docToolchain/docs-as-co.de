@@ -1,5 +1,8 @@
 = Docs-as-Code
 
+image::https://api.netlify.com/api/v1/badges/a19a2bf7-7316-4bff-9a85-045c1d54b7b1/deploy-status[Netlify Status,link="https://app.netlify.com/sites/docs-as-code/deploys"]
+
+
 This repository hosts the source for the https://docs-as-co.de website.
 It is based on
 

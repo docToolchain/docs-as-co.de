@@ -11,7 +11,7 @@ RED=`tput setaf 5`
 BLUE=`tput setaf 6`
 RESET=`tput sgr0`
 
-clear
+#clear
 
 echo
 echo "Docker container to develop or build the ${BLUE}$site ${RESET}website:"

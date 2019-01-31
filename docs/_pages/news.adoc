@@ -1,12 +1,7 @@
 = News test2
-:page-layout: single
+:page-layout: posts
 :page-title: News & Blog
 :page-permalink: /news/
 :page-liquid: true
 
 
-{% for post in site.posts %}
-
-*  {{post.date | date: "%d. %b, %Y"}} : link:{{ site.baseurl }}{{ post.url }}[{{ post.title }}]
-
-{% endfor %}

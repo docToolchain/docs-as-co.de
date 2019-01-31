@@ -31,7 +31,7 @@ task info () {
              gradle ${color 'green', 'logs'} to show jekyll logs
              
             ================================================================"""
-         .stripIndent()
+                .stripIndent()
     }
 }
 task develop (type: Exec) {
@@ -54,8 +54,8 @@ task production (dependsOn: ['develop','remove']) {
 task upload (type: Exec) {
     executable = "docker"
     args = ["run", "-it", "gernotstarke/ftp-uploader:0.2",
-                   "-v", "${localdir}:/${localdir}",
-                   site, server, localdir]
+            "-v", "${localdir}:/${localdir}",
+            site, server, localdir]
 }
 task open () {
     doLast {

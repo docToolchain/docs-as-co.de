@@ -1,0 +1,15 @@
+= Handle Dependency Updates the easy Way
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/dependency-update/
+:page-tags: [gradle]
+
+Every developer knows this problem - you work on a project and over time new versions of the configured dependencies are released.
+Sometimes it is even not that there is a new version, but it is the stable release you've been waiting for so long!
+
+But instead doing a manual check from time to time, there is a better approach for your gradle project: the https://github.com/ben-manes/gradle-versions-plugin[gradle-versions-plugin] by https://twitter.com/benmanes[Ben Manes].
+
+Just install it and get a report for your dependencies by executing the `dependencyUpdates` task.
+
+This will now help me to keep the dependencies for docToolchain up to date!
