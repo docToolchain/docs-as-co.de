@@ -1,0 +1,18 @@
+= More about AsciiDoc
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/awesome-asciidoc/
+:page-tags: [doc, asciidoc]
+
+With the second blog post of this series, I already mentioned that I https://rdmueller.github.io/why_asciidoc/[love AsciiDoc] to create technical documentation, but I didn't say too much about how to use AsciiDoc.
+
+There is a simple reason for this - other great minds have already created enough content on how to use AsciiDoc. As always, the best resource to start your journey with AsciiDoc might be the homepage, but since I always use Asciidoctor, the Ruby port of the original AsciiDoc, you should start with the homepage of http://asciidoctor.org/[Asciidoctor].
+
+If you only want to scroll through all those features which make AsciiDoc so great, just head over to http://mrhaki.blogspot.de/search/label/Awesome%3AAsciidoctor[MrHaki's Blog: Awesome:Asciidoctor]. It contains all the cool tricks! As bonus, the compiled blog posts are also available as https://leanpub.com/awesomeasciidoctornotebook/[eBook on Leanpub] - you can read it for free or use this chance to buy https://twitter.com/mrhaki[mrhaki] a beer.
+
+You might also wonder what the best way to edit AsciiDoc is. For nearly every decent editor there is an AsciiDoc plugin. So the best way would be to look if a plugin is available for your favourite editor. I personally like the https://github.com/asciidoctor/asciidoctor-intellij-plugin/releases[IntelliJ plugin], since it is performant and supports plantUML. I just noticed that a new version has just been released 11 hours ago :-) - so the support for https://rdmueller.github.io/plantuml-without-graphviz/[plantUML without Graphviz] is already contained.
+
+PS: if you wonder why I prefere AsciiDoc over https://daringfireball.net/projects/markdown/[Markdown] (a http://leadtechie.com/[good friend] pointed me towards a https://www.google.com/trends/explore?date=all&q=markdown,asciidoc[google trends comparison]) - compare the features! Markdown comes in different flavours / dialacts which makes it harder to switch between tools. And Asciidoctor comes with a good extensible architecture. But even out of the box, there are important features in AsciiDoc which I miss in Markdown. I can easily http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files[split up my rather long documents] into several easy to maintain ones, I can http://mrhaki.blogspot.de/2014/04/awesome-asciidoc-include-partial-parts.html[include source code] in a very good way and can easily render different formats like HTML5, eBook formats, PDF and DOCX.
+
+More on AsciiDoc vs. Markdown can be found in the http://asciidoctor.org/docs/user-manual/#compared-to-markdown[Asciidoctor Manual].

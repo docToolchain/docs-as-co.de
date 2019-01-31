@@ -1,0 +1,49 @@
+= Jira to Sparx EA
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/jira2eac/
+:page-tags: [doc, atlassian, asciidoc, sparx]
+
+Sparx Enterprise Architect really shines when you use it to model your architecture by creating connections between elements. If you model your requirements, too, EA let's you trace your design from the requirement up to the class.
+
+Problem is, when you work in an agile project, it is likely that your requirements are kept in an issue tracker like Jira in form of User Stories. So traceability is gone. :-(
+
+A solution could be to create a connection between Jira and EA. Sparx provides an https://marketplace.atlassian.com/plugins/atlassian.confluence.plugins.eaconnector/cloud/overview[EA Connector for Jira], but since I am a techie, my "not invented here"-syndrome kicks in...
+
+DocToolchain already contains a task which fetches certain jira issues (https://rdmueller.github.io/Jira/[Living Documents for Agile Projects]) and a task which exports useful information from EA (https://rdmueller.github.io/sparx-ea/[Did you ever wish you had better Diagrams?]). Let's update these tasks the following way:
+
+1. the EA script currently searches for a {adoc:<filename>} - tag in comments. Let's add a {jira:<search>} tag for diagrams
+2. whenever such a tag is found, start a groovy script which exports the jira issues defined by <search> to a file
+3. the EA script now has to pick up the file and create requirements-elements as diagram sub-elements and sync them with already existing ones
+
+This would allow you to create a traceability between your architecture and the User Stories stored in Jira.
+
+Step 1 is easy - the task already does it for the {adoc:} - tag. I just added some code which looks for a tag like `{jira:<jql>}` at the start of diagram notes.
+
+Step 2 is a bit harder. Since there is already groovy code to connect to jira, I decided to integrate groovy into the Visual Basic Script. Not an easy task if you know nearly nothing about VBS, but [Microsoft Technet to the rescue](https://technet.microsoft.com/en-us/library/ee156605.aspx)! The following code executes a groovy script vrom within VBS and returns the output:
+
+```visualbasic
+Set objShell = CreateObject("WScript.Shell")
+objShell.CurrentDirectory = fso.GetFolder("./scripts")
+Set objExecObject = objShell.Exec ("cmd /K  groovy exportJira.groovy """ & strSearch &""" & exit")
+strReturn = ""
+Do While Not objExecObject.StdOut.AtEndOfStream
+    strReturn = strReturn & vbCR & objExecObject.StdOut.ReadLine()
+Loop
+Set objShell = Nothing
+```
+
+The `exportJira.groovy` script takes the `<jql>` string from the tag found in the diagram node and starts a jira search with it. All found elements are handed over to the `.vbs` script to be processed in step 3:
+
+Step 3 should again be very straight forward - since the VBS script gets each single line outputted by the groovy script, elements can easily be synced one by one. But I'll do it only one way.
+
+The code to create a new element can be found in the book https://leanpub.com/ScriptingEA[Scripting Enterprise Architect] by Thomas Kilian.
+
+As a result, you can now add a tag like `{jira:project=DT}` and docToolchain will automatically fetch all jira issues in the project with the key `DT`, and create a requirement element for each jira issue within the given diagram. This enables you to connect these jira issues to other elements in your architecture model and thus create a traceability within your model up to jira issues or user stories.
+
+The script is not perfect yet, but with some tricks it is already useful. Issues with an already existing name will only be updated with the current details.
+
+Whenever the script created new issues, it makes sense to mark them with a different color as soon as you have connected them to your model. This will let you easily scan for new issues (= standard color) after the next sync.
+
+As always, the updated code is already on github.
