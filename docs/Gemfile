@@ -10,9 +10,9 @@ gem "github-pages", group: :jekyll_plugins
 gem 'pygments.rb', '~> 1.1.2'
 gem "minimal-mistakes-jekyll"
 gem "coderay"
+gem 'jekyll-plantuml'
 
 group :jekyll_plugins do
   gem 'jekyll-asciidoc'
-#  TODO: get asciidoctor-diagram to work in container
-# gem 'asciidoctor-diagram', '~> 1.4.0'
+  gem 'asciidoctor-diagram'
 end
