@@ -1,0 +1,38 @@
+= Colorful Gradle
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/colorful-gradle/
+:page-tags: [gradle]
+
+
+Did you ever whished to change the color of your gradle log output? Maybe to highlight something?
+
+AFAIK, Gradle has no support for colors out of the box, but you can solve this easily - even without an additional library.
+
+The key to success are https://en.wikipedia.org/wiki/ANSI_escape_code[ANSI escape sequences] (which are supported by most terminals) and a little trick.
+
+The excape squences are initiated with the ESC-character 27.
+To print this character from within Java or Groovy, you need to cast it a little bit like this `new String((char) 27)`.
+And that's already all of the magic, because the rest of the escape sequences are standard ASCII characters.
+
+So, `print new String((char) 27) + &quot;[33m&quot;` turns the rest of your text yellow and `print new String((char) 27) + &quot;[0m&quot;` returns to the default color of the console.
+
+Now, let's turn this knowledge into a small closure
+
+```groovy
+def color = { color, text -&gt;
+ def colors = [black: 30, red: 31, green: 32, yellow: 33, blue: 34, magenta: 35, cyan: 36, white: 37]
+ return new String((char) 27) + "[${colors[color]}m${text}" + new String((char) 27) + "[0m"
+}
+```
+
+With this closure, you can now spice up your text with color like this:
+
+```groovy
+println "this is ${color 'green', 'some'} ${color 'red', 'colorful'} ${color 'white', 'text'}"
+```
+
+The result looks something like this:
+
+image::oldblog/console.png[]
