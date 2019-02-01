@@ -69,7 +69,7 @@ var store = [
     "title": {{ doc.title | jsonify }},
     "excerpt":
     {%- if site.search_full_content == true -%}
-    {{ doc.content | asciidocify | newline_to_br |
+    {{ doc.content | newline_to_br |
     replace:"<br />", " " |
     replace:"</p>", " " |
     replace:"</h1>", " " |
@@ -80,7 +80,7 @@ var store = [
     replace:"</h6>", " "|
     strip_html | strip_newlines | jsonify }},
     {%- else -%}
-    {{ doc.content | asciidocify | newline_to_br |
+    {{ doc.content | newline_to_br |
     replace:"<br />", " " |
     replace:"</p>", " " |
     replace:"</h1>", " " |
