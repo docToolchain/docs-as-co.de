@@ -27,7 +27,7 @@ gernot:
 
 anoff:
   name        : "Andreas Offenhaeuser"
-  bio         : "Software engineer, nodeJS & cloud fan"
+  bio         : "Software engineer, Node.js, Cloud, Tinkerer"
   avatar      : "/images/anoff.jpg"
   links:
     - label: "Website"

@@ -1,6 +1,6 @@
 = PlantUML dev workflow and GitHub/GitLab integration
 :page-layout: single
-:page-author: andreas
+:page-author: anoff
 :page-liquid: true
 :page-permalink: /news/plantuml-markdown-code-gitlab-github-integration/
 :page-tags: [plantuml, markdown]
