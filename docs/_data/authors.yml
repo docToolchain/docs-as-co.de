@@ -24,3 +24,18 @@ gernot:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/GernotStarke"
+
+anoff:
+  name        : "Andreas Offenhaeuser"
+  bio         : "Software engineer, nodeJS & cloud fan"
+  avatar      : "/images/anoff.jpg"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.anoff.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/an0xff"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/anoff"
