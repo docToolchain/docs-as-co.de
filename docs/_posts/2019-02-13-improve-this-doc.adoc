@@ -39,5 +39,5 @@ To make it even cleaner, put the image reference from above in a file called `_f
 
 The result will look like the black/orange buttons which can be found in the docToolchain manual:
 
-image::improveThisDoc2.png[]
+image::ImproveThisDoc2.png[]
 
