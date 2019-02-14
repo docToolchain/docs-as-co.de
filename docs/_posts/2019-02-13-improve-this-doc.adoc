@@ -1,0 +1,43 @@
+= Improve this Doc!
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/improve-this-doc/
+:page-tags: [docs]
+
+The http://docs.grails.org/3.3.8/guide/single.html#transactionsRollbackAndTheSession[Grails documentation] was the first time I saw this feature and I immediatly noticed that it is a great idea.
+A simple button in the upper right corner which reads "Improve this Doc" and links you to the github source of the displayed page.
+
+image::improveThisDoc.png[]
+
+When you follow the Docs-as-Code approach, this is a great way to get in contact with your readers.
+Unlike the edit button of a wiki, this button will let you automatically fork the docs when you edit them and yu will create a PR instead of directly overwriten the master version.
+
+For me, that is a more polite way to propose a change than it is with most wiki systems.
+
+But how can you achive this with Asciidoctor?
+
+Because Asciidoctor first processes the `include` directives to create a single file before rendering it, there is no standard way to get the filename of an included module during rendering time.
+
+The workaround is to prepend every file with the needed filename:
+
+    :filename: arc42/chap-02-Constraints.adoc
+
+If you have already a larger set of files, you can use the https://doctoolchain.github.io/docToolchain/#_prependfilename[`prependFilename`-Task] of docToolchain.
+
+With this attribute in your files, you can create an "Improve this Doc!" button like this:
+
+    image::https://img.shields.io/badge/improve-this%20doc-orange.svg[link={project-repository-docs-link}{filename}, float=right]
+
+Where you set the `project-repository-docs-link` in your `config.adoc` file:
+
+    :project-repository-docs-link: https://github.com/<yourOrg>/<yourProject>/master/src/docs/
+
+To make it even cleaner, put the image reference from above in a file called `_feedback.adoc` and reference it from all of your files as
+
+    include::_feedback.adoc[]
+
+The result will look like the black/orange buttons which can be found in the docToolchain manual:
+
+image::ImproveThisDoc2.png[]
+
