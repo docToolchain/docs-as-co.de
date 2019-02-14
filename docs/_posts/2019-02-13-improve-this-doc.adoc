@@ -5,6 +5,9 @@
 :page-permalink: /news/improve-this-doc/
 :page-tags: [doc]
 
+Ein erster Absatz ohne Link ets. Lorem Ipsum.
+
+
 The http://docs.grails.org/3.3.8/guide/single.html#transactionsRollbackAndTheSession[Grails documentation] was the first time I saw this feature and I immediatly noticed that it is a great idea.
 A simple button in the upper right corner which reads "Improve this Doc" and links you to the github source of the displayed page.
 
