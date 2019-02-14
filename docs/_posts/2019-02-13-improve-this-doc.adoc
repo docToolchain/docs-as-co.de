@@ -3,10 +3,11 @@
 :page-author: ralf
 :page-liquid: true
 :page-permalink: /news/improve-this-doc/
-:page-tags: [docs]
+:page-tags: [doc]
 
 The http://docs.grails.org/3.3.8/guide/single.html#transactionsRollbackAndTheSession[Grails documentation] was the first time I saw this feature and I immediatly noticed that it is a great idea.
 A simple button in the upper right corner which reads "Improve this Doc" and links you to the github source of the displayed page.
+
 
 image::improveThisDoc.png[]
 
