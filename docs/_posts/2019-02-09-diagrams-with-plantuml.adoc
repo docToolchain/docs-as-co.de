@@ -6,7 +6,7 @@
 :page-tags: [plantuml, markdown]
 
 This post covers PlantUML basics and how it can be used in GitLab or GitHub projects as well as a seamless local development environment using Visual Studio Code.
-I have been wanting to write this post for months. Lately I have been using PlantUML extensively at work but also in my private projects. You can see it being used in my link:https://github.com/anoff/plantbuddy#main-features[plantbuddy] and link:https://github.com/anoff/techradar#design[techradar] projects on GitHub. Using it in different places and for various purposes I came across a bunch of issues that I want to share in this post.
+I have been wanting to write this post for months. Lately I have been using PlantUML extensively at work but also in my private projects. You can see it being used in my plantbuddy and techradar projects on GitHub. Using it in different places and for various purposes I came across a bunch of issues that I want to share in this post.
 
 NOTE: This is a crosspost of my original article at link:https://blog.anoff.io/2018-07-31-diagrams-with-plantuml/[blog.anoff.io] from late 2018.
 
