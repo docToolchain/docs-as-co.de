@@ -154,8 +154,8 @@ To use the proxy service integration simply use:
 
 There are two fundamental ways of keeping PlantUML diagrams
 
-1. inline into Markdown
-1. keep as individual `.puml` files
+. inline into Markdown
+. keep as individual `.puml` files
 
 Depending on your toolstack one of those should be your preferred option to work with diagrams in your repository. It is highly recommend to keep diagrams as close to the code as possible and not create artificial documentation repositories.
 
