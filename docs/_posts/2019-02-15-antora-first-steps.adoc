@@ -1,0 +1,168 @@
+= Multi repository architecture documentation with Antora and ARC42 - Part 1
+:page-layout: single
+:page-author: anoff
+:page-liquid: true
+:page-permalink: /news/multi-repo-arc42-antora-part1/
+:page-tags: [arc42, asciidoc]
+
+After 2 years of working with the arc42 template in markdown, I spent the last few weeks learning about an asciidoc based site generator named link://antora.org/[Antora]. The main reason for the interest in AsciiDoc was the fact that the limited feature set in markdown often impairs you while writing down complex things. But I had one problem; most of our documentation is scattered across multiple repositories as we try to keep the docs as close to the code as possible. That is why this series will cover how to get a multi repository (software) architecture template up and running using link://antora.org/[Antora].
+
+.This is a screenshot of the final result
+image::website.png[Preview image, link="antora-arc42-1.surge.sh"]
+
+== The starting point
+
+There are a few things that you should at least have heard of before you continue reading:
+
+. link://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc] is a markup language, kind of like Markdown but more powerful. Think of it as a hybrid between the extremely powerful LaTeX and the simple but easy to read Markdown.
+  ** Compared to Markdown it focuses more on providing large documents like books or full blown documentation
+  ** You might also stumble upon link://asciidoctor.org/[Asciidoctor] which is the de-facto standard for converting `asciidoc` files into readable formats like `pdf`, `html`, `epub` etc. whereas AsciiDoc itself is the markup syntax itself
+. link://arc42.org/[arc42] is a software architecture template under MIT license that can be used in almost any scenario because it proves to be highly flexible and inherently agnostic of technology and domains
+. link://antora.org/[Antora] solves the problem of writing `AsciiDoc` distributed over multiple repositories by introducing a component concept and providing a generator that merges the multiple sources automatically
+
+The official link://github.com/arc42/arc42-template/tree/master/EN/asciidoc[arc42 asciidoc template] is structured into the twelve arc42 chapters and one main file `arc42-template.adoc` which includes all the chapters as refernce to combine them into a kind of _book_.
+The main conflict I had with this concept in my projects was that I want my lower level software architecture to be close to the implementation and - in my multi-repository environment - that means a different repository than the overall concepts that arc42 focuses on in the first chapters.
+
+The first step to introduce Antora is to make your `AsciiDoc` files actually comply with the Antora way of structuring documentation.
+
+
+== Changing docs into the Antora structure
+
+NOTE: Because link://gitlab.com/graphitefriction[Sara White] and link://gitlab.com/mojavelinux[Dan Allen] did an amazing job with link://docs.antora.org/[the Antora docs] detailing all the concepts behind Antora I will only mention the essentials here.
+
+There are two types of _abstraction_ that Antora makes for distributed documentation; `Component` and `Module`
+
+image::antora-artifacts.svg[Antora artifacts]
+
+A **component** can have multiple modules that are all located in a fixed directory structure adjacent to each other, there can be only one component within a git repository. Each component must have at least one module, the _ROOT_ module.
+The **playbook** (overall config of the documentation) references one or more git repositories that each contains a component with 1 or more modules.
+
+. Antora expects all documentation to be part of a _component_
+.. any asciidoc file can reference or include files from other components within the same Antora project
+. the playbook can define multiple content sources
+.. each content source needs to point to a root directory of a git repo (local or remote)
+.. you can use `start_path` in a link://docs.antora.org/antora/2.0/playbook/playbook-schema/#content-category[playfile source] to make the docs start relative to the git root
+.. the repo must have at least one commit
+. within this start path link://docs.antora.org/antora/2.0/modules/#module-overview[a component structure] is expected
+.. the link://docs.antora.org/antora/2.0/component-descriptor/#component-descriptor-requirements[antora.yml] file defines the position of a component
+.. there must be a `modules/ROOT` (uppercase) module present
+.. all `.adoc` files must reside in the `modules/XYZ/pages` directory
+. files are only `include::`-able in Antora if they have the `:page-partial:` attribute
+.. see link://gitlab.com/antora/antora/issues/405[antora#405] for Dan's comments
+.. the `:page-partial:` attribute only works as a document attribute following the document heading
+.. if you only have lvl1 headings the attribute should be the very first line
+.. my current feeling is that antora `.adoc` files should best be written as their own documents i.e. give each file a document title followed by the partial attribute
+
+== Modifications to the arc42 template
+
+image::antora-arc42-s.png[Antora arc42 mashup]
+
+WARNING: All links to my GitHub repo point to the HEAD commit at the time of writing; things might have changed on master.
+
+The first version of the antora port remains as close to the original template as possible. To reproduce the result a couple of steps are necessary.
+
+. create the antora component structure with `docs/modules/ROOT/pages/`
+.. the `docs/` folder is not required by Antora, but I did not like having documentation _modules_ in the root of a git repo 🙄
+.. add a link://github.com/anoff/antora-arc42/blob/0e46f1c8b700e594b5b2e22718264a23b5f6cf42/playbook.yml[playbook.yml] to the root directory of the git repository specifying the current local directory as the only component and `start_path: docs`
++
+.playbook.yml
+[source, adoc]
+----
+site:
+  title: Antora ARC42 Template
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://anoff.io/antora-arc42
+  start_page: system::03_system_scope_and_context.adoc
+content:
+  sources:
+  - url: ./
+    start_path: docs
+    branches: [HEAD]
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+----
+
+.. move all link://github.com/arc42/arc42-template/tree/master/EN/asciidoc[arc42 template] files into the `ROOT/pages` directory directly - do not use subfolders within the pages directory
+.. create an link://github.com/anoff/antora-arc42/blob/0e46f1c8b700e594b5b2e22718264a23b5f6cf42/docs/antora.yml[antora.yml] that defines the entry point for the component into the `docs/` folder
++
+.antora.yml
+[source,adoc]
+----
+name: system
+title: System Level
+version: 0.9.0
+start_page: 03_system_scope_and_context.adoc
+nav:
+  - modules/ROOT/nav.adoc
+----
+
+. rewrite all template files to be adoc documents
+.. turn the `== Level 1 Heading` into `= Document title`
+.. adjust subsequent headings to preserve heading hierarchy
+.. add the `:page-partial:` attribute to each document
+. I got rid of all the help popups and instead made it fully visible _sidebar_ content
+. create a link://github.com/anoff/antora-arc42/blob/0e46f1c8b700e594b5b2e22718264a23b5f6cf42/docs/modules/ROOT/nav.adoc[nav.adoc] navigation entry for the ROOT component
+.. this is used to create the navbar entry on the right
+. Fix paths in the overview document
+.. I renamed `arc42-template.adoc` to `index.adoc`
+.. also make sure to change all `include::` paths to no longer use the `src/` subfolder
+.. link://gitlab.com/antora/antora/issues/405#note_139121293[Dan recommends] to use component references instead of local paths from the beginning, I assume this makes copy pasting less error-prone
+
+If you want to follow the steps in detail, take a look at the link://github.com/anoff/antora-arc42/commits/0e46f1c8b700e594b5b2e22718264a23b5f6cf42[commits on my GitHub repo].
+
+This should already yield a working page. You can test it running the following commands
+
+[source,sh]
+----
+# install the antora tools
+npm i -g @antora/cli@2.0 @antora/site-generator-default@2.0
+# install the serve utility to start a local web server
+npm i -g serve
+
+# run the antora build
+antora generate playbook.yml --to-dir dist/ --clean
+
+# browse the output locally
+serve dist/
+----
+
+TIP: In case you want to publish to gh pages or any other service that might run jekyll link://docs.antora.org/antora/2.0/run-antora/#publish-to-github-pages[take a look at these notes] describing how to make antora work in a jekyll environment
+
+== Customizing the UI
+
+I actually think Antora's default UI is quite pleasing - compared to the default plantUML theme 🙄. But I wanted to modify their default footer content. For small changes Antora has a concept of _supplemental_ UI files that allows you to switch individual files of the UI component that are used during the Antora site generation.
+
+By taking a look at the link://gitlab.com/antora/antora-ui-default/tree/master/src/partials[default UI project] I identified the `footer-content.hbs` as the file I wanted to replace.
+This is achieved by the `supplemental_files: ./supplemental-ui` section in the `playbook.yml` and adding the custom footer file in the respective directory.
+
+.supplemental-ui/footer-content.hbs
+[source, hbs]
+----
+<footer class="footer">
+  <p>Original arc42 template licensed under <a href="https://raw.githubusercontent.com/arc42/arc42-template/master/LICENSE.txt">MIT</a> and modified for antora fit by <a href="https://anoff.io">Andreas Offenhaeuser</a>, the page is created using the Antora Default UI licensed under <a href="https://gitlab.com/antora/antora-ui-default/blob/master/LICENSE">MPL-2.0</a> </p>
+</footer>
+----
+
+In addition to this I added the **Find on GitHub** entry in the header, but I am sure you can figure out how that works 😉
+
+You can find the final result of all steps in this first tutorial link://antora-arc42-1.surge.sh[at antora-arc42-1.surge.sh]
+
+== Next steps
+
+Over the next few days/weeks I will keep working on this setup to bring in more aspects I see necessary for a real life scenario.
+
+. separate _larger_ sections of the arc42 template into their own antora component, e.g. architecture decisions, cross cutting concepts
+. setting up a multi repo arc42 playbook that consists of
+  ** a _system_ repository containing the top level architecture docs
+  ** two components that implement a part of the system and have the component specific documentation allocated in the same repository
+  ** an antora build that generates a fully integrated arc42 documentation out of those three repos
+. build a custom UI project
+  ** modified header colors etc
+. add plantUML support
+
+Stay tuned for follow up posts on these steps.
+
+If you have any questions send me a DM on link://twitter.com/an0xff[Twitter].

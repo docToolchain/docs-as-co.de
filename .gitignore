@@ -2,3 +2,4 @@ docs/_site
 /docs/.gradle/**
 docs/build
 .idea
+.jekyll-metadata
