@@ -32,7 +32,7 @@ anoff:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://www.anoff.io"
+      url: "https://blog.anoff.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/an0xff"
