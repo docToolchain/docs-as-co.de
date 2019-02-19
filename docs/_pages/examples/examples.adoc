@@ -10,7 +10,7 @@ Here you find links to public examples of the _docs-as-code_ approach.
 Contact us if you like your system to be
 included here...
 
-http://aim42.github.io/htmlSanityCheck/hsc_arc42.html[HTML Sanity Checker]::
+https://hsc.aim42.org/documentation/hsc_arc42.html[HTML Sanity Checker]::
 Verbose example for the documentation of a Gradle plugin, created by Dr. Gernot Starke. +
 [small]#Gradle, AsciiDoc, arc42#
 
