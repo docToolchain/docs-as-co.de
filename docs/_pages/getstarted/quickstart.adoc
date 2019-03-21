@@ -115,7 +115,7 @@ Good choice!
 A fairy appears and grants you a wish.
 You wish for a very simple build file and the following line of text appears:
 
-.gradle.build
+.build.gradle
 [source,groovy]
 ----
 plugins { id "org.asciidoctor.convert" version "1.5.3" }
