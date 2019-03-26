@@ -1,3 +1,4 @@
+:filename: _pages/getstarted/tutorial2.adoc
 = Tutorial
 :page-layout: asciidoc
 :page-permalink: /getstarted/tutorial2
@@ -7,6 +8,7 @@
 :imagesdir: images
 
 = Tutorial: add docToolchain as submodule
+include::../feedback.adoc[]
 
 // numbering from here on
 :numbered:
@@ -84,8 +86,10 @@ Just first add docToolchain as submodule (next step) and then do
 
     cd docToolchain
     ./gradlew -p .. init
+    ./gradlew -p .. wrapper
 
- This will use the gradle wrapper contained in docToolchain to initialize your main project.
+ This will use the gradle wrapper contained in docToolchain to initialize your main project
+ and it will also install the wrapper to that you don't need to install gradle by yourself.
 
 Alternatively use https://sdkman.io[sdkman]
 ****
