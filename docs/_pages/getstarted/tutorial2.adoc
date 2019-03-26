@@ -8,7 +8,7 @@
 :imagesdir: images
 
 = Tutorial: add docToolchain as submodule
-include::../feedback.adoc[]
+include::feedback.adoc[]
 
 // numbering from here on
 :numbered:
