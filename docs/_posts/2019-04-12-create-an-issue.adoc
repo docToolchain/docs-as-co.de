@@ -1,0 +1,45 @@
+= Create an Issue
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/create-an-issue/
+:page-tags: [doc]
+
+:url-1: https://docs-a-sco.de/news/improve-this-doc/
+:url-2: https://stackoverflow.com/questions/55118885/gitlab-pre-fill-issue-form-through-hyperlink/55628516
+:url-3: https://docs.gitlab.com/ee/user/project/issues/create_new_issue.html#new-issue-via-url-with-prefilled-fields
+:url-4: https://docs.microsoft.com/en-us/teamblog/a-new-feedback-system-is-coming-to-docs
+
+In {url-1}[another post], I showed you how you can create an "Improve this Doc" button to enable your readers to propose changes to your documents.
+
+Some times your readers might notice a problem with your documentation but don't know how to directly improve it.
+Maybe you have a tutorial on your page which doesn't work in a specific environment.
+
+If this happens with code, you would open an issue!
+Now let's apply this to our documents...
+
+In the same way as we do with the "Improve this Doc" button, we can link to the issue tracker.
+But there isn't an issue tracker for each module of the documentation like there is the source for it.
+So how do we ensure that there is a conenction between the created issue und the documentation module?
+
+I first saw this solution implemented for the {url-4}[docs created by Microsoft] (great work!).
+Let's pre-fill the issue form with a template which contains the reference back to the source of our documentation module.
+
+Since I already had the Microsoft example at hand, it was easy to figure out how to do this for GitHub.
+Just append the `title` and `body` of the issue to be created as URL parameters to your link:
+
+    https://github.com/docToolchain/documentation/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23page:manual/01_introduction_and_goals.adoc
+
+For Bitbucket, it was easy for figure out the correct params from the page source.
+Here they are `title` and `content`:
+
+    ...?title=test&content=test%0Atest2+test3
+
+For GitLab it was a bit harder and I had to create a {url-2}[Stackoverflow question] 'cause I couldn't find the answer through google or the docs search...
+But the community also didn't produce a result.
+By chance I stumbled a few days later over a {url-3}[the reference in the docs].
+So for GitLab you need `issue[title]` and `issue[description]`:
+
+    https://gitlab.com/ralf-d-mueller/GradlePluginWorkshop/issues/new?issue[title]=This+goes+to+the+title&issue[description]=and+this+will%0Aprefill+the+body
+    
+    Happy Coding!
