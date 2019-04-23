@@ -25,8 +25,11 @@ https://jbake.org[JBake] has some advantages over Jekyll when you are on a Java-
 Things I have modified
 
 * [x] cleaned up gsp templates in such a way that all templates are self-contained (every opened tag is also closed within the template)
+* [x] added plantUML support
 * [ ] toc-left (currently implemented for `tutorial2` has to be added
 * [ ] create menu "convention over configuration" style
 * [ ] add a theme as demo
 * [ ] blog with tags
 * [ ] add blog tags to menu
+* [ ] add scrollspy
+* [ ] add tabs
