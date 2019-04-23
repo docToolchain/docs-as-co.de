@@ -6,10 +6,27 @@ image::https://api.netlify.com/api/v1/badges/a19a2bf7-7316-4bff-9a85-045c1d54b7b
 This repository hosts the source for the https://docs-as-co.de website.
 It is based on
 
-* Jekyl as static site generator
+* JBake as static site generator
 * AsciiDoc as markup language
-* https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[this Java Magazin article] on how to implement it
 
 Since github does not support AsciiDoc for github pages, the website is hosted at https://netlify.com .
 
 Start in https://gitpod.io#https://github.com/docToolchain/docs-as-co.de[gitpod.io]
+
+https://jbake.org[JBake] has some advantages over Jekyll when you are on a Java-Environment:
+
+* it is JVM based
+* there is a CLI, Maven- and Gradle-Plugin
+* GSP Templates (Groovy!) are available
+* it is based on twitter bootstrap
+** many themes are available
+** the bootrap css and asciidoc css seem to interfere less
+
+Things I have modified
+
+* [x] cleaned up gsp templates in such a way that all templates are self-contained (every opened tag is also closed within the template)
+* [ ] toc-left (currently implemented for `tutorial2` has to be added
+* [ ] create menu "convention over configuration" style
+* [ ] add a theme as demo
+* [ ] blog with tags
+* [ ] add blog tags to menu
