@@ -1,0 +1,15 @@
+type=page
+status=published
+~~~~~~
+
+== Blogs
+
+Here is a collection of relevant blogs.
+You know some more? Send us a pull request!
+
+
+* http://andyetter.com/[Andrew Etter]
+* https://justwriteclick.com/[Just Write Click - Anne Gentle]
+* https://www.docslikecode.com/[Docs-like-Code - Anne Gentle]
+* https://idratherbewriting.com/[I'd Rather Be Writing - Tom Johnson]
+* https://rdmueller.github.io[Ralf D. Müller]

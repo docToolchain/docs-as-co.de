@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+    	<loc>http://localhost:8820/furtherreading/talks.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/furtherreading/index.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/furtherreading/books.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/furtherreading/blogs.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/furtherreading/articles.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/examples/index.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/getstarted/getstarted.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/docs/index.html</loc>
+    	<lastmod>2019-03-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/about/site.html</loc>
+    	<lastmod>2013-09-24</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/about/imprint.html</loc>
+    	<lastmod>2013-09-24</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/about/contact.html</loc>
+    	<lastmod>2013-09-24</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2019-01-23-JAX.html</loc>
+    	<lastmod>2019-01-23</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2019-01-22-OOP.html</loc>
+    	<lastmod>2019-01-22</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2019-01-14-arc42-by-example.html</loc>
+    	<lastmod>2019-01-14</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2018-10-29-sparkling-wine.html</loc>
+    	<lastmod>2018-10-29</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2018-09-21-tabs-asciidoc.html</loc>
+    	<lastmod>2018-09-21</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2018-07-31-asciidoc-image-size.html</loc>
+    	<lastmod>2018-07-31</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2018-06-14-colorful-gradle.html</loc>
+    	<lastmod>2018-06-14</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-10-30-plantUML-revisited.html</loc>
+    	<lastmod>2017-10-30</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-05-07-PPT-as-asciidoc-editor.html</loc>
+    	<lastmod>2017-05-07</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-05-05-create-epub.html</loc>
+    	<lastmod>2017-05-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-05-04-create-docx.html</loc>
+    	<lastmod>2017-05-04</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-04-07-enterprise-edition2.html</loc>
+    	<lastmod>2017-04-07</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-04-03-enterprise-edition.html</loc>
+    	<lastmod>2017-04-03</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-04-02-dependency-update.html</loc>
+    	<lastmod>2017-04-02</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2017-01-13-htmlSanityCheck.html</loc>
+    	<lastmod>2017-01-13</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-11-27-jria2eac.html</loc>
+    	<lastmod>2016-11-27</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-11-23-single-file-html.html</loc>
+    	<lastmod>2016-11-23</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-10-03-Jira.html</loc>
+    	<lastmod>2016-10-03</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-09-19-changelog.html</loc>
+    	<lastmod>2016-09-19</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-09-12-pdf-output.html</loc>
+    	<lastmod>2016-09-12</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-09-05-awesome-asciidoc.html</loc>
+    	<lastmod>2016-09-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-08-29-sparx-ea.html</loc>
+    	<lastmod>2016-08-29</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-08-22-arc42.html</loc>
+    	<lastmod>2016-08-22</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-08-08-plantuml-maven.html</loc>
+    	<lastmod>2016-08-08</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-08-02-plantuml-without-graphviz.html</loc>
+    	<lastmod>2016-08-02</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-07-25-plantuml-gradle.html</loc>
+    	<lastmod>2016-07-25</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-07-18-maven-asciidoc-build.html</loc>
+    	<lastmod>2016-07-18</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-07-11-gradle-asciidoc-build.html</loc>
+    	<lastmod>2016-07-11</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-07-03-why-asciidoc.html</loc>
+    	<lastmod>2016-07-03</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/news/2016-05-16-why-no-word.html</loc>
+    	<lastmod>2016-05-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://localhost:8820/getstarted/tutorial2.html</loc>
+    	<lastmod>2019-04-02</lastmod>
+    </url>
+
+</urlset>

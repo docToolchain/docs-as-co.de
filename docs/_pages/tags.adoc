@@ -1,5 +1,0 @@
-= News by Tags
-:page-layout: tags
-:page-permalink: /tags/
-:page-liquid: true
-

@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JBake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/asciidoctor.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="about/">About</a></li>
+                      
+                        <li><a href="about/contact.html">Contact</a></li>
+                      
+                        <li><a href="about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Blog</h1>
+	</div>
+	
+		<a href="news/2019-01-23-JAX.html"><h1>Docs-as-Code at JAX conference</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Wed Jan 23 00:00:00 GMT 2019)</p>
+		<!--p><div class="paragraph">
+<p>Come and visit my talk at the JAX conference in Mainz!</p>
+</div>
+<div class="paragraph">
+<p>
+<blockquote class="twitter-tweet" data-lang="de"><p lang="de" dir="ltr">Laut mehrerer Umfragen ist fehlende <a href="https://twitter.com/hashtag/Dokumentation?src=hash&amp;ref_src=twsrc%5Etfw">#Dokumentation</a> ein großes Hindernis für den Einsatz von <a href="https://twitter.com/hashtag/OpenSource?src=hash&amp;ref_src=twsrc%5Etfw">#OpenSource</a>-<a href="https://twitter.com/hashtag/Software?src=hash&amp;ref_src=twsrc%5Etfw">#Software</a>. <a href="https://twitter.com/RalfDMueller?ref_src=twsrc%5Etfw">@RalfDMueller</a> zeigt, wie Du einfach Dokumentation für Dein Produkt erzeugst, egal ob Open oder Inner Source.<br>&gt;&gt; <a href="https://t.co/nlJOq0PEOP">https://t.co/nlJOq0PEOP</a> <a href="https://t.co/oE5yJSXFy1">pic.twitter.com/oE5yJSXFy1</a></p>&mdash; JAXCON (@jaxcon) <a href="https://twitter.com/jaxcon/status/1088066421442166784?ref_src=twsrc%5Etfw">23. Januar 2019</a></blockquote>
+</p>
+</div>
+<div class="paragraph">
+<p>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+</div></p-->
+  	
+		<a href="news/2019-01-22-OOP.html"><h1>HtmlSanityCheck at OOP conference</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Tue Jan 22 00:00:00 GMT 2019)</p>
+		<!--p><div class="paragraph">
+<p>For the second time, we were happy to present the Docs-as-Code approach to a broad audience of experts with a real example.
+HtmlSanityCheck is not only a central component of docToolchain to test the generated documentation,
+it is also a real life example of the docs-as-code approach. with which we can  which where we use a lot of tips from our own experience and a little live coding to arouse interest in the Docs-as-Code approach.</p>
+</div>
+<div class="paragraph">
+<p>The source of the example can be found at <a href="https://github.com/aim42/htmlSanityCheck" class="bare">https://github.com/aim42/htmlSanityCheck</a> .</p>
+</div>
+<div class="paragraph">
+<p>
+<script async class="speakerdeck-embed" data-id="8afdba2e3b8f46bc969195fc060a7f67" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+</p>
+</div></p-->
+  	
+		<a href="news/2019-01-14-arc42-by-example.html"><h1>arc42 by Example</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jan 14 00:00:00 GMT 2019)</p>
+		<!--p><div class="paragraph">
+<p>The second edition of <em>arc42 by Example</em> has just been released.</p>
+</div>
+<div class="paragraph">
+<p>The new edition contains as new example the arc42 architecture of docToolchain!</p>
+</div>
+<div class="paragraph">
+<p>
+<blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">We just released the second edition of „arc42 by Example“: <br><br>Six real-world examples of software architectures, explained with the <a href="https://twitter.com/hashtag/arc42?src=hash&amp;ref_src=twsrc%5Etfw">#arc42</a> template.<a href="https://t.co/2IEONcMGze">https://t.co/2IEONcMGze</a><a href="https://twitter.com/RalfDMueller?ref_src=twsrc%5Etfw">@RalfDMueller</a> <a href="https://twitter.com/StefanZoerner?ref_src=twsrc%5Etfw">@StefanZoerner</a> <a href="https://twitter.com/rotnroll666?ref_src=twsrc%5Etfw">@rotnroll666</a> <a href="https://twitter.com/arc42Tipps?ref_src=twsrc%5Etfw">@arc42Tipps</a> <a href="https://twitter.com/arc_improve42?ref_src=twsrc%5Etfw">@arc_improve42</a></p>&mdash; Dr. Gernot Starke (@gernotstarke) <a href="https://twitter.com/gernotstarke/status/1084789835976577024?ref_src=twsrc%5Etfw">14. Januar 2019</a></blockquote>
+</p>
+</div>
+<div class="paragraph">
+<p>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+</div></p-->
+  	
+		<a href="news/2018-10-29-sparkling-wine.html"><h1>Sparxling Wine</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Oct 29 00:00:00 GMT 2018)</p>
+		<!--p><div class="paragraph">
+<p>In order to optimize docToolchain for Mac and Linux, I wanted to give Sparx Enterprise Architect a try on a *nix environment.</p>
+</div>
+<div class="paragraph">
+<p>I once already tried to install EA on Wine on Ubuntu within Hypervisor on Windows 10, but with my first try I didn&#8217;t succeed.
+I tried to follow the <a href="https://sparxsystems.com/enterprise_architect_user_guide/14.0/product_information/enterprise_architect_linux.html">instructions on the Sparx website</a>, but it made the impression that some of those instructions are a bit outdated.</p>
+</div>
+<div class="paragraph">
+<p>So today I just thought "hey, you should check the <a href="https://wiki.winehq.org/Ubuntu">wine home-page</a> and follow these instructions".
+That was a success!</p>
+</div>
+<div class="paragraph">
+<p>Now with a Sparx EA 14.1 running on my machine on Ubuntu, expect some updates to docToolchain soo 😎</p>
+</div></p-->
+  	
+		<a href="news/2018-09-21-tabs-asciidoc.html"><h1>How to use tabs in AsciiDoc</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Fri Sep 21 00:00:00 GMT 2018)</p>
+		<!--p><div class="paragraph">
+<p>While writing a tutorial, I just came across the need to target two different user groups - windows and linux users.
+I wanted to write some shell commands as example but didn&#8217;t know if I should use powershell examples or better go withbash.
+Both examples would be a good solution, but it wouldn&#8217;t be nice to always have to skip half of them.</p>
+</div>
+<div class="paragraph">
+<p>Haven&#8217;t I seen tabbed code blocks somewhere in documentation?</p>
+</div>
+<div class="paragraph">
+<p>I remembered that I read about an asciidoctor plugin written by the spring team.
+Google soon revealed a <a href="https://stackoverflow.com/questions/38211766/using-tabs-in-asciidoc-spring-rest-docs">stackoverflow</a> question as the best result.
+This then led me to the plugin itself: <a href="https://github.com/spring-io/spring-asciidoctor-extensions">spring-boot-asciidoctor-extensions</a>.</p>
+</div>
+<div class="paragraph">
+<p>Used the right way, it produces beautiful looking tabs for your code-blocks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/tabs.png" alt="tabs">
+</div>
+</div>
+<div class="paragraph">
+<p>I was tempted to show you here how to use the extensions, but then reminded myself that it would be better to add the details I was missing from the readme when I first tried to use it, to the readme itself.</p>
+</div>
+<div class="paragraph">
+<p>So head over to <a href="https://github.com/spring-io/spring-asciidoctor-extensions">spring-boot-asciidoctor-extensions</a> and give it a try!</p>
+</div>
+<div class="paragraph">
+<p>PS: as with most of those extensions which make use of HTML, CSS and JavaScript, they are ignored by all output formats which are not HTML based.
+So if you want to generate for example PDF, your code blocks will be rendered as separrate blocks.</p>
+</div>
+<div class="paragraph">
+<p>PSPS: yes, you can use more than two tabs. Just add additional "secondary" blocks.</p>
+</div></p-->
+  	
+		<a href="news/2018-07-31-asciidoc-image-size.html"><h1>AsciiDoc Image Size</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Tue Jul 31 00:00:00 GMT 2018)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you work with several output formats for your doucments, it can be quite hard to get the size of oyur images right.
+Most of the time, you will use large images which should be scaled to 100% in regards to the column width.
+This is easily done in HTML and also in AsciiDoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy"> image:test.png[width=100%]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But as soon as you render your document also as PDF and DOCX, you soon notice that these formats behave differently.
+docToolhcain uses docBook as intermediate format in order to convert it through pandoc to DOCX.
+The <code>width=100%</code> is reflected as <code>contentwidth=&quot;100%&quot;</code> in docBook but does not lead to the expected result when converted to DOCX via pandoc. The PD output also does not reflect it as expected.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scalewidth_to_the_rescue"><code>scalewidth</code> to the rescue!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The AsciiDoc image also accepts the <code>scalewidth</code> parameter which lets you finetune the image size for the PDF generator.
+But a <code>scalewidth=100%</code> seems to be ignored by pandoc (it is reflected in the docBook output) and the meaning for PDF is to display the image in its original size taking the DPI info form the image header into account.
+This also leads to unexpected results.</p>
+</div>
+<div class="paragraph">
+<p>As a last resort, I came up with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy"> image:test.png[width=100%, scalewidth=17cm]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>17cm</code> is the column width when rendered as DIN-A4 page, resulting in a full width image.
+Not nice, but it works and these two parameters indeed work for HTML, PDF and DOCX because the absolute size is not ignored by pandoc!</p>
+</div>
+<div class="paragraph">
+<p>This can be also abreviated to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy"> image:test.png[{fullWidth}]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>by declaring <code>fullWidth</code> as attribute in your build</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code> tasks.withType(AsciidoctorTask) { docTask -&gt;
+
+  attributes \
+          'source-highlighter': 'coderay',
+          'toc': 'left',
+          'icons': 'font',
+          'sourceDir': "$projectDir/src/",
+          'fullWidth': "scaledwidth=17cm, width=100%"
+
+  // good to see what the build is doing...
+  logDocuments = true
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A full working example can be found here: <a href="https://github.com/arc42/HHGDAC/tree/master/folge-3">https://github.com/arc42/HHGDAC/tree/master/folge-3</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2018-06-14-colorful-gradle.html"><h1>Colorful Gradle</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Thu Jun 14 00:00:00 GMT 2018)</p>
+		<!--p><div class="paragraph">
+<p>Did you ever whished to change the color of your gradle log output? Maybe to highlight something?</p>
+</div>
+<div class="paragraph">
+<p>AFAIK, Gradle has no support for colors out of the box, but you can solve this easily - even without an additional library.</p>
+</div>
+<div class="paragraph">
+<p>The key to success are <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape sequences</a> (which are supported by most terminals) and a little trick.</p>
+</div>
+<div class="paragraph">
+<p>The excape squences are initiated with the ESC-character 27.
+To print this character from within Java or Groovy, you need to cast it a little bit like this <code>new String((char) 27)</code>.
+And that&#8217;s already all of the magic, because the rest of the escape sequences are standard ASCII characters.</p>
+</div>
+<div class="paragraph">
+<p>So, <code>print new String((char) 27) + &quot;[33m&quot;</code> turns the rest of your text yellow and <code>print new String((char) 27) + &quot;[0m&quot;</code> returns to the default color of the console.</p>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s turn this knowledge into a small closure</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">def color = { color, text -&amp;gt;
+ def colors = [black: 30, red: 31, green: 32, yellow: 33, blue: 34, magenta: 35, cyan: 36, white: 37]
+ return new String((char) 27) + "[${colors[color]}m${text}" + new String((char) 27) + "[0m"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this closure, you can now spice up your text with color like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">println "this is ${color 'green', 'some'} ${color 'red', 'colorful'} ${color 'white', 'text'}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The result looks something like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/console.png" alt="console">
+</div>
+</div></p-->
+  	
+		<a href="news/2017-10-30-plantUML-revisited.html"><h1>plantUML revisited</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Oct 30 00:00:00 GMT 2017)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Two days ago, a plantUML tweet caught my attention:</p>
+</div>
+<div class="paragraph">
+<p>Someone is willing to pay for a plantUML diagram.
+That&#8217;s something I haven&#8217;t seen before, so I checked what it was all about:
+the following diagram needed to be implemented as plantUML…</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS-architecture.png" alt="ActionFPS architecture">
+</div>
+</div>
+<div class="paragraph">
+<p>The money caught my attention, but what made me to do the work was the following.
+When I advise about plantUML, I always tell people that - because you don&#8217;t have control over the layout - is great for sequence diagrams but hard to use for complex diagrams of other types.</p>
+</div>
+<div class="paragraph">
+<p>Now, here it was - a complex architecture diagram and the chance to give it a try for the value of three beers! 🍺🍺🍺</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS.png" alt="ActionFPS">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS2.png" alt="ActionFPS2">
+</div>
+</div>
+<div class="paragraph">
+<p>Here is what I&#8217;ve learned from this:</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_different_tools_use_a_different_visual_language">different tools use a different visual language</h3>
+<div class="paragraph">
+<p>plantUML has no icon saying "these are multiple instances".
+But from the names of the elements, I deducted that I could use the database symbol for the repositories and the file symbol for the csv elements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_was_missing_a_visual_legend">I was missing a visual legend</h3>
+<div class="paragraph">
+<p>while the meaning of the csv and repository elements is clear to me, I have no clue about the color codes or the rounded shapes of the diagram.
+I guess others have the same problem with my diagrams.
+So always try to create a legend which explains the visual hints.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_you_have_an_existing_diagram_you_can_easily_describe_your_plantuml_code_to_look_like_the_original_diagram">when you have an existing diagram, you can easily describe your plantUML code to look like the original diagram</h3>
+<div class="paragraph">
+<p>By only using the <code>-&gt;</code> (right) and <code>--&gt;</code> (down) arrows, I already achieved most of the layout.
+Sometimes I had to reverse the arrow direction <code>&lt;--</code> to keep the meaning "down" but draw the arrow the other direction (I normally switch the two elements and do not reverse the arrow).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_but_the_layout_can_be_a_beast">but the layout can be a beast…</h3>
+<div class="paragraph">
+<p>Have you noticed that the plantUML consists of two images? That is because even with hidden lines, I didn&#8217;t manage to put those diagrams underneath each other. PlantUML always rendered them side by side.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While I managed to redraw the given diagram with plantUML, I wouldn&#8217;t want to design such a diagram from scratch with plantUML, since it doesn&#8217;t give you enough degrees of freedom.</p>
+</div>
+<div class="paragraph">
+<p>While this is true for component-, class- and deployment-diagrams of a certain complexity, I really enjoy using plantUML for sequence diagrams. For sequence diagrams, it is a blessing that plantUML takes care of the layout, no matter how I change the diagram!</p>
+</div>
+<div class="paragraph">
+<p>PS: here is a copy of the plantUML source: <a href="https://github.com/rdmueller/rdmueller.github.io/blob/master/images/ActionFPS.puml">https://github.com/rdmueller/rdmueller.github.io/blob/master/images/ActionFPS.puml</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2017-05-07-PPT-as-asciidoc-editor.html"><h1>Do more with Slides</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Sun May 07 00:00:00 GMT 2017)</p>
+		<!--p><div class="paragraph">
+<p>As an architect, you often have to present your ideas and architecture to an audience.
+Powerpoint might seem to be a perfect fit for that, but people also want to have something they can mail around and read it without you presenting it.</p>
+</div>
+<div class="paragraph">
+<p>This often result in slides which contain lots of text but it is still not enough text to sell your idea without you presenting it.</p>
+</div>
+<div class="paragraph">
+<p>Do you know this problem?</p>
+</div>
+<div class="paragraph">
+<p>Why not turn your presentation into a full fledged document?</p>
+</div>
+<div class="paragraph">
+<p>Powerpoint has the capability to store speaker notes with each slide.
+Let&#8217;s re-use them and store the story you want to tell with each slide…</p>
+</div>
+<div class="paragraph">
+<p>Imagine a speaker note looking something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>some notes you need as real speaker note
+...
+{adoc}
+This is your full story you want to tell.
+
+Use the full range of *asciidoc* formatting and insert the slide image with the following placeholder:
+
+.an example slide
+{slide}
+
+you might continue your story after the slide...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next we just need <a href="https://github.com/docToolchain/docToolchain/blob/master/scripts/exportPPT.vbs">a <code>.vbs</code> script</a> to export everything…</p>
+</div>
+<div class="paragraph">
+<p>Now you can create great slide shows which can be turned into documents in a small amount of time.</p>
+</div>
+<div class="paragraph">
+<p>And have you ever caught yourself using powerpoint to draw up some images for your documentation?
+The script above will make this easier too!</p>
+</div>
+<div class="paragraph">
+<p>As always, the script is aprt of the current <a href="https://github.com/docToolchain/docToolchain">docToolchain</a> version and available as <code>exportPPT</code>-task.</p>
+</div></p-->
+  	
+		<a href="news/2017-05-05-create-epub.html"><h1>Turn your Document into an Audio-Book</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Fri May 05 00:00:00 GMT 2017)</p>
+		<!--p><div class="paragraph">
+<p>Last blog post showed you how to convert your asciidoc into <code>.docx</code> via docbook.</p>
+</div>
+<div class="paragraph">
+<p>Pandoc can do more than that.
+It has a lot of target format under the hood.</p>
+</div>
+<div class="paragraph">
+<p>The one I like most is ePub, since it lets me move the generated document onto my eReader.
+For me the most convenient way to read large documents.</p>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s use pandoc again to turn docbook into ePub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task convertToEpub (
+ dependsOn: [generateDocbook ],
+ type: Exec
+) {
+ workingDir 'build/docs/docbook'
+ //commandLine "pandoc -r arc42-template.xml -o arc42-template.docx "
+ executable = "pandoc"
+ new File('build/docs/epub/').mkdirs()
+ args = ['-r','docbook',
+ '-t','epub',
+ '-o','../epub/arc42-template-en.epub',
+ 'arc42-template-en.xml']
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That was easy.
+The funny think I only found out while I was writing this blog post is, that if you try to open this file on a windows 10 machine, it will open up in Edge.</p>
+</div>
+<div class="paragraph">
+<p>So far so good - but Edge has a quite good text to speech engine which is activated for ePub files!</p>
+</div>
+<div class="paragraph">
+<p>This way you can easily let Edge read your documents as audio-book to you.
+Isn&#8217;t that great?</p>
+</div></p-->
+  	
+		<a href="news/2017-05-04-create-docx.html"><h1>Render Asciidoc to docx (MS Word)</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Thu May 04 00:00:00 GMT 2017)</p>
+		<!--p><div class="paragraph">
+<p>docToolchain is currently able to render your documents as HTML and PDF.
+But sometimes you just need a different format. The best solution I&#8217;ve found so far is <a href="http://pandoc.org/">pandoc</a> - the universal document converter.
+It is a command line tool which takes one format as input and another as output.
+The quality of the conversion depends on the features of the input format.</p>
+</div>
+<div class="paragraph">
+<p>I got best results with docbook as input format, so let&#8217;s add it to the docToolchain build.
+This is easy with the <a href="https://rdmueller.github.io/plantUML-and-pdf/">last fix</a> I applied to the build:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task generateDocbook (
+ type: AsciidoctorTask,
+ description: 'use docbook as asciidoc backend') {
+ backends = ['docbook']
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What`s cool about this conversion is, that I already creates the plantUML images and we don&#8217;t have to take care of this in the next steps.</p>
+</div>
+<div class="paragraph">
+<p>Now, since pandoc is a command line tool, we can simply use the exec-task to start pandoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task convertToDocx (
+ dependsOn: [generateDocbook ],
+ type: Exec
+) {
+ workingDir 'build/docs/docbook'
+ executable = "pandoc"
+ new File('build/docs/docx/').mkdirs()
+ args = ['-r','docbook',
+ '-t','docx',
+ '-o','../docx/arc42-template.docx',
+ 'arc42-template.xml']
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et voila, we have a quite good looking <code>.docx</code> file with all images already included.
+The <code>workingDir</code> ensures that pandoc will find the image folder.</p>
+</div>
+<div class="paragraph">
+<p>Not looking as good as you expected? Need different styles or a cover page?</p>
+</div>
+<div class="paragraph">
+<p>Pandoc has a lot of setting to change styles etc., but I found them hard to apply and found a IMHO better solution:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a word file with the cover page you want to add.</p>
+</li>
+<li>
+<p>Include the generated <code>.docx</code> file as reference</p>
+</li>
+<li>
+<p>Change styles of the main document</p>
+</li>
+<li>
+<p>save it</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The styles of the main document should now also change the styles of the generated document.
+But now you have two documents. To solve this, just write a <code>.vbs</code> script to save your document with inlined references - sorry, no example code for that :-(</p>
+</div></p-->
+  	
+		<a href="news/2017-04-07-enterprise-edition2.html"><h1>Enterprise Asciidoctor</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Fri Apr 07 00:00:00 GMT 2017)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Last time I wrote about how to configure Gradle to run behind a proxy with a local binary repository.</p>
+</div>
+<div class="paragraph">
+<p>First, I have to say that I love twitter, because not long after I tweeted about the new blog post, <a href="https://twitter.com/StuafOdiug">Guido Faust</a> reminded me that "The usage of a tool like nexus, artifactory or others is also usefull to save time, traffic and ensure availability" - full ack. People like me tend to speak of a firewall and local binary repository as an annoyance, but it is true that these are tools which help to create a stable environment! I had to learn this the hard way when I wanted to rebuild some sandbox projects after codehaus left the scene.</p>
+</div>
+<div class="paragraph">
+<p>But after playing around with me new build file, I also noticed a flaw - all java dependencies where resolved through the local repository, but the ruby gems where still resolved directly through the internet.</p>
+</div>
+<div class="paragraph">
+<p>Since I couldn&#8217;t find out how to change this jRuby behaviour, I just decided not to use the jRuby dependency resolution anymore and switched to the <a href="https://github.com/asciidoctor/asciidoctorj">asciidoctorj bindings</a>. All extensions which I use are available and these bindings can be resolved as simple java dependencies.</p>
+</div>
+<div class="paragraph">
+<p>So I refactored my build file (the comments still show how to switch back) and solved a small problem with the groov extension DSL: I had to add a dependency to <code>asciidoctorj-groovy-dsl</code> - don&#8217;t ask me why it worked before :-)</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whats_the_drawback">What&#8217;s the drawback?</h4>
+<div class="paragraph">
+<p>The versions of the java bindings seem the be a little bit behind the jRuby versions, but all features which I need are already available.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_why_didnt_i_try_to_resolve_the_jruby_dependencies_through_the_local_binary_repository">Why didn&#8217;t I try to resolve the jRuby dependencies through the local binary repository?</h4>
+<div class="paragraph">
+<p>The java bindings are resolved through the standard java repositories. These are very likely to be already configured in your local binary repository. The jRuby dependency are not so likely to be already available.</p>
+</div>
+<div class="paragraph">
+<p>The details of my changes can be viewed in the commit diff: <a href="https://github.com/docToolchain/docToolchain/commit/4e1ee93bf942492c55e303da8b23e13e517049a6">https://github.com/docToolchain/docToolchain/</a></p>
+</div>
+</div></p-->
+  	
+		<a href="news/2017-04-03-enterprise-edition.html"><h1>Behind the great Firewall</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Apr 03 00:00:00 GMT 2017)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The open internet is a great place to code, but sometimes you are sitting behind a great firewall in a corporate environment.
+Your are not allowed to just pull the hottest stuff from the internet, but have to go through an internal binary artifact repository like nexus or artifactory.</p>
+</div>
+<div class="paragraph">
+<p>So, how do you configure your gradle installation in such a way that you don&#8217;t have to always change the build file?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_set_a_proxy">Set a Proxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That one is easy.</p>
+</div>
+<div class="paragraph">
+<p>Gradle uses the standard proxy configuration the same way other java apps do. You can set the proxy in your <code>gradle.properties</code> as described <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy">in the userguide</a>.
+To configure the proxy for all your builds, just put the config into your <a href="http://mrhaki.blogspot.de/2010/09/gradle-goodness-different-ways-to-set.html"><code>&lt;USER_HOME&gt;/.gradle/gradle.properties</code></a> file instead of the project local one.</p>
+</div>
+<div class="paragraph">
+<p>BTW: if your settings seem to be ignored, you might created the <code>gradle.properties</code> file in the wrong location.
+In this case, start your build with the <code>--debug</code> option and check the start of the output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>PS C:\demo&gt; .\gradlew.bat --debug
+13:27:38.010 [INFO] [org.gradle.BuildLogger] Starting Build
+13:27:38.017 [DEBUG] [org.gradle.BuildLogger] Gradle user home: C:\Users\ralf\.gradle</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_repositories">Configure Repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, if a proxy is not enough but you need to fetch dependencies from an internal nexus or artifactory, you can easily specify it in the repositories section of your build file.
+But you have to do this for each project… do you?
+No! There is a better solution:</p>
+</div>
+<div class="paragraph">
+<p>Create a <a href="https://docs.gradle.org/current/userguide/init_scripts.html"><code>init.gradle</code></a> file in your local <code>&lt;USER_HOME&gt;/.gradle</code> folder with a <code>allprojects</code> section in which you specify the internal repositories for dependency resolution:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">allprojects {
+  buildscript {
+    repositories {
+      maven {
+        url = "https://intranet/..."
+      }
+    }
+  }
+  repositories {
+    maven {
+      url = "https://intranet/..."
+      credentials {
+        username = "${repo_user}"
+        password = "${repo_password}"
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you need to specify credentials for the repository, just specify them as shown in the second example.
+This way, the <code>repo_user</code> and <code>repo_password</code> can be specified in the <code>gradle.properties</code> file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_the_gradle_wrapper">Configure the Gradle-Wrapper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With the above configuration, all dependencies are resolved through the internal repository. Dependencies not in the internal repositories are resolved from the internet through the proxy. If you don&#8217;t want this, just specify no proxy :-)</p>
+</div>
+<div class="paragraph">
+<p>But what about Gradle itself?
+Best practice is to use the <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html">Gradle wrapper</a> but the wrapper is configured to fetch Gradle from external sources.</p>
+</div>
+<div class="paragraph">
+<p>There is also a config for that: <code>&lt;your project&gt;/gradle/wrapper/gradle-wrapper.properties</code>.
+Just replace the line</p>
+</div>
+<div class="paragraph">
+<p><code>distributionUrl=https\://services.gradle.org/distributions/gradle-2.12-bin.zip</code></p>
+</div>
+<div class="paragraph">
+<p>With your internal distribution location…</p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2017-04-02-dependency-update.html"><h1>Handle Dependency Updates the easy Way</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Sun Apr 02 00:00:00 GMT 2017)</p>
+		<!--p><div class="paragraph">
+<p>Every developer knows this problem - you work on a project and over time new versions of the configured dependencies are released.
+Sometimes it is even not that there is a new version, but it is the stable release you&#8217;ve been waiting for so long!</p>
+</div>
+<div class="paragraph">
+<p>But instead doing a manual check from time to time, there is a better approach for your gradle project: the <a href="https://github.com/ben-manes/gradle-versions-plugin">gradle-versions-plugin</a> by <a href="https://twitter.com/benmanes">Ben Manes</a>.</p>
+</div>
+<div class="paragraph">
+<p>Just install it and get a report for your dependencies by executing the <code>dependencyUpdates</code> task.</p>
+</div>
+<div class="paragraph">
+<p>This will now help me to keep the dependencies for docToolchain up to date!</p>
+</div></p-->
+  	
+		<a href="news/2017-01-13-htmlSanityCheck.html"><h1>Automated Quality-Checks</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Fri Jan 13 00:00:00 GMT 2017)</p>
+		<!--p><div class="paragraph">
+<p>Now that docToolchain handles your docs like your code, the next logical step is to add some automated tests.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s where <a href="https://github.com/aim42/htmlSanityCheck">htmlSanityCheck</a>, a project originally started by <a href="https://twitter.com/gernotstarke">Gernot Starke</a> fits:</p>
+</div>
+<div class="paragraph">
+<p>It is a gradle plugin which does some quality checks on a generated HTML document.
+Since it is well documented, I will not waste your time by writing something which is already written on the project page.</p>
+</div>
+<div class="paragraph">
+<p>The htmlSanityCheck is now the last default task for docToolchain and creates a report which looks like this:</p>
+</div>
+<div class="paragraph">
+<p>As always, the updated code is already on github: <a href="https://github.com/docToolchain/docToolchain">docToolchain</a></p>
+</div></p-->
+  	
+		<a href="news/2016-11-27-jria2eac.html"><h1>Jira to Sparx EA</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Sun Nov 27 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Sparx Enterprise Architect really shines when you use it to model your architecture by creating connections between elements. If you model your requirements, too, EA let&#8217;s you trace your design from the requirement up to the class.</p>
+</div>
+<div class="paragraph">
+<p>Problem is, when you work in an agile project, it is likely that your requirements are kept in an issue tracker like Jira in form of User Stories. So traceability is gone. :-(</p>
+</div>
+<div class="paragraph">
+<p>A solution could be to create a connection between Jira and EA. Sparx provides an <a href="https://marketplace.atlassian.com/plugins/atlassian.confluence.plugins.eaconnector/cloud/overview">EA Connector for Jira</a>, but since I am a techie, my "not invented here"-syndrome kicks in&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>DocToolchain already contains a task which fetches certain jira issues (<a href="https://rdmueller.github.io/Jira/">Living Documents for Agile Projects</a>) and a task which exports useful information from EA (<a href="https://rdmueller.github.io/sparx-ea/">Did you ever wish you had better Diagrams?</a>). Let&#8217;s update these tasks the following way:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the EA script currently searches for a {adoc:&lt;filename&gt;} - tag in comments. Let&#8217;s add a {jira:&lt;search&gt;} tag for diagrams</p>
+</li>
+<li>
+<p>whenever such a tag is found, start a groovy script which exports the jira issues defined by &lt;search&gt; to a file</p>
+</li>
+<li>
+<p>the EA script now has to pick up the file and create requirements-elements as diagram sub-elements and sync them with already existing ones</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This would allow you to create a traceability between your architecture and the User Stories stored in Jira.</p>
+</div>
+<div class="paragraph">
+<p>Step 1 is easy - the task already does it for the {adoc:} - tag. I just added some code which looks for a tag like <code>{jira:&lt;jql&gt;}</code> at the start of diagram notes.</p>
+</div>
+<div class="paragraph">
+<p>Step 2 is a bit harder. Since there is already groovy code to connect to jira, I decided to integrate groovy into the Visual Basic Script. Not an easy task if you know nearly nothing about VBS, but [Microsoft Technet to the rescue](<a href="https://technet.microsoft.com/en-us/library/ee156605.aspx)!" class="bare">https://technet.microsoft.com/en-us/library/ee156605.aspx)!</a> The following code executes a groovy script vrom within VBS and returns the output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-visualbasic" data-lang="visualbasic">Set objShell = CreateObject("WScript.Shell")
+objShell.CurrentDirectory = fso.GetFolder("./scripts")
+Set objExecObject = objShell.Exec ("cmd /K  groovy exportJira.groovy """ &amp; strSearch &amp;""" &amp; exit")
+strReturn = ""
+Do While Not objExecObject.StdOut.AtEndOfStream
+    strReturn = strReturn &amp; vbCR &amp; objExecObject.StdOut.ReadLine()
+Loop
+Set objShell = Nothing</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>exportJira.groovy</code> script takes the <code>&lt;jql&gt;</code> string from the tag found in the diagram node and starts a jira search with it. All found elements are handed over to the <code>.vbs</code> script to be processed in step 3:</p>
+</div>
+<div class="paragraph">
+<p>Step 3 should again be very straight forward - since the VBS script gets each single line outputted by the groovy script, elements can easily be synced one by one. But I&#8217;ll do it only one way.</p>
+</div>
+<div class="paragraph">
+<p>The code to create a new element can be found in the book <a href="https://leanpub.com/ScriptingEA">Scripting Enterprise Architect</a> by Thomas Kilian.</p>
+</div>
+<div class="paragraph">
+<p>As a result, you can now add a tag like <code>{jira:project=DT}</code> and docToolchain will automatically fetch all jira issues in the project with the key <code>DT</code>, and create a requirement element for each jira issue within the given diagram. This enables you to connect these jira issues to other elements in your architecture model and thus create a traceability within your model up to jira issues or user stories.</p>
+</div>
+<div class="paragraph">
+<p>The script is not perfect yet, but with some tricks it is already useful. Issues with an already existing name will only be updated with the current details.</p>
+</div>
+<div class="paragraph">
+<p>Whenever the script created new issues, it makes sense to mark them with a different color as soon as you have connected them to your model. This will let you easily scan for new issues (= standard color) after the next sync.</p>
+</div>
+<div class="paragraph">
+<p>As always, the updated code is already on github.</p>
+</div></p-->
+  	
+		<a href="news/2016-11-23-single-file-html.html"><h1>Single-File HTML</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Wed Nov 23 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Asciidoctor renders good looking HTML pages, but often you don&#8217;t have a server to publish the document for others to read. That&#8217;s why I render my documents as PDF or publish them to confluence. A single file can easily be sent as mail attachment.</p>
+</div>
+<div class="paragraph">
+<p>While playing around with SVG stored in CSS files as data-uri&#8217;s, I thought it would be nice to do the same with the embedded images of the rendered asciidoc files.</p>
+</div>
+<div class="paragraph">
+<p>First I thought about writing a new post processor for the docToolchain but then I started to google and found out that such an option is already <a href="http://asciidoctor.org/docs/user-manual/#managing-images">part of asciidoctor</a>:</p>
+</div>
+<div class="paragraph">
+<p>Just add</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:data-uri:</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to your document et voila - you get a single file HTML output. From what I&#8217;ve tested so far, the file will be slightly bigger than the PDF and renders quite nice in modern browsers. So I added the two lines as standard option to the <code>config.adoc</code> files of docToolchain.</p>
+</div></p-->
+  	
+		<a href="news/2016-10-03-Jira.html"><h1>Living Documents for Agile Projects</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Oct 03 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you describe a solution architecture, your document will be in an unfinished state for a long time. If you are on an agile project, your document will be a living one. There will be always open questions which need to be tracked. A good idea to track them is the issue tracker which you already use for the code of your project. It not only allows you to track the progress on the open issue, it also allows you to assign the open issue to those people who will give you the right answer.</p>
+</div>
+<div class="paragraph">
+<p>Today I will show you how you can turn your asciidoc documentation into a living document by linking it to Jira.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_idea">The Idea</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most trivial way to link to jira is to just add the url of your issue to your text:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://example.atlassian.net/browse/DOC-51</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can add the issue id as name of the link in order to just get the issue id linked to your issue</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://example.atlassian.net/browse/DOC-51[DOC-51]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Trivial, but you always have to paste the base URL from somewhere. To make it more convenient, an asciidoctor plugin could make sense. <a href="https://twitter.com/mrhaki">mrhaki</a> describes in his awesome blog exactly this: <a href="http://mrhaki.blogspot.de/2015/03/awesome-asciidoctor-use-inline.html">Awesome Asciidoctor: Use Inline Extension DSL with Gradle</a>. A detailed description on how to write asciidoctor extensions can be found <a href="http://asciidoctor.org/docs/asciidoctor-gradle-plugin/#adding-custom-extensions">in the documentation of the asciidoctor gradle plugin</a>.</p>
+</div>
+<div class="paragraph">
+<p>So, I&#8217;ve added the code from mrhaki to the docToolchain project in a slightly modified version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+    // Here we can add the code for extensions we write.
+    extensions {
+        inlinemacro (name: "jira") {
+            parent, target, attributes -&gt;
+
+                options = [
+                        "type": ":link",
+                        "target": "https://jira-instance/browse/${target}".toString(),
+                        "id": "${target}"
+                ]
+
+                // Create the link to the issue.
+                createInline(parent, "anchor", target, attributes, options).render()
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do you seen the <code>"id"</code>-key in the list of options? That lets us do an additional trick which I will explain further down the article&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The extension lets us now link to our issues by just writing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jira:DOC-51[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>don&#8217;t forget the <code>[]</code> - otherwise it will not work.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_open_issues">List of open Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>But wouldn&#8217;t it be nice to have also a list of all open issues at the end of the document? Now that we know how to write an inline plugin, I would like to use this mechanism to create a table. Unfortunately, I couldn&#8217;t finde an example on how to write an extension which creates a table, so I do a simple fallback to just create a file which can be included&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Jira has a nice REST api. IMHO, this is even easier to use than the Java-API. This little code snipped shows how to retrieve all open issues of a given project with a given label assigned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportJiraIssues(
+        description: 'exports all jira issues from a given search'
+) &lt;&lt; {
+        def user = jiraUser
+        def pass = jiraPass
+        if (!pass) {
+            System.console().readPassword("Jira password for user '$user': ")
+        }
+
+        def stats = [:]
+        def jira = new groovyx.net.http.RESTClient( jiraRoot+'/rest/api/2/' )
+        jira.encoderRegistry = new groovyx.net.http.EncoderRegistry( charset: 'utf-8' )
+        def headers = [
+                'Authorization':"Basic " + "${user}:${pass}".bytes.encodeBase64().toString(),
+                'Content-Type':'application/json; charset=utf-8'
+        ]
+        def openIssues = new File('./build/docs/openissues.adoc')
+        openIssues.write("",'utf-8')
+        println jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel)
+        jira.get(path:'search',
+                query:['jql': jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel),
+                       'maxResults':1000,
+                       'fields':'created,resolutiondate,priority,summary,timeoriginalestimate, assignee'
+                ],
+                headers:headers
+        ).data.issues.each { issue -&gt;
+            openIssues.append("| &lt;&lt;${issue.key}&gt;&gt; ",'utf-8')
+            openIssues.append("| ${issue.fields.priority.name} ",'utf-8')
+            openIssues.append("| ${Date.parse("yyyy-MM-dd'T'H:m:s.000z",issue.fields.created).format('dd.MM.yy')} ",'utf-8')
+            openIssues.append("| ${issue.fields.assignee?issue.fields.assignee.displayName:'not assigned'} ",'utf-8')
+            openIssues.append("| ${jiraRoot}/browse/${issue.key}[${issue.fields.summary}]\n",'utf-8')
+        }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to use it, you have to set some properties in <code>gradle.properties</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-properties" data-lang="properties">// settings to link to open issues
+
+jiraRoot = 'https://jira-instance'
+jiraUser = 'username'
+jiraPass = '' // leave empty to get a prompt
+jiraProject = '' // the key of the project
+jiraLabel = '' // the label to restrict search to
+
+jiraJql  = project='%jiraProject%' AND resolution='Unresolved' AND labels='%jiraLabel%' ORDER BY priority DESC, duedate ASC</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates the content for an asciidoc table which then can be included like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-asciidoc" data-lang="asciidoc">.Open Issues
+[options="header",cols="2,1,1,2,6"]
+|====
+|ID | Priority | Created | Assignee | Summary
+
+Unresolved directive in &lt;stdin&gt; - include::../../../../build/docs/openissues.adoc[]
+
+|====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve also added this asciidoc snippet to the arc42 template of docToolchain as appendix.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linking_the_issues">Linking the Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Getting back to the neat little trick I did with the <code>id</code>-option in the asciidoc jira extension above: since all inline references to an jira issue are now linked with the issue-key as ID, it is easy to link to them as anchor. This can be done with the <code><a href="#anchor-id">[anchor-id]</a></code>-syntax in asciidoc and that&#8217;s also exactly what I did in the script which creates the table with all open issues:</p>
+</div>
+<div class="paragraph">
+<p>The ID of each row links to the reference within the document. This let&#8217;s you easily check the context of the open issue.</p>
+</div>
+<div class="paragraph">
+<p>The summary of each row links to the configured jira system. This let&#8217;s you easily check the current status of the issue and edit it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/jira-open-issues.png" alt="jira open issues">
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>The current version of docToolchain is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/5bf544c7d6eecf6031398573f5abe21e89feeaba">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-09-19-changelog.html"><h1>The only constant in life is change</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Sep 19 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Today I will show how to add a change log to your documents. Git is quite good when it comes to log changes, so why not use git to add a table of changes to your document? If your version your documents along with your code, you don&#8217;t want to see all code commits in the change log of your documents. But git can handle this.</p>
+</div>
+<div class="paragraph">
+<p>If you type <code>git log src/docs/arc42</code>, it will only output the changes made to the files in <code>src/docs/arc42</code>. That&#8217;s already a great feature, but not enough to include it into the asciidoc template.</p>
+</div>
+<div class="paragraph">
+<p>First, the changes have to be parsed and re-formatted to asciidoc. There are git libraries somewhere which let you do this programatically, but I am a bit more practical. I used nearly the same approach I used for <a href="https://rdmueller.github.io/sparx-ea/">exporting the Sparx EA diagrams</a>: I just use groovy to execute a shell command. In this case, I only need the output and don&#8217;t care to see what happens during the process. Since fetching the changes is quite fast, a simpel groovy statement like this is enough:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>def res = "git log ./src/docs/arc42".execute().text</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This executes the command and returns the whole change log as string:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>commit f811ed51fd21c089bc6ee7853dcf5284eaa2ae88
+Author: Ralf D. Mueller &lt;ralf.d.mueller@gmail.com&gt;
+Date:   Sun Aug 21 23:14:14 2016 +0200</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>added arc42 template as content</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the language features provided by Groovy, it is easy to parse this and render it as asciidoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportChangeLog(
+        dependsOn: [streamingExecute],
+        description: 'exports the change log from a git subpath'
+) &lt;&lt; {
+    def res = "git log ./src/docs/arc42".execute().text
+    def changes = []
+    def change = null
+    res.eachLine { line -&gt;
+        switch (line) {
+            case ~/^commit.*/:
+                if (change!=null) {
+                    changes &lt;&lt; change
+                }
+                change = [commit:line-'commit ',log:'']
+                break;
+            case ~/^Author:.*/:
+                change['author'] = line-'Author: '
+                break;
+            case ~/^Date:.*/:
+                change['date'] = line-'Date: '
+                break;
+            default:
+                change['log'] += (line ? line.trim()+ "\n" : '')
+        }
+    }
+    changes &lt;&lt; change
+    def changelog = new File('./build/docs/changelog.adoc')
+    changelog.write("")
+
+    changes.each { c -&gt;
+        changelog.append """| ${new Date(Date.parse(c.date)).format("dd.MM.yyyy")}
+| ${c.author.replaceAll('&lt;[^&gt;]*&gt;','')}
+| ${c.log}
+"""
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting file can easily embedded in asciidoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>    .Changes
+    [options="header",cols="1,2,6"]
+    |====
+    | Date
+    | Author
+    | Comment
+
+    include::../../build/docs/changelog.adoc[]
+
+    |====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The table name and heading are part of the asciidoc template and not the <code>changelog.adoc</code> file in order to make it easy to translate. And indeed, the docToolchain project contains the <a href="https://arc42.github.io">arc42</a> template in two languages :-)</p>
+</div>
+<div class="paragraph">
+<p>So, if you now run <code>gradle exportChangeLog</code> and then just <code>gradle</code> the docToolchain build will render a nice changelog for you:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/changelog.png" alt="changelog">
+</div>
+</div>
+<div class="paragraph">
+<p>As always, the updated docToolchain build is available on <a href="https://github.com/docToolchain/docToolchain/tree/b2b011caee933b8d7c764bb62c6bb00b5431c583">github</a></p>
+</div></p-->
+  	
+		<a href="news/2016-09-12-pdf-output.html"><h1>Beyond HTML</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Sep 12 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Up until now, the docToolchain build only generates HTML5 output. It looks nice, but sometimes you need different formats. For instance, when you want to share your architecture via mail, a single file format like PDF would be helpful - and this is one of the strengths of asciidoctor: it makes it easy to render your content in different formats.</p>
+</div>
+<div class="paragraph">
+<p>For the Gradle-Build, I Just add a reference to the <a href="https://github.com/asciidoctor/asciidoctor-pdf">asciidoctor-pdf</a> plugin and tell the asciidoctor task to render PDF in addition. Two new attributes add a link to a theme file through which you can change the style of the rendered PDF:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">...
+dependencies {
+    // this is the gem we need for diagrams
+    gems 'rubygems:asciidoctor-diagram:1.5.1'
+    gems 'rubygems:asciidoctor-pdf:1.5.0.alpha.12'
+}
+asciidoctor {
+    backends 'html5', 'pdf'
+    attributes \
+        'pdf-stylesdir': 'pdfTheme',
+        'pdf-style': 'custom',
+
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More about themes can be found at <a href="https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc" class="bare">https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc</a> .</p>
+</div>
+<div class="paragraph">
+<p>In order to avoid conversion problems with some UTF-8 characters, I had to add some font definitions to the pdf theme to allow the plugin to find the right characters :-)</p>
+</div>
+<div class="paragraph">
+<p>Since the pdf renderer is just a plugin to be included, I also added the changes to the maven build. In order to make it work, I had to set the version of jRuby to be used to 1.7.21, but now it runs quite nice&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The current asciidoctor-pdf is still in alpha, but the quality of the output is already quite good. No reason not to use it for internal documents :-) :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/asciidoc-pdf.png" alt="asciidoc pdf">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extra_feature_document_review">extra feature: document review</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The PDF output not only allows us to render the document as a single file, it brings some unexpected extra features: for a long time, I wasn&#8217;t aware how Adobe Acrobat Reader evolved. I always just used it to read PDFs. A few month back, I took a closer look at all those features now available in the free Acrobat Reader DC and was surprised. It now contains lots of features to annotate the document. Not only text annotation, but also drawings are possible. This allows you to use the generated PDF for a full document review cycle!</p>
+</div>
+<div class="paragraph">
+<p>PS: all examples are based on the <a href="https://github.com/asciidoctor/asciidoctor-gradle-examples">asciidoctor-gradle</a> and <a href="https://github.com/asciidoctor/asciidoctor-maven-examples">asciidoctor-maven</a> examples on github. They are a great ressource for inspiration :-)</p>
+</div>
+<div class="paragraph">
+<p>All changes are (as always) available on Github: <a href="https://github.com/docToolchain/docToolchain/tree/3cef06737014a7e8b3c28d09ed64efff8e7e033e">docToolchain</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-09-05-awesome-asciidoc.html"><h1>More about AsciiDoc</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Sep 05 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>With the second blog post of this series, I already mentioned that I <a href="https://rdmueller.github.io/why_asciidoc/">love AsciiDoc</a> to create technical documentation, but I didn&#8217;t say too much about how to use AsciiDoc.</p>
+</div>
+<div class="paragraph">
+<p>There is a simple reason for this - other great minds have already created enough content on how to use AsciiDoc. As always, the best resource to start your journey with AsciiDoc might be the homepage, but since I always use Asciidoctor, the Ruby port of the original AsciiDoc, you should start with the homepage of <a href="http://asciidoctor.org/">Asciidoctor</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you only want to scroll through all those features which make AsciiDoc so great, just head over to <a href="http://mrhaki.blogspot.de/search/label/Awesome%3AAsciidoctor">MrHaki&#8217;s Blog: Awesome:Asciidoctor</a>. It contains all the cool tricks! As bonus, the compiled blog posts are also available as <a href="https://leanpub.com/awesomeasciidoctornotebook/">eBook on Leanpub</a> - you can read it for free or use this chance to buy <a href="https://twitter.com/mrhaki">mrhaki</a> a beer.</p>
+</div>
+<div class="paragraph">
+<p>You might also wonder what the best way to edit AsciiDoc is. For nearly every decent editor there is an AsciiDoc plugin. So the best way would be to look if a plugin is available for your favourite editor. I personally like the <a href="https://github.com/asciidoctor/asciidoctor-intellij-plugin/releases">IntelliJ plugin</a>, since it is performant and supports plantUML. I just noticed that a new version has just been released 11 hours ago :-) - so the support for <a href="https://rdmueller.github.io/plantuml-without-graphviz/">plantUML without Graphviz</a> is already contained.</p>
+</div>
+<div class="paragraph">
+<p>PS: if you wonder why I prefere AsciiDoc over <a href="https://daringfireball.net/projects/markdown/">Markdown</a> (a <a href="http://leadtechie.com/">good friend</a> pointed me towards a <a href="https://www.google.com/trends/explore?date=all&amp;q=markdown,asciidoc">google trends comparison</a>) - compare the features! Markdown comes in different flavours / dialacts which makes it harder to switch between tools. And Asciidoctor comes with a good extensible architecture. But even out of the box, there are important features in AsciiDoc which I miss in Markdown. I can easily <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files">split up my rather long documents</a> into several easy to maintain ones, I can <a href="http://mrhaki.blogspot.de/2014/04/awesome-asciidoc-include-partial-parts.html">include source code</a> in a very good way and can easily render different formats like HTML5, eBook formats, PDF and DOCX.</p>
+</div>
+<div class="paragraph">
+<p>More on AsciiDoc vs. Markdown can be found in the <a href="http://asciidoctor.org/docs/user-manual/#compared-to-markdown">Asciidoctor Manual</a>.</p>
+</div></p-->
+  	
+		<a href="news/2016-08-29-sparx-ea.html"><h1>Did you ever wish you had better Diagrams?</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Aug 29 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s recap what we did so far: in order to kickstart a documentation project, we&#8217;ve created a dual gradle / maven asciidoc build with included arc42 template in two languages and easy textual diagram drawing with planUML. That&#8217;s already quite a feature list!</p>
+</div>
+<div class="paragraph">
+<p>But what if plantUML diagrams are not enough for your needs? What if you can&#8217;t rely on the auto-layout feature of plantUML?</p>
+</div>
+<div class="paragraph">
+<p>One solution would be to just start up your favourite diagramming tool, draw your diagrams, export them and reference them from asciidoc. No problem. But what if you need to update one of the diagrams? Or you just worked the whole day on some diagrams and you don&#8217;t know anymore which ones to re-export?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wouldnt_it_be_nice_if_your_build_just_takes_care_of_it">Wouldn&#8217;t it be nice if your build just takes care of it?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It could just search for your diagrams files and export them.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s exactly what we will add today. Since there are two many diagramming tools on the market to include them all in one post, I will stick to <a href="http://www.sparxsystems.com/">Sparx Enterprise Architect</a>. Enterprise Architect - or short jsut EA - is a powerful but yet affordable tool which can be easily scripted.</p>
+</div>
+<div class="paragraph">
+<p>There are several options for scripting like internal scripts written in <a href="http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/the_scripter_window.html">JavaScript, JScript and VBScript</a>. These scripts have to be invoked manually from within the application. Another option is to use the <a href="http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/usingtheautomationinterface.html">automation interface</a> and "remote control" the application from outside. This can be done in various languages (all which have access to the ActiveX COM interface). There is a java bridge included and VBS would be the native approach.</p>
+</div>
+<div class="paragraph">
+<p>In the past I already played around with the included java interface and had the feeling that it is a little bit incomplete or buggy. That&#8217;s why I soon switched to VisualBasic as scripting for EA - this avoids an additional layer between me and the application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The script I want to include into our build will have several tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>find all EA repositories within the project</p>
+</li>
+<li>
+<p>open the found repositories through EA</p>
+</li>
+<li>
+<p>export all diagrams and save them with their given name as file name</p>
+</li>
+<li>
+<p>as bonus, check all element notes and export those which start with {adoc: filename}</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve chose to use the given name of a diagram for the file name because I think it is easier to handle and speaks for itself. Drawback is that you have to make sure that the name is a valid file name and it is unique. Another aproach would be to use the quite cryptic object ID (GUID)</p>
+</div>
+<div class="paragraph">
+<p>What&#8217;s up with the bonus tasks? Working with EA, I like to directly write my comments and descriptions in the note fields of the diagram elements. By prefixing them with {adoc: filename}, I can decide to export and easily include them into my documentation. This way, the written documentation for a diagram can be directly maintained within EA.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code">Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is the VB-Script code which does all the hard work:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-visualbasic" data-lang="visualbasic">    ' based on the "Project Interface Example" which comes with EA
+    ' http://stackoverflow.com/questions/1441479/automated-method-to-export-enterprise-architect-diagrams
+
+    Dim EAapp 'As EA.App
+    Dim Repository 'As EA.Repository
+    Dim FS 'As Scripting.FileSystemObject
+
+    Dim projectInterface 'As EA.Project
+
+    ' Helper
+    ' http://windowsitpro.com/windows/jsi-tip-10441-how-can-vbscript-create-multiple-folders-path-mkdir-command
+    Function MakeDir (strPath)
+      Dim strParentPath, objFSO
+      Set objFSO = CreateObject("Scripting.FileSystemObject")
+      On Error Resume Next
+      strParentPath = objFSO.GetParentFolderName(strPath)
+
+      If Not objFSO.FolderExists(strParentPath) Then MakeDir strParentPath
+      If Not objFSO.FolderExists(strPath) Then objFSO.CreateFolder strPath
+      On Error Goto 0
+      MakeDir = objFSO.FolderExists(strPath)
+
+    End Function
+
+    '
+    ' Recursively saves all diagrams under the provided package and its children
+    '
+    Sub DumpDiagrams(thePackage,currentModel)
+
+        Set currentPackage = thePackage
+        Const   ForAppending = 8
+
+        For Each currentElement In currentPackage.Elements
+            If (Left(currentElement.Notes, 6) = "{adoc:") Then
+                strFileName = Mid(currentElement.Notes,7,InStr(currentElement.Notes,"}")-7)
+                strNotes = Right(currentElement.Notes,Len(currentElement.Notes)-InStr(currentElement.Notes,"}"))
+                set objFSO = CreateObject("Scripting.FileSystemObject")
+		            If (currentModel.Name="Model") Then
+    	            ' When we work with the default model, we don't need a sub directory
+      	          path = "./src/docs/ea/asciidoc/"
+      	        Else
+      	          path = "./src/docs/ea/asciidoc/"&amp;currentModel.Name&amp;"/"
+      	      	End If
+                MakeDir(path)
+                WScript.echo path&amp;strFileName
+                set objFile = objFSO.OpenTextFile(path&amp;strFileName&amp;".ad",ForAppending, True)
+                objFile.WriteLine(vbCRLF&amp;vbCRLF&amp;"."&amp;currentElement.Name&amp;vbCRLF&amp;strNotes)
+                objFile.Close
+            End If
+        Next
+        ' Iterate through all diagrams in the current package
+        For Each currentDiagram In currentPackage.Diagrams
+
+            ' Open the diagram
+            Repository.OpenDiagram(currentDiagram.DiagramID)
+
+            ' Save and close the diagram
+            If (currentModel.Name="Model") Then
+                ' When we work with the default model, we don't need a sub directory
+                path = "/src/docs/ea/images/"
+            Else
+                path = "/src/docs/ea/images/" &amp; currentModel.Name &amp; "/"
+            End If
+            filename = path &amp; currentDiagram.Name &amp; ".png"
+            MakeDir("." &amp; path)
+            projectInterface.SaveDiagramImageToFile(fso.GetAbsolutePathName(".")&amp;filename)
+            WScript.echo " extracted image to ." &amp; filename
+            Repository.CloseDiagram(currentDiagram.DiagramID)
+        Next
+
+        ' Process child packages
+        Dim childPackage 'as EA.Package
+        For Each childPackage In currentPackage.Packages
+            call DumpDiagrams(childPackage, currentModel)
+        Next
+
+    End Sub
+
+    Function SearchEAProjects(path)
+
+      For Each folder In path.SubFolders
+        SearchEAProjects folder
+      Next
+
+      For Each file In path.Files
+        If fso.GetExtensionName (file.Path) = "eap" Then
+          WScript.echo "found "&amp;file.path
+          OpenProject(file.Path)
+        End If
+      Next
+
+    End Function
+
+    Sub OpenProject(file)
+      ' open Enterprise Architect
+      Set EAapp = CreateObject("EA.App")
+      WScript.echo "opening Enterprise Architect. This might take a moment..."
+      ' load project
+      EAapp.Repository.OpenFile(file)
+      ' make Enterprise Architect to not appear on screen
+      EAapp.Visible = False
+
+      ' get repository object
+      Set Repository = EAapp.Repository
+      ' Show the script output window
+      ' Repository.EnsureOutputVisible("Script")
+
+      Set projectInterface = Repository.GetProjectInterface()
+
+      ' Iterate through all model nodes
+      Dim currentModel 'As EA.Package
+      For Each currentModel In Repository.Models
+        ' Iterate through all child packages and save out their diagrams
+        Dim childPackage 'As EA.Package
+        For Each childPackage In currentModel.Packages
+          call DumpDiagrams(childPackage,currentModel)
+        Next
+      Next
+      EAapp.Repository.CloseFile()
+    End Sub
+
+  set fso = CreateObject("Scripting.fileSystemObject")
+  WScript.echo "Image extractor"
+  WScript.echo "looking for .eap files in " &amp; fso.GetAbsolutePathName(".") &amp; "/src"
+  'Dim f As Scripting.Files
+  SearchEAProjects fso.GetFolder("./src")
+  WScript.echo "finished exporting images"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_it_to_the_build">add it to the Build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Gradle uses Groovy and Groovy is able to easily execute shell scripts. But the standard execution mechanism has some drawbacks (regarding getting the output/error messages from the shell script and also regarding parameters). So I wrote my own streaming execute code which I add through meta programming to the string class. The code which adds the method has also to be executed, so I wrote a special task for this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task streamingExecute(
+    dependsOn: [],
+    description: 'extends the String class with a better .executeCmd'
+) &lt;&lt; {
+    //I need a streaming execute in order to export from EA
+    String.metaClass.executeCmd = {
+        //make sure that all paramters are interpreted through the cmd-shell
+        //TODO: make this also work with *nix
+        def p = "cmd /c ${delegate.value}".execute()
+        def result=[std:'',err:'']
+        def ready = false
+        Thread.start{
+            def reader = new BufferedReader(new InputStreamReader(p.in))
+            def line = ""
+            while ((line = reader.readLine()) != null) {
+                println ""+line
+                result.std+=line+"\n"
+            }
+            ready=true
+            reader.close()
+        }
+        p.waitForOrKill(30000)
+        def error = p.err.text
+        if (error.isEmpty()) {
+            return result
+        } else {
+            throw new RuntimeException("\n"+error)
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_windows_linux">Windows? Linux?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This code fragment currently only works for Windows, but I guess if you use EA, you are not running Linux or MacOS, so I guess this will be fine. If you use Ea on Linux or MaxOS, please contact me - it would be great to make this work on Linux!</p>
+</div>
+<div class="paragraph">
+<p>Now you might think, that if this only runs on Windows, I can&#8217;t use it on a build server. Take a closer look at the VBScript above. I&#8217;ve configured it in such a way that it exports everything to <code>/src/docs/es</code> and not to the <code>/build</code> folder. This is because I normally export the EA content on my dev machine and check in the results. This makes it even easier to get a diff of the work you&#8217;ve done in EA. The remaining build process can rely on the exported data and thus even runs on Linux.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_final_task">final task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to use the streaming execute and run the VBScript, I just added another small task to the Gradle build file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportEA(
+    dependsOn: [streamingExecute],
+    description: 'exports all diagrams and some texts from EA files'
+) &lt;&lt; {
+		new File('src/docs/ea/.').mkdirs()
+    //execute through cscript in order to make sure that we get WScript.echo right
+    "%SystemRoot%\\System32\\cscript.exe //nologo scripts/exportEAP.vbs".executeCmd()
+    //the VB Script is only capable of writing iso-8859-1-Files.
+    //we now have to convert them to UTF-8
+    new File('src/docs/ea/.').eachFileRecurse { file -&gt;
+    	if (file.isFile()) {
+	    	println "exported notes "+file.canonicalPath
+	    	file.write(file.getText('iso-8859-1'),'utf-8')
+    	}
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So, to export all diagrams and notes from EA, you simply run <code>gradle exportEA</code> in the shell: (I&#8217;ve included a small sample EA file)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; gradle exportEA
+:streamingExecute
+:exportEA
+Image extractor
+looking for .eap files in .\docToolchain/src
+found .\src\docs\Models.eap
+opening Enterprise Architect. This might take a moment...
+ extracted image to ./src/docs/images/ea/Use Cases.png
+finished exporting images
+exported notes .\src\docs\ea\UseCases.ad</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BUILD SUCCESSFUL</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Total time: 14.228 secs</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_give_it_a_try">Give it a Try&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So, if you want to test it, you can use the sample EA file included in the docToolchain project and add a small asciidoc file like the following:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image::ea/Use{sp}Cases.png[width=25%]
+include::ea/UseCases.ad[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the <code> </code> in the filename? This is in asciidoc the workaround for spaces in a filename.</p>
+</div>
+<div class="paragraph">
+<p>The EA sample diagram looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/EA_screenshot.png" alt="EA screenshot">
+</div>
+</div>
+<div class="paragraph">
+<p>and our build turns renders it like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/EA_rendered.png" alt="EA rendered">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today we extended our build with the feature to extract Diagrams and Notes from the Sparxsystems Enterprise Architect UML Modeller. This feature is quite helpful when you have to deal with Diagrams where plantUML is not enough but it does not replace plantUML. PlantUML is still quite useful when you need a simple diagram or a diagram - like a sequence diagram - where the auto-layout of plantUML is quite useful.</p>
+</div>
+<div class="paragraph">
+<p>The updated docTool project can be found here:  <a href="https://github.com/docToolchain/docToolchain/tree/8cc79e8ee36fe67ebd82c99628c38cef425f4749">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-08-22-arc42.html"><h1>Let&#8217;s add Content!</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Aug 22 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Through the last blog posts, the build script advanced from a simple asciidoc example to a dual build asciidoc archetype with plantUML.</p>
+</div>
+<div class="paragraph">
+<p>But when you want to document your project, you also need content. Wouldn&#8217;t it be great to have a template to get you started?</p>
+</div>
+<div class="paragraph">
+<p>If you want to document your solution architecture, this template already exists. It&#8217;s called <strong>arc42</strong> and additional information about it is available at <a href="https://arc42.github.io">https://arc42.github.io</a>. On this page, you will find downloads for several source formats, but we only need (who could have guessed) the asciidoc version.</p>
+</div>
+<div class="paragraph">
+<p>The tempalte is available as English and German version, so I just copied both version into the docToolchain project. They both reside in their own folder with their own main template in <code>/src/docs</code>. Feel free to just delete the language version you don&#8217;t need.</p>
+</div>
+<div class="paragraph">
+<p>In order to make it look good, I had to fix the <code>imagesDir</code> and add some rendering options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>:toc: left</strong> displays a table of contents on the left</p>
+</li>
+<li>
+<p><strong>:icons: font</strong> displays the so called admonitions with a nice looking icon</p>
+</li>
+<li>
+<p><strong>:source-highlighter: coderay</strong> will render source code in a nice way</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The result should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/arc42_sample.png" alt="arc42 sample">
+</div>
+</div>
+<div class="paragraph">
+<p>The current version of the build should already cover most problems when you start to document your software architecture. But the next blog posts will still add some spice - follow me on twitter if you want to get updates!</p>
+</div>
+<div class="paragraph">
+<p>The updated docToolchain project can be found here:  <a href="https://github.com/docToolchain/docToolchain/tree/8cc79e8ee36fe67ebd82c99628c38cef425f4749">https://github.com/docToolchain/docToolchain</a></p>
+</div></p-->
+  	
+		<a href="news/2016-08-08-plantuml-maven.html"><h1>PlantUML with Maven</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Aug 08 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Let&#8217;s add <a href="https://plantuml.com">PlantUML</a> to our maven build. I&#8217;ll use a slightly different approach. For the gradle build, I referenced the asciidoctor-diagram ruby gem to be used. But there is also a .jar version of it which can be used. It is one minor version behind the ruby gem, but that doesn&#8217;t matter in this case.</p>
+</div>
+<div class="paragraph">
+<p>First, let&#8217;s clean up the build a bit. I&#8217;ve added a name and description for the project at the top of the file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;name&gt;docToolchain&lt;/name&gt;
+    &lt;description&gt;an example project on how to create agile documentation&lt;/description&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and also added a properties section where I define the dependency versions used in the rest of the build</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+        &lt;asciidoctor.maven.plugin.version&gt;1.5.3&lt;/asciidoctor.maven.plugin.version&gt;
+        &lt;asciidoctorj.diagram.version&gt;1.5.0&lt;/asciidoctorj.diagram.version&gt;
+    &lt;/properties&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That makes it a bit easier to get an overview and to update versions later.</p>
+</div>
+<div class="paragraph">
+<p>Now let&#8217;s add the right dependency and configure the asciidoctor maven plugin:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
+            &lt;artifactId&gt;asciidoctorj-diagram&lt;/artifactId&gt;
+            &lt;version&gt;${asciidoctorj.diagram.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;configuration&gt;
+        [...]
+        &lt;requires&gt;
+            &lt;require&gt;asciidoctor-diagram&lt;/require&gt;
+        &lt;/requires&gt;
+    &lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et voilá, we have the same result as with the gradle build :-)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The versions are already set is such a way that you can switch between the Graphviz dot version and the build in alpha of jdot.</p>
+</div>
+<div class="paragraph">
+<p>The updated docTool project can be found here:  <a href="https://github.com/docToolchain/docToolchain/tree/0c51e469da884af0632721996a2d2eb010f73cca">https://github.com/docToolchain/docToolchain</a></p>
+</div></p-->
+  	
+		<a href="news/2016-08-02-plantuml-without-graphviz.html"><h1>How to use PlantUML without Graphviz</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Tue Aug 02 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p><a href="http://www.graphviz.org">Graphviz</a> is cool to render diagrams and <a href="https://plantuml.com">PlantUML</a> depends on Graphviz. But Graphviz is also a command line tool which needs to be installed. You can run it as portable app, but what if your company does not allow you to install Graphviz? What if you want to distribute your build but don&#8217;t want to ask your users to install an additional package?</p>
+</div>
+<div class="paragraph">
+<p>Since <a href="http://plantuml.com/smetana02.html">April 2016</a>, PlantUML supports rendering of diagrams without Graphviz. It is still in alpha but already working quite nice. The only drawback I currently notice is that it does not render arrow heads - something I can work with for the time being :-)</p>
+</div>
+<div class="paragraph">
+<p>So just add</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>!pragma graphviz_dot jdot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>at top of your diagram and it will be rendered through jdot and not Graphviz dot. Just like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[plantuml,jdot,png]
+----
+!pragma graphviz_dot jdot
+class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog
+----</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>!pragma graphviz_dot jdot
+class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to make this work with the docToolchain project, the used version of asciidoctor-diagram had to be updated to 1.5.1 - this version includes the newest plantUML.</p>
+</div>
+<div class="paragraph">
+<p>If you experience problems, you can always use the <code>version</code> statement of plantUML to check which version from which folder is used:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[plantuml,version,png]
+----
+version
+----</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>version</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In my case, I used the <a href="https://github.com/asciidoctor/asciidoctor-intellij-plugin">asciidoctor-intellij-plugin</a> plugin to edit my AsciiDoc files. THis plugin rendered the images to the <code>images</code> folder within the <code>src</code> folder. The result was that the Gradle build copied the images created by the IntelliJ plugins over the generated one.</p>
+</div>
+<div class="paragraph">
+<p>BTW: Thanx to <a href="https://twitter.com/ahus1de">Alexander Schwartz</a> there is a <a href="https://github.com/asciidoctor/asciidoctor-intellij-plugin/releases/tag/0.13-preview1">preview version</a> of the asciidoctor-intellij-plugin available which is able to work without Graphviz. And in addition, it renders the text and preview side-by-side!</p>
+</div>
+<div class="paragraph">
+<p>PS: as always, the current version of docToolchain is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/d090eb8b1e38cf044599e884236e0aff9effca9c">https://github.com/docToolchain/docToolchain</a></p>
+</div></p-->
+  	
+		<a href="news/2016-07-25-plantuml-gradle.html"><h1>Next Level: PlantUML with Gradle</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jul 25 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In my blog previous post about why I love AsciiDoc, I wrote about the usage of <a href="http://plantuml.com/">plantUml</a> in AsciiDoc. Today I will show you how to configure your Gradle build in such a way that a block like this</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>[plantuml,"test",png]
+....
+class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog
+....</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will be rendered as Class-Diagram like this</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cleanup_first">Cleanup first</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>But first things first. Lets evolve the build a bit. Last time I&#8217;ve added a default task to the maven build for convenience. Let&#8217;s do the same with the <code>build.gradle</code> by appending</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">// let's set a defaultTask for convenience
+defaultTasks 'asciidoctor'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The default Gradle build looks for the sources in <code>src/docs/asciidoc</code>, but since I plan to use AsciiDoc as the only format, I would like to put the sources in <code>src/docs</code>. This is configured by defining an asciidoctor task like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+  // configure source and output files and folders
+  sourceDir = file('src/docs')
+  sources {
+    include 'test.asciidoc'
+  }
+  outputDir = file('build/docs')
+  // good to see what the build is doing...
+  logDocuments = true
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>sources</code> statement specifies to only render the main file and not the included files (<code>include.asciidoc</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asciidoc_diagram_plugin">AsciiDoc-Diagram Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To include PlantUML diagrams in an AsciiDoc file, we need the <a href="http://asciidoctor.org/docs/asciidoctor-diagram/">AsciiDoc-Diagram Plugin</a>. Since this plugin, like most AsciiDoctor plugins, is a Ruby Gem, we first need to install the <a href="http://jruby-gradle.org/">JRuby Gradle plugin</a> with the following line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+  // we need this plugin to add ruby gems
+  id "com.github.jruby-gradle.base" version "1.3.0"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this plugin, we can define a dependency to the AsciiDoc-Diagram Gem:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">dependencies {
+    // this is the gem we need for diagrams
+    gems 'rubygems:asciidoctor-diagram:1.4.0'
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Gem alone is not enough since it also depends on the famous <a href="http://www.graphviz.org/">Graphviz</a> library. Unfortunately, this can&#8217;t be easily defined as dependency and has to be installed manually.</p>
+</div>
+<div class="paragraph">
+<p>To make it work, we also have to initialize the JRuby plugin by running the <code>jrubyPrepare</code> task. This is done by specifying a <code>dependsOn`for the `asciidoctor</code> task:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+  // the jrubyPrepare tasks takes care of loading the gems
+  dependsOn jrubyPrepare
+
+  // the asciidoctor task depends on this gem
+  requires = ['asciidoctor-diagram']
+
+  // seems to be important :-)
+  gemPath = jrubyPrepare.outputDir
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>putting all changes together, the <code>build.gradle</code> file now looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">/*
+ * This build file is part of the docToolchain
+ */
+
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+  // we need this plugin to add ruby gems
+  id "com.github.jruby-gradle.base" version "1.3.0"
+}
+
+dependencies {
+    // this is the gem we need for diagrams
+    gems 'rubygems:asciidoctor-diagram:1.4.0'
+}
+
+asciidoctor {
+  // configure source and output files and folders
+  sourceDir = file('src/docs')
+  sources {
+    include 'test.asciidoc'
+  }
+  outputDir = file('build/docs')
+  // good to see what the build is doing...
+  logDocuments = true
+
+  // the jrubyPrepare tasks takes care of loading the gems
+  dependsOn jrubyPrepare
+
+  // the asciidoctor task depends on this gem
+  requires = ['asciidoctor-diagram']
+
+  // seems to be important :-)
+  gemPath = jrubyPrepare.outputDir
+
+}
+
+// let's set a defaultTask for convenience
+defaultTasks 'asciidoctor'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To test it, I&#8217;ve included the PlantUML fragment from above near the top of the <code>test.asciidoc</code> source file (after the definitions). The <code>gradlew</code> statement executed on the commandline will now render the file like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As you can see, it is easy to combine AsciiDoc with planUML to define UML diagrams <em>within</em> your documentation.</p>
+</div>
+<div class="paragraph">
+<p>But one question still remains:</p>
+</div>
+<div class="sect2">
+<h3 id="_when_does_it_make_sense_to_use_plantuml_within_your_document">When does it make sense to use plantUML within your document?</h3>
+<div class="paragraph">
+<p>
+<div style="float:right"><a href="https://www.amazon.de/arc42-Aktion-Praktische-Tipps-Architekturdokumentation/dp/3446448012/ref=as_li_ss_il?ie=UTF8&redirect=true&ref_=as_li_qf_sp_asin_il_tl&linkCode=li1&tag=&linkId=6ed21b5fbad8c1d5793fe05122b6ed2d" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=3446448012&Format=_SL110_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=" ></a><img src="https://ir-de.amazon-adsystem.com/e/ir?t=&l=li1&o=3&a=3446448012" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+</p>
+</div>
+<div class="paragraph">
+<p>The new book <a href="https://leanpub.com/arc42inpractice">Communicating Software Architecture</a>(English) / <a href="http://amzn.to/29UUm0p">arc42 in Aktion</a>(German) by <a href="https://www.gernotstarke.de/">Gernot Starke</a> and <a href="http://www.peterhruschka.eu/">Peter Hruschka</a> provides a good answer. Since you nearly can&#8217;t control the layout of plantUML, it only makes sense when you don&#8217;t have to manually control the layout. This is the case for most simple diagrams and dynamic diagrams like a sequence diagram. PlantUML does such a good job with layouting sequence diagrams, that I even would prefere to draw them with PlantUML over any other tool.</p>
+</div>
+<div class="paragraph">
+<p>PS: the docToolchain project created above is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/c99227237a5871345e6f27e6f56dac1b63e3e4ce">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-07-18-maven-asciidoc-build.html"><h1>Simple AsciiDoc Build with Maven</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jul 18 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="{{page.previous.url}}">Last time</a> we created a Gradle project to render an AsciiDoc file. But what if you can&#8217;t use Gradle but have to use Maven?</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s add a <code>pom.xml</code> to turn the project into a Maven project!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_maven_integration">Maven Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Again - if you don&#8217;t have Maven already installed, use <a href="http://sdkman.io">SDKMan</a> or <a href="https://github.com/flofreud/posh-gvm">posh-GVM</a> to download and install it.</p>
+</div>
+<div class="paragraph">
+<p>I assume that you already have a command line open and your working directory is the project we created last time.</p>
+</div>
+<div class="paragraph">
+<p>For Maven, there is also a <a href="https://github.com/takari/maven-wrapper">wrapper</a> which acts like the Gradle wrapper. To make our project more convenient, let&#8217;s first install the wrapper:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">mvn -N io.takari:maven:wrapper</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, maven needs a <code>pom.xml</code> file and unfortunately, it is not as simple as the <code>build.gradle</code> file. I googled a bit and this is what I came up with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.mycompany.doc&lt;/groupId&gt;
+	&lt;artifactId&gt;asciidocTest&lt;/artifactId&gt;
+	&lt;version&gt;0.1&lt;/version&gt;
+
+	&lt;build&gt;
+		&lt;!-- (1) makes it easier to run build --&gt;
+		&lt;defaultGoal&gt;generate-resources&lt;/defaultGoal&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
+				&lt;artifactId&gt;asciidoctor-maven-plugin&lt;/artifactId&gt;
+				&lt;version&gt;1.5.3&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;!-- (2) defaults to src/main/asciidoc --&gt;
+					&lt;sourceDirectory&gt;src/docs/asciidoc&lt;/sourceDirectory&gt;
+					&lt;!-- (3) defaults to docbook --&gt;
+					&lt;backend&gt;html5&lt;/backend&gt;
+					&lt;!-- (4) defaults to target/generated-docs --&gt;
+					&lt;outputDirectory&gt;build/docs/html5&lt;/outputDirectory&gt;
+				&lt;/configuration&gt;
+				&lt;executions&gt;
+					&lt;execution&gt;
+						&lt;id&gt;output-html&lt;/id&gt;
+						&lt;phase&gt;generate-resources&lt;/phase&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;process-asciidoc&lt;/goal&gt;
+						&lt;/goals&gt;
+					&lt;/execution&gt;
+				&lt;/executions&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is not the simplest build file for rendering AsciiDoc, but I wanted to configure it so that it does the same as the Gradle build:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>(1) set a default build target so that you don&#8217;t have to specify one when you run maven</p>
+</li>
+<li>
+<p>(2)/(4) change the source and output directories to be the same as with the Gradle build</p>
+</li>
+<li>
+<p>(3) somehow the renderer defaults to the docbook backend (It seems to ignore the backend defined in the <code>test.asciidoc</code> file). So I configured the html5 backend directly in <code>the pom.xml</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it! Just run</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">mvnw</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and you&#8217;ll get the same output as with the Gradle build:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/renderedHtml.png" alt="renderedHtml">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It doesn&#8217;t matter if you use Maven or Gradle as build tool. You can unleash the power of AsciiDoc with both build systems. You can even use it without a build system by directly using AsciiDoctor as library from Groovy or Java.</p>
+</div>
+<div class="paragraph">
+<p>PS: the docToolchain project greated above is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/e68bf3e039f52ba346626a0da8e2082e29390021">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-07-11-gradle-asciidoc-build.html"><h1>Simple AsciiDoc Build with Gradle</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jul 11 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>So I told you to use AsciiDoc to write technical documents because of all the great features.</p>
+</div>
+<div class="paragraph">
+<p>Today I want to show you how to unleash the power and get started.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gradle_integration">Gradle Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s first start with Gradle. I like Gradle much because it is modern and avoids unwanted complexity. But I am far from being a Gradle expert. Everytime I need a feature, I have to google it. I guess that&#8217;s ok, since I want to code and document and not spend too much time with the build system :-)</p>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s get started. If you don&#8217;t have already Gradle installed on your machine, you should give <a href="http://sdkman.io">SDKMan</a> a try. It manages the installation, upgrade and switch between versions of not only Gradle but all the tools a java developer needs - all but the JDK :-(. If you are on a Windows machine like me, you have to use <a href="https://github.com/flofreud/posh-gvm">posh-GVM</a> instead of SDKMan. It&#8217;s a bit harder to install but will yield the same results - as long as you use the powershell :-)</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s first create a fresh working dir</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">mkdir docToolchain
+cd docToolchain</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and init Git and Gradle</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">gradle init
+git init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This created a simple <code>build.gradle</code> file and also added <code>gradlew</code> the Gradle-wrapper. It’s a best-practice-thing. The Gradle-wrapper makes sure that everybody who checks out the project will be able to just build your project. Only the proxy has to be configured - Gradle will be automatically installed. To use the wrapper type <code>gradlew</code> instead of <code>gradle</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>build.gradle</code> file might be a good starting point for a normal project, but in this case, I just replace it with the following one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it. It&#8217;s basically all we need to convert our first asciidoc file. (If you wonder about the notation - it&#8217;s the new way to reference plugins which works from Gradle v2.1 on.)</p>
+</div>
+<div class="paragraph">
+<p>To get a slightly more challenging document than a simple "Hello World", let&#8217;s copy the one provided by <a href="https://www.twitter.com/mojavelinux">@mojavelinux</a> as  <a href="https://gist.github.com/mojavelinux/4402636">gist</a>. Just put the three files <code>include.asciidoc.txt</code> and <code>test.asciidoc.txt</code>  in the project&#8217;s subfolder <code>/src/docs/asciidoc</code> and <code>tiger.png</code> into <code>/src/docs/asciidoc/images</code> . In order to make it work, remove the <code>.txt</code> extension of the two files and also in the <code>test.asciidoc</code> file on line 141.</p>
+</div>
+<div class="paragraph">
+<p>The <code>test.asciidoc</code> file is configured to use an external style sheet which is missing in our setup. So to use the internal stylesheet, change the beginning of the file to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>//:stylesheet: asciidoc.css
+:imagesdir: images
+//:backend: docbook45
+:backend: html5</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The reference to the external style sheet is <code>/src/docs/asciidoc</code> is the standard location where the plugin searches for asciidoc files. It will convert all files it finds.</p>
+</div>
+<div class="paragraph">
+<p>We are now ready to create our first HTML document from the example files. Just run</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">gradle asciidoctor</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>from the command line and check out the result in <code>/build/asciidoc/html5/test.html</code></p>
+</div>
+<div class="paragraph">
+<p>The result should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/renderedHtml.png" alt="renderedHtml">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;ve followd all the steps above, you&#8217;ve just created your first asciidoc project to write technical documentation!</p>
+</div>
+<div class="paragraph">
+<p>You are not ready to unleash the power of asciidoc&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>PS: the docToolchain project greated above is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/acb67f4db20a3285cbe18ebd07c8a03f0d50c5a7">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-07-03-why-asciidoc.html"><h1>Why you should use AsciiDoc to document your Software Solution</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Sun Jul 03 00:00:00 GMT 2016)</p>
+		<!--p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="{{page.previous.url}}">Last time</a> I wrote about why I don&#8217;t like  Word, but I didn&#8217;t mention an alternative.</p>
+</div>
+<div class="paragraph">
+<p>For me, AsciiDoc as markup language is a perfect alternative for technical documents. Together with the tooling provided by the AsciiDoctorJ community it fulfills all my requirements.</p>
+</div>
+<div class="paragraph">
+<p>AsciiDoc is a plain text format and thus just stores the information you want to document, the content. The text will contain - besides tables - no layout. The layout is created by whatever renderer you chose. Since you don&#8217;t have to worry about the layout, it also will not distract you. No <em>"argh - how do I get this paragraph together with the diagram on one page?"</em>!</p>
+</div>
+<div class="paragraph">
+<p>And since it is plain text, you can happily store it along with the source code of your project. This not only solves versioning problems. You can now apply version control, "code"-review and diffs the same way you are used to do with your code.</p>
+</div>
+<div class="paragraph">
+<p>It also solves the first problem of any information architecture: <em>Where are documents stored?</em></p>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s take a look at the extra features AsciiDoc provides over real plain text.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_images_are_referenced_and_not_embedded"><a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images">Images are referenced and not embedded</a>:</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>image::sunset.jpg[]
+image::sunset.jpg[Sunset]
+[[img-sunset]]
+image::sunset.jpg[caption="Figure 1: ", title="A mountain sunset", alt="Sunset", width="300", height="200", link="http://www.flickr.com/photos/javh/5448336655"]
+image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This opens up new possibilities when you want to keep your documents up to date. No more "someone should update this diagram, but where is the source?" and "I will do it later, it&#8217;s too much effort now". The document will reference the image and the source of the image (UML Model, Powerpoint etc.) will be in the same location or at least referenced from the build of your documentation. Yes - build - because nobody likes to read plain AsciiDoc, you will have to render it to a more suitable output format. This is best done with the build tools you already know: Maven or Gradle. And this adds the new possibilities: you take the source file of your diagrams, images, slides etc. and extract the images just before the document gets rendered. This way you only have to update the source, not the document.</p>
+</div>
+<div class="paragraph">
+<p>BTW: that&#8217;s part two of an information architecture - you not only know where your documents are stored, you also reference the location of external sources for images.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_extend_the_capabilities_of_asciidoc">Plugins extend the capabilities of AsciiDoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The plugin I like most is the <a href="http://www.plantuml.com">PlantUML</a> plugin (called Diagram-plugin because it also can render additional formats). When installed, you can describe UML diagrams in plain text and they will be rendered with the document. The magic is the same as with AsciiDoc - you don&#8217;t have to care about the layout. PlantUML will render the boxes for you. This does not always make sense, but for certain types of diagrams it is better than any other tool.</p>
+</div>
+<div class="paragraph">
+<p>For instance when it comes to sequence diagrams - you don&#8217;t want to layout them manually. PlantUML does a really good job for sequence diagrams.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example for PlantUML inside AsciiDoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>[plantuml,"demo",png]
+---
+artifact ".adoc-File" as adoc
+artifact ".html-File" as html
+artifact ".pdf-File" as pdf
+component asciidoctorj
+adoc -&gt; asciidoctorj
+asciidoctorj -down-&gt; html
+asciidoctorj -down-&gt; pdf
+---</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/demo.png" alt="demo">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_subdocuments_can_be_referenced">Subdocuments can be referenced</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just put all your chapters in subdocuments and create a master which includes them when rendering of the whole document. This makes it easier to handle you text. And if you need different compositions for different stakeholders, just create additional "master" documents which rearrange, leave out or even add new chapters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>include::Chapter_01.adoc[]
+include::Chapter_02.adoc[]
+include::Chapter_03.adoc[]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion_tldr">Conclusion / tl;dr</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are only a few reasons why I favour Asciidoc over any text processor. The main reason is that it looks like code, feels like code, can be controlled like code and builds like code. And that&#8217;s what counts :-)</p>
+</div>
+<div class="paragraph">
+<p>If you need more arguments, check out the great blogposts by <a href="https://twitter.com/mrhaki">@mrhaki</a>: <a href="http://mrhaki.blogspot.de/search/label/Awesome%3AAsciidoctor">Awesome:Asciidoctor</a></p>
+</div>
+</div>
+</div></p-->
+  	
+		<a href="news/2016-05-16-why-no-word.html"><h1>Why I don&#8217;t like Word to write documentation</h1></a>
+		<p>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon May 16 00:00:00 GMT 2016)</p>
+		<!--p><div class="paragraph">
+<p>Don&#8217;t get me wrong &ndash; MS Word is a great product for many use cases, but most of them are IMHO outdated (like writing a letter) and writing modern documentation is not a use case where MS Word shines.</p>
+</div>
+<div class="paragraph">
+<p>Today we live in the information age, but Word is page oriented &ndash; Word lets you write documents with pages, page numbers, page header and footer etc.<br>
+The table of contents lists the page numbers the content can be found on &ndash; linking to the content is not a first class feature.</p>
+</div>
+<div class="paragraph">
+<p>When I write down the documentation for a project, I don&#8217;t want to create pages &ndash; I want to dump information. The format in which the information will be published is important, but it is even more important to have the freedom to change the format to &ndash; for example &ndash; HTML, ePub, Word, PDF and whatever may come in the future and what my stakeholders need.<br>
+Yes, Word can be saved as HTML and printed as PDF, but that&#8217;s not the same.</p>
+</div>
+<div class="paragraph">
+<p>BTW: interesting about Word is that it implements many advanced features which seem to be hard to use.<br>
+Did you know that Word lets you…</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>compare two documents?</p>
+</li>
+<li>
+<p>compose a document from subdocuments?</p>
+</li>
+<li>
+<p>reference images instead of embedding them?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These are great features, but since we are not used to them, they are hard to handle.</p>
+</div>
+<div class="paragraph">
+<p>Instead of comparing documents and checking the diff, we use templates with a change history table as part of the document. A proper diff together with version control would be more helpful.</p>
+</div>
+<div class="paragraph">
+<p>Instead of composing documents from subdocuments, we copy and paste parts from document to document in order to create views for different stakeholders. A habit which would not be tolerated in software development :-)</p>
+</div>
+<div class="paragraph">
+<p>When we use images in documents, they are embedded. So if we want to make a change, we first have to search for the source file (and hopefully find it), change it and embed it again. Storing only the reference to the image within the document would make this easier.</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately, composing documents and referencing images result in multifile documents which people are not used to and would break the "please mail me the doc" flow.</p>
+</div>
+<div class="paragraph">
+<p>So what&#8217;s the solution? Stay tuned and I will explain in my next post why I prefer asciidoc over Word&#8230;&#8203;</p>
+</div></p-->
+  	
+	
+	<hr />
+	
+	<p>Older posts are available in the <a href="archive.html">archive</a>.</p>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+    
+
+
+</body>
+</html>

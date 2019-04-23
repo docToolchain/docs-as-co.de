@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Why you should use AsciiDoc to document your Software Solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Why you should use AsciiDoc to document your Software Solution</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Sun Jul 03 00:00:00 GMT 2016)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="{{page.previous.url}}">Last time</a> I wrote about why I don&#8217;t like  Word, but I didn&#8217;t mention an alternative.</p>
+</div>
+<div class="paragraph">
+<p>For me, AsciiDoc as markup language is a perfect alternative for technical documents. Together with the tooling provided by the AsciiDoctorJ community it fulfills all my requirements.</p>
+</div>
+<div class="paragraph">
+<p>AsciiDoc is a plain text format and thus just stores the information you want to document, the content. The text will contain - besides tables - no layout. The layout is created by whatever renderer you chose. Since you don&#8217;t have to worry about the layout, it also will not distract you. No <em>"argh - how do I get this paragraph together with the diagram on one page?"</em>!</p>
+</div>
+<div class="paragraph">
+<p>And since it is plain text, you can happily store it along with the source code of your project. This not only solves versioning problems. You can now apply version control, "code"-review and diffs the same way you are used to do with your code.</p>
+</div>
+<div class="paragraph">
+<p>It also solves the first problem of any information architecture: <em>Where are documents stored?</em></p>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s take a look at the extra features AsciiDoc provides over real plain text.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_images_are_referenced_and_not_embedded"><a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#images">Images are referenced and not embedded</a>:</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>image::sunset.jpg[]
+image::sunset.jpg[Sunset]
+[[img-sunset]]
+image::sunset.jpg[caption="Figure 1: ", title="A mountain sunset", alt="Sunset", width="300", height="200", link="http://www.flickr.com/photos/javh/5448336655"]
+image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This opens up new possibilities when you want to keep your documents up to date. No more "someone should update this diagram, but where is the source?" and "I will do it later, it&#8217;s too much effort now". The document will reference the image and the source of the image (UML Model, Powerpoint etc.) will be in the same location or at least referenced from the build of your documentation. Yes - build - because nobody likes to read plain AsciiDoc, you will have to render it to a more suitable output format. This is best done with the build tools you already know: Maven or Gradle. And this adds the new possibilities: you take the source file of your diagrams, images, slides etc. and extract the images just before the document gets rendered. This way you only have to update the source, not the document.</p>
+</div>
+<div class="paragraph">
+<p>BTW: that&#8217;s part two of an information architecture - you not only know where your documents are stored, you also reference the location of external sources for images.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_extend_the_capabilities_of_asciidoc">Plugins extend the capabilities of AsciiDoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The plugin I like most is the <a href="http://www.plantuml.com">PlantUML</a> plugin (called Diagram-plugin because it also can render additional formats). When installed, you can describe UML diagrams in plain text and they will be rendered with the document. The magic is the same as with AsciiDoc - you don&#8217;t have to care about the layout. PlantUML will render the boxes for you. This does not always make sense, but for certain types of diagrams it is better than any other tool.</p>
+</div>
+<div class="paragraph">
+<p>For instance when it comes to sequence diagrams - you don&#8217;t want to layout them manually. PlantUML does a really good job for sequence diagrams.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example for PlantUML inside AsciiDoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>[plantuml,"demo",png]
+---
+artifact ".adoc-File" as adoc
+artifact ".html-File" as html
+artifact ".pdf-File" as pdf
+component asciidoctorj
+adoc -&gt; asciidoctorj
+asciidoctorj -down-&gt; html
+asciidoctorj -down-&gt; pdf
+---</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/demo.png" alt="demo">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_subdocuments_can_be_referenced">Subdocuments can be referenced</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just put all your chapters in subdocuments and create a master which includes them when rendering of the whole document. This makes it easier to handle you text. And if you need different compositions for different stakeholders, just create additional "master" documents which rearrange, leave out or even add new chapters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>include::Chapter_01.adoc[]
+include::Chapter_02.adoc[]
+include::Chapter_03.adoc[]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion_tldr">Conclusion / tl;dr</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are only a few reasons why I favour Asciidoc over any text processor. The main reason is that it looks like code, feels like code, can be controlled like code and builds like code. And that&#8217;s what counts :-)</p>
+</div>
+<div class="paragraph">
+<p>If you need more arguments, check out the great blogposts by <a href="https://twitter.com/mrhaki">@mrhaki</a>: <a href="http://mrhaki.blogspot.de/search/label/Awesome%3AAsciidoctor">Awesome:Asciidoctor</a></p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

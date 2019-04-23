@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Next Level: PlantUML with Gradle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Next Level: PlantUML with Gradle</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jul 25 00:00:00 GMT 2016)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In my blog previous post about why I love AsciiDoc, I wrote about the usage of <a href="http://plantuml.com/">plantUml</a> in AsciiDoc. Today I will show you how to configure your Gradle build in such a way that a block like this</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>[plantuml,"test",png]
+....
+class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog
+....</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will be rendered as Class-Diagram like this</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cleanup_first">Cleanup first</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>But first things first. Lets evolve the build a bit. Last time I&#8217;ve added a default task to the maven build for convenience. Let&#8217;s do the same with the <code>build.gradle</code> by appending</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">// let's set a defaultTask for convenience
+defaultTasks 'asciidoctor'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The default Gradle build looks for the sources in <code>src/docs/asciidoc</code>, but since I plan to use AsciiDoc as the only format, I would like to put the sources in <code>src/docs</code>. This is configured by defining an asciidoctor task like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+  // configure source and output files and folders
+  sourceDir = file('src/docs')
+  sources {
+    include 'test.asciidoc'
+  }
+  outputDir = file('build/docs')
+  // good to see what the build is doing...
+  logDocuments = true
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>sources</code> statement specifies to only render the main file and not the included files (<code>include.asciidoc</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asciidoc_diagram_plugin">AsciiDoc-Diagram Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To include PlantUML diagrams in an AsciiDoc file, we need the <a href="http://asciidoctor.org/docs/asciidoctor-diagram/">AsciiDoc-Diagram Plugin</a>. Since this plugin, like most AsciiDoctor plugins, is a Ruby Gem, we first need to install the <a href="http://jruby-gradle.org/">JRuby Gradle plugin</a> with the following line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+  // we need this plugin to add ruby gems
+  id "com.github.jruby-gradle.base" version "1.3.0"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this plugin, we can define a dependency to the AsciiDoc-Diagram Gem:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">dependencies {
+    // this is the gem we need for diagrams
+    gems 'rubygems:asciidoctor-diagram:1.4.0'
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Gem alone is not enough since it also depends on the famous <a href="http://www.graphviz.org/">Graphviz</a> library. Unfortunately, this can&#8217;t be easily defined as dependency and has to be installed manually.</p>
+</div>
+<div class="paragraph">
+<p>To make it work, we also have to initialize the JRuby plugin by running the <code>jrubyPrepare</code> task. This is done by specifying a <code>dependsOn`for the `asciidoctor</code> task:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+  // the jrubyPrepare tasks takes care of loading the gems
+  dependsOn jrubyPrepare
+
+  // the asciidoctor task depends on this gem
+  requires = ['asciidoctor-diagram']
+
+  // seems to be important :-)
+  gemPath = jrubyPrepare.outputDir
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>putting all changes together, the <code>build.gradle</code> file now looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">/*
+ * This build file is part of the docToolchain
+ */
+
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+  // we need this plugin to add ruby gems
+  id "com.github.jruby-gradle.base" version "1.3.0"
+}
+
+dependencies {
+    // this is the gem we need for diagrams
+    gems 'rubygems:asciidoctor-diagram:1.4.0'
+}
+
+asciidoctor {
+  // configure source and output files and folders
+  sourceDir = file('src/docs')
+  sources {
+    include 'test.asciidoc'
+  }
+  outputDir = file('build/docs')
+  // good to see what the build is doing...
+  logDocuments = true
+
+  // the jrubyPrepare tasks takes care of loading the gems
+  dependsOn jrubyPrepare
+
+  // the asciidoctor task depends on this gem
+  requires = ['asciidoctor-diagram']
+
+  // seems to be important :-)
+  gemPath = jrubyPrepare.outputDir
+
+}
+
+// let's set a defaultTask for convenience
+defaultTasks 'asciidoctor'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To test it, I&#8217;ve included the PlantUML fragment from above near the top of the <code>test.asciidoc</code> source file (after the definitions). The <code>gradlew</code> statement executed on the commandline will now render the file like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As you can see, it is easy to combine AsciiDoc with planUML to define UML diagrams <em>within</em> your documentation.</p>
+</div>
+<div class="paragraph">
+<p>But one question still remains:</p>
+</div>
+<div class="sect2">
+<h3 id="_when_does_it_make_sense_to_use_plantuml_within_your_document">When does it make sense to use plantUML within your document?</h3>
+<div class="paragraph">
+<p>
+<div style="float:right"><a href="https://www.amazon.de/arc42-Aktion-Praktische-Tipps-Architekturdokumentation/dp/3446448012/ref=as_li_ss_il?ie=UTF8&redirect=true&ref_=as_li_qf_sp_asin_il_tl&linkCode=li1&tag=&linkId=6ed21b5fbad8c1d5793fe05122b6ed2d" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=3446448012&Format=_SL110_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=" ></a><img src="https://ir-de.amazon-adsystem.com/e/ir?t=&l=li1&o=3&a=3446448012" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+</p>
+</div>
+<div class="paragraph">
+<p>The new book <a href="https://leanpub.com/arc42inpractice">Communicating Software Architecture</a>(English) / <a href="http://amzn.to/29UUm0p">arc42 in Aktion</a>(German) by <a href="https://www.gernotstarke.de/">Gernot Starke</a> and <a href="http://www.peterhruschka.eu/">Peter Hruschka</a> provides a good answer. Since you nearly can&#8217;t control the layout of plantUML, it only makes sense when you don&#8217;t have to manually control the layout. This is the case for most simple diagrams and dynamic diagrams like a sequence diagram. PlantUML does such a good job with layouting sequence diagrams, that I even would prefere to draw them with PlantUML over any other tool.</p>
+</div>
+<div class="paragraph">
+<p>PS: the docToolchain project created above is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/c99227237a5871345e6f27e6f56dac1b63e3e4ce">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

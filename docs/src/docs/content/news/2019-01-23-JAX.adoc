@@ -1,0 +1,23 @@
+= Docs-as-Code at JAX conference
+:jbake-type: post
+:jbake-date: 2019-01-23
+:jbake-status: published
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/JAX2019/
+:page-tags: [upcomingTalk]
+:imagesdir: /images
+
+Come and visit my talk at the JAX conference in Mainz!
+
++++
+<blockquote class="twitter-tweet" data-lang="de"><p lang="de" dir="ltr">Laut mehrerer Umfragen ist fehlende <a href="https://twitter.com/hashtag/Dokumentation?src=hash&amp;ref_src=twsrc%5Etfw">#Dokumentation</a> ein großes Hindernis für den Einsatz von <a href="https://twitter.com/hashtag/OpenSource?src=hash&amp;ref_src=twsrc%5Etfw">#OpenSource</a>-<a href="https://twitter.com/hashtag/Software?src=hash&amp;ref_src=twsrc%5Etfw">#Software</a>. <a href="https://twitter.com/RalfDMueller?ref_src=twsrc%5Etfw">@RalfDMueller</a> zeigt, wie Du einfach Dokumentation für Dein Produkt erzeugst, egal ob Open oder Inner Source.<br>&gt;&gt; <a href="https://t.co/nlJOq0PEOP">https://t.co/nlJOq0PEOP</a> <a href="https://t.co/oE5yJSXFy1">pic.twitter.com/oE5yJSXFy1</a></p>&mdash; JAXCON (@jaxcon) <a href="https://twitter.com/jaxcon/status/1088066421442166784?ref_src=twsrc%5Etfw">23. Januar 2019</a></blockquote>
++++
+
+ifndef::env-idea[]
+// workaround for JavaFX preview in IntelliJ not supporting Twitter's widget.js
++++
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
++++
+endif::[]

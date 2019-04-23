@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>PlantUML with Maven</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>PlantUML with Maven</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Aug 08 00:00:00 GMT 2016)</em></p>
+
+	<p><div class="paragraph">
+<p>Let&#8217;s add <a href="https://plantuml.com">PlantUML</a> to our maven build. I&#8217;ll use a slightly different approach. For the gradle build, I referenced the asciidoctor-diagram ruby gem to be used. But there is also a .jar version of it which can be used. It is one minor version behind the ruby gem, but that doesn&#8217;t matter in this case.</p>
+</div>
+<div class="paragraph">
+<p>First, let&#8217;s clean up the build a bit. I&#8217;ve added a name and description for the project at the top of the file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;name&gt;docToolchain&lt;/name&gt;
+    &lt;description&gt;an example project on how to create agile documentation&lt;/description&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and also added a properties section where I define the dependency versions used in the rest of the build</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;properties&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+        &lt;asciidoctor.maven.plugin.version&gt;1.5.3&lt;/asciidoctor.maven.plugin.version&gt;
+        &lt;asciidoctorj.diagram.version&gt;1.5.0&lt;/asciidoctorj.diagram.version&gt;
+    &lt;/properties&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That makes it a bit easier to get an overview and to update versions later.</p>
+</div>
+<div class="paragraph">
+<p>Now let&#8217;s add the right dependency and configure the asciidoctor maven plugin:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
+            &lt;artifactId&gt;asciidoctorj-diagram&lt;/artifactId&gt;
+            &lt;version&gt;${asciidoctorj.diagram.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;configuration&gt;
+        [...]
+        &lt;requires&gt;
+            &lt;require&gt;asciidoctor-diagram&lt;/require&gt;
+        &lt;/requires&gt;
+    &lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>et voilá, we have the same result as with the gradle build :-)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>class Animal
+class Cat
+class Dog
+Animal &lt;|-- Cat
+Animal &lt;|-- Dog</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The versions are already set is such a way that you can switch between the Graphviz dot version and the build in alpha of jdot.</p>
+</div>
+<div class="paragraph">
+<p>The updated docTool project can be found here:  <a href="https://github.com/docToolchain/docToolchain/tree/0c51e469da884af0632721996a2d2eb010f73cca">https://github.com/docToolchain/docToolchain</a></p>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

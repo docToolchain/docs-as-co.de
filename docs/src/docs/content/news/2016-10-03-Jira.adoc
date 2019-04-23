@@ -1,0 +1,142 @@
+= Living Documents for Agile Projects
+:jbake-type: post
+:jbake-date: 2016-10-03
+:jbake-status: published
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/jira/
+:page-tags: [doc, atlassian, asciidoc, arc42]
+:imagesdir: /images
+
+If you describe a solution architecture, your document will be in an unfinished state for a long time. If you are on an agile project, your document will be a living one. There will be always open questions which need to be tracked. A good idea to track them is the issue tracker which you already use for the code of your project. It not only allows you to track the progress on the open issue, it also allows you to assign the open issue to those people who will give you the right answer.
+
+Today I will show you how you can turn your asciidoc documentation into a living document by linking it to Jira.
+
+## The Idea
+
+The most trivial way to link to jira is to just add the url of your issue to your text:
+
+    https://example.atlassian.net/browse/DOC-51
+
+You can add the issue id as name of the link in order to just get the issue id linked to your issue
+
+    https://example.atlassian.net/browse/DOC-51[DOC-51]
+    
+Trivial, but you always have to paste the base URL from somewhere. To make it more convenient, an asciidoctor plugin could make sense. https://twitter.com/mrhaki[mrhaki] describes in his awesome blog exactly this: http://mrhaki.blogspot.de/2015/03/awesome-asciidoctor-use-inline.html[Awesome Asciidoctor: Use Inline Extension DSL with Gradle]. A detailed description on how to write asciidoctor extensions can be found http://asciidoctor.org/docs/asciidoctor-gradle-plugin/#adding-custom-extensions[in the documentation of the asciidoctor gradle plugin].
+
+So, I've added the code from mrhaki to the docToolchain project in a slightly modified version:
+
+```groovy
+asciidoctor {
+    // Here we can add the code for extensions we write.
+    extensions {
+        inlinemacro (name: "jira") {
+            parent, target, attributes ->
+
+                options = [
+                        "type": ":link",
+                        "target": "https://jira-instance/browse/${target}".toString(),
+                        "id": "${target}"
+                ]
+
+                // Create the link to the issue.
+                createInline(parent, "anchor", target, attributes, options).render()
+        }
+    }
+}
+```
+
+Do you seen the `"id"`-key in the list of options? That lets us do an additional trick which I will explain further down the article...
+
+The extension lets us now link to our issues by just writing
+
+    jira:DOC-51[]
+    
+don't forget the `[]` - otherwise it will not work.
+
+## List of open Issues
+
+But wouldn't it be nice to have also a list of all open issues at the end of the document? Now that we know how to write an inline plugin, I would like to use this mechanism to create a table. Unfortunately, I couldn't finde an example on how to write an extension which creates a table, so I do a simple fallback to just create a file which can be included...
+
+Jira has a nice REST api. IMHO, this is even easier to use than the Java-API. This little code snipped shows how to retrieve all open issues of a given project with a given label assigned:
+
+```groovy
+task exportJiraIssues(
+        description: 'exports all jira issues from a given search'
+) << {
+        def user = jiraUser
+        def pass = jiraPass
+        if (!pass) {
+            System.console().readPassword("Jira password for user '$user': ")
+        }
+
+        def stats = [:]
+        def jira = new groovyx.net.http.RESTClient( jiraRoot+'/rest/api/2/' )
+        jira.encoderRegistry = new groovyx.net.http.EncoderRegistry( charset: 'utf-8' )
+        def headers = [
+                'Authorization':"Basic " + "${user}:${pass}".bytes.encodeBase64().toString(),
+                'Content-Type':'application/json; charset=utf-8'
+        ]
+        def openIssues = new File('./build/docs/openissues.adoc')
+        openIssues.write("",'utf-8')
+        println jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel)
+        jira.get(path:'search',
+                query:['jql': jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel),
+                       'maxResults':1000,
+                       'fields':'created,resolutiondate,priority,summary,timeoriginalestimate, assignee'
+                ],
+                headers:headers
+        ).data.issues.each { issue ->
+            openIssues.append("| <<${issue.key}>> ",'utf-8')
+            openIssues.append("| ${issue.fields.priority.name} ",'utf-8')
+            openIssues.append("| ${Date.parse("yyyy-MM-dd'T'H:m:s.000z",issue.fields.created).format('dd.MM.yy')} ",'utf-8')
+            openIssues.append("| ${issue.fields.assignee?issue.fields.assignee.displayName:'not assigned'} ",'utf-8')
+            openIssues.append("| ${jiraRoot}/browse/${issue.key}[${issue.fields.summary}]\n",'utf-8')
+        }
+
+}
+```
+
+In order to use it, you have to set some properties in `gradle.properties`:
+
+```properties
+// settings to link to open issues
+
+jiraRoot = 'https://jira-instance'
+jiraUser = 'username'
+jiraPass = '' // leave empty to get a prompt
+jiraProject = '' // the key of the project
+jiraLabel = '' // the label to restrict search to
+
+jiraJql  = project='%jiraProject%' AND resolution='Unresolved' AND labels='%jiraLabel%' ORDER BY priority DESC, duedate ASC
+```
+
+This creates the content for an asciidoc table which then can be included like this:
+
+```asciidoc
+.Open Issues
+[options="header",cols="2,1,1,2,6"]
+|====
+|ID | Priority | Created | Assignee | Summary
+
+include::../../../../build/docs/openissues.adoc[]
+
+|====
+```
+
+I've also added this asciidoc snippet to the arc42 template of docToolchain as appendix.
+
+## Linking the Issues
+
+Getting back to the neat little trick I did with the `id`-option in the asciidoc jira extension above: since all inline references to an jira issue are now linked with the issue-key as ID, it is easy to link to them as anchor. This can be done with the `<<anchor-id>>`-syntax in asciidoc and that's also exactly what I did in the script which creates the table with all open issues:
+
+The ID of each row links to the reference within the document. This let's you easily check the context of the open issue.
+
+The summary of each row links to the configured jira system. This let's you easily check the current status of the issue and edit it.
+
+image::oldblog/jira-open-issues.png[]
+
+---
+
+The current version of docToolchain is available on github: https://github.com/docToolchain/docToolchain/tree/5bf544c7d6eecf6031398573f5abe21e89feeaba[https://github.com/docToolchain/docToolchain]

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Did you ever wish you had better Diagrams?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Did you ever wish you had better Diagrams?</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Aug 29 00:00:00 GMT 2016)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s recap what we did so far: in order to kickstart a documentation project, we&#8217;ve created a dual gradle / maven asciidoc build with included arc42 template in two languages and easy textual diagram drawing with planUML. That&#8217;s already quite a feature list!</p>
+</div>
+<div class="paragraph">
+<p>But what if plantUML diagrams are not enough for your needs? What if you can&#8217;t rely on the auto-layout feature of plantUML?</p>
+</div>
+<div class="paragraph">
+<p>One solution would be to just start up your favourite diagramming tool, draw your diagrams, export them and reference them from asciidoc. No problem. But what if you need to update one of the diagrams? Or you just worked the whole day on some diagrams and you don&#8217;t know anymore which ones to re-export?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wouldnt_it_be_nice_if_your_build_just_takes_care_of_it">Wouldn&#8217;t it be nice if your build just takes care of it?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It could just search for your diagrams files and export them.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s exactly what we will add today. Since there are two many diagramming tools on the market to include them all in one post, I will stick to <a href="http://www.sparxsystems.com/">Sparx Enterprise Architect</a>. Enterprise Architect - or short jsut EA - is a powerful but yet affordable tool which can be easily scripted.</p>
+</div>
+<div class="paragraph">
+<p>There are several options for scripting like internal scripts written in <a href="http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/the_scripter_window.html">JavaScript, JScript and VBScript</a>. These scripts have to be invoked manually from within the application. Another option is to use the <a href="http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/usingtheautomationinterface.html">automation interface</a> and "remote control" the application from outside. This can be done in various languages (all which have access to the ActiveX COM interface). There is a java bridge included and VBS would be the native approach.</p>
+</div>
+<div class="paragraph">
+<p>In the past I already played around with the included java interface and had the feeling that it is a little bit incomplete or buggy. That&#8217;s why I soon switched to VisualBasic as scripting for EA - this avoids an additional layer between me and the application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The script I want to include into our build will have several tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>find all EA repositories within the project</p>
+</li>
+<li>
+<p>open the found repositories through EA</p>
+</li>
+<li>
+<p>export all diagrams and save them with their given name as file name</p>
+</li>
+<li>
+<p>as bonus, check all element notes and export those which start with {adoc: filename}</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve chose to use the given name of a diagram for the file name because I think it is easier to handle and speaks for itself. Drawback is that you have to make sure that the name is a valid file name and it is unique. Another aproach would be to use the quite cryptic object ID (GUID)</p>
+</div>
+<div class="paragraph">
+<p>What&#8217;s up with the bonus tasks? Working with EA, I like to directly write my comments and descriptions in the note fields of the diagram elements. By prefixing them with {adoc: filename}, I can decide to export and easily include them into my documentation. This way, the written documentation for a diagram can be directly maintained within EA.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code">Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is the VB-Script code which does all the hard work:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-visualbasic" data-lang="visualbasic">    ' based on the "Project Interface Example" which comes with EA
+    ' http://stackoverflow.com/questions/1441479/automated-method-to-export-enterprise-architect-diagrams
+
+    Dim EAapp 'As EA.App
+    Dim Repository 'As EA.Repository
+    Dim FS 'As Scripting.FileSystemObject
+
+    Dim projectInterface 'As EA.Project
+
+    ' Helper
+    ' http://windowsitpro.com/windows/jsi-tip-10441-how-can-vbscript-create-multiple-folders-path-mkdir-command
+    Function MakeDir (strPath)
+      Dim strParentPath, objFSO
+      Set objFSO = CreateObject("Scripting.FileSystemObject")
+      On Error Resume Next
+      strParentPath = objFSO.GetParentFolderName(strPath)
+
+      If Not objFSO.FolderExists(strParentPath) Then MakeDir strParentPath
+      If Not objFSO.FolderExists(strPath) Then objFSO.CreateFolder strPath
+      On Error Goto 0
+      MakeDir = objFSO.FolderExists(strPath)
+
+    End Function
+
+    '
+    ' Recursively saves all diagrams under the provided package and its children
+    '
+    Sub DumpDiagrams(thePackage,currentModel)
+
+        Set currentPackage = thePackage
+        Const   ForAppending = 8
+
+        For Each currentElement In currentPackage.Elements
+            If (Left(currentElement.Notes, 6) = "{adoc:") Then
+                strFileName = Mid(currentElement.Notes,7,InStr(currentElement.Notes,"}")-7)
+                strNotes = Right(currentElement.Notes,Len(currentElement.Notes)-InStr(currentElement.Notes,"}"))
+                set objFSO = CreateObject("Scripting.FileSystemObject")
+		            If (currentModel.Name="Model") Then
+    	            ' When we work with the default model, we don't need a sub directory
+      	          path = "./src/docs/ea/asciidoc/"
+      	        Else
+      	          path = "./src/docs/ea/asciidoc/"&amp;currentModel.Name&amp;"/"
+      	      	End If
+                MakeDir(path)
+                WScript.echo path&amp;strFileName
+                set objFile = objFSO.OpenTextFile(path&amp;strFileName&amp;".ad",ForAppending, True)
+                objFile.WriteLine(vbCRLF&amp;vbCRLF&amp;"."&amp;currentElement.Name&amp;vbCRLF&amp;strNotes)
+                objFile.Close
+            End If
+        Next
+        ' Iterate through all diagrams in the current package
+        For Each currentDiagram In currentPackage.Diagrams
+
+            ' Open the diagram
+            Repository.OpenDiagram(currentDiagram.DiagramID)
+
+            ' Save and close the diagram
+            If (currentModel.Name="Model") Then
+                ' When we work with the default model, we don't need a sub directory
+                path = "/src/docs/ea/images/"
+            Else
+                path = "/src/docs/ea/images/" &amp; currentModel.Name &amp; "/"
+            End If
+            filename = path &amp; currentDiagram.Name &amp; ".png"
+            MakeDir("." &amp; path)
+            projectInterface.SaveDiagramImageToFile(fso.GetAbsolutePathName(".")&amp;filename)
+            WScript.echo " extracted image to ." &amp; filename
+            Repository.CloseDiagram(currentDiagram.DiagramID)
+        Next
+
+        ' Process child packages
+        Dim childPackage 'as EA.Package
+        For Each childPackage In currentPackage.Packages
+            call DumpDiagrams(childPackage, currentModel)
+        Next
+
+    End Sub
+
+    Function SearchEAProjects(path)
+
+      For Each folder In path.SubFolders
+        SearchEAProjects folder
+      Next
+
+      For Each file In path.Files
+        If fso.GetExtensionName (file.Path) = "eap" Then
+          WScript.echo "found "&amp;file.path
+          OpenProject(file.Path)
+        End If
+      Next
+
+    End Function
+
+    Sub OpenProject(file)
+      ' open Enterprise Architect
+      Set EAapp = CreateObject("EA.App")
+      WScript.echo "opening Enterprise Architect. This might take a moment..."
+      ' load project
+      EAapp.Repository.OpenFile(file)
+      ' make Enterprise Architect to not appear on screen
+      EAapp.Visible = False
+
+      ' get repository object
+      Set Repository = EAapp.Repository
+      ' Show the script output window
+      ' Repository.EnsureOutputVisible("Script")
+
+      Set projectInterface = Repository.GetProjectInterface()
+
+      ' Iterate through all model nodes
+      Dim currentModel 'As EA.Package
+      For Each currentModel In Repository.Models
+        ' Iterate through all child packages and save out their diagrams
+        Dim childPackage 'As EA.Package
+        For Each childPackage In currentModel.Packages
+          call DumpDiagrams(childPackage,currentModel)
+        Next
+      Next
+      EAapp.Repository.CloseFile()
+    End Sub
+
+  set fso = CreateObject("Scripting.fileSystemObject")
+  WScript.echo "Image extractor"
+  WScript.echo "looking for .eap files in " &amp; fso.GetAbsolutePathName(".") &amp; "/src"
+  'Dim f As Scripting.Files
+  SearchEAProjects fso.GetFolder("./src")
+  WScript.echo "finished exporting images"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_it_to_the_build">add it to the Build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Gradle uses Groovy and Groovy is able to easily execute shell scripts. But the standard execution mechanism has some drawbacks (regarding getting the output/error messages from the shell script and also regarding parameters). So I wrote my own streaming execute code which I add through meta programming to the string class. The code which adds the method has also to be executed, so I wrote a special task for this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task streamingExecute(
+    dependsOn: [],
+    description: 'extends the String class with a better .executeCmd'
+) &lt;&lt; {
+    //I need a streaming execute in order to export from EA
+    String.metaClass.executeCmd = {
+        //make sure that all paramters are interpreted through the cmd-shell
+        //TODO: make this also work with *nix
+        def p = "cmd /c ${delegate.value}".execute()
+        def result=[std:'',err:'']
+        def ready = false
+        Thread.start{
+            def reader = new BufferedReader(new InputStreamReader(p.in))
+            def line = ""
+            while ((line = reader.readLine()) != null) {
+                println ""+line
+                result.std+=line+"\n"
+            }
+            ready=true
+            reader.close()
+        }
+        p.waitForOrKill(30000)
+        def error = p.err.text
+        if (error.isEmpty()) {
+            return result
+        } else {
+            throw new RuntimeException("\n"+error)
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_windows_linux">Windows? Linux?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This code fragment currently only works for Windows, but I guess if you use EA, you are not running Linux or MacOS, so I guess this will be fine. If you use Ea on Linux or MaxOS, please contact me - it would be great to make this work on Linux!</p>
+</div>
+<div class="paragraph">
+<p>Now you might think, that if this only runs on Windows, I can&#8217;t use it on a build server. Take a closer look at the VBScript above. I&#8217;ve configured it in such a way that it exports everything to <code>/src/docs/es</code> and not to the <code>/build</code> folder. This is because I normally export the EA content on my dev machine and check in the results. This makes it even easier to get a diff of the work you&#8217;ve done in EA. The remaining build process can rely on the exported data and thus even runs on Linux.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_final_task">final task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to use the streaming execute and run the VBScript, I just added another small task to the Gradle build file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportEA(
+    dependsOn: [streamingExecute],
+    description: 'exports all diagrams and some texts from EA files'
+) &lt;&lt; {
+		new File('src/docs/ea/.').mkdirs()
+    //execute through cscript in order to make sure that we get WScript.echo right
+    "%SystemRoot%\\System32\\cscript.exe //nologo scripts/exportEAP.vbs".executeCmd()
+    //the VB Script is only capable of writing iso-8859-1-Files.
+    //we now have to convert them to UTF-8
+    new File('src/docs/ea/.').eachFileRecurse { file -&gt;
+    	if (file.isFile()) {
+	    	println "exported notes "+file.canonicalPath
+	    	file.write(file.getText('iso-8859-1'),'utf-8')
+    	}
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So, to export all diagrams and notes from EA, you simply run <code>gradle exportEA</code> in the shell: (I&#8217;ve included a small sample EA file)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; gradle exportEA
+:streamingExecute
+:exportEA
+Image extractor
+looking for .eap files in .\docToolchain/src
+found .\src\docs\Models.eap
+opening Enterprise Architect. This might take a moment...
+ extracted image to ./src/docs/images/ea/Use Cases.png
+finished exporting images
+exported notes .\src\docs\ea\UseCases.ad</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BUILD SUCCESSFUL</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Total time: 14.228 secs</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_give_it_a_try">Give it a Try&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So, if you want to test it, you can use the sample EA file included in the docToolchain project and add a small asciidoc file like the following:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image::ea/Use{sp}Cases.png[width=25%]
+include::ea/UseCases.ad[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the <code> </code> in the filename? This is in asciidoc the workaround for spaces in a filename.</p>
+</div>
+<div class="paragraph">
+<p>The EA sample diagram looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/EA_screenshot.png" alt="EA screenshot">
+</div>
+</div>
+<div class="paragraph">
+<p>and our build turns renders it like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/EA_rendered.png" alt="EA rendered">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Today we extended our build with the feature to extract Diagrams and Notes from the Sparxsystems Enterprise Architect UML Modeller. This feature is quite helpful when you have to deal with Diagrams where plantUML is not enough but it does not replace plantUML. PlantUML is still quite useful when you need a simple diagram or a diagram - like a sequence diagram - where the auto-layout of plantUML is quite useful.</p>
+</div>
+<div class="paragraph">
+<p>The updated docTool project can be found here:  <a href="https://github.com/docToolchain/docToolchain/tree/8cc79e8ee36fe67ebd82c99628c38cef425f4749">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

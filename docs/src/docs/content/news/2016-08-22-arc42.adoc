@@ -1,0 +1,32 @@
+= Let's add Content!
+:jbake-type: post
+:jbake-date: 2016-08-22
+:jbake-status: published
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/arc42/
+:page-tags: [asciidoc, doc, maven, arc42]
+:imagesdir: /images
+
+Through the last blog posts, the build script advanced from a simple asciidoc example to a dual build asciidoc archetype with plantUML.
+
+But when you want to document your project, you also need content. Wouldn't it be great to have a template to get you started?
+
+If you want to document your solution architecture, this template already exists. It's called **arc42** and additional information about it is available at https://arc42.github.io[https://arc42.github.io]. On this page, you will find downloads for several source formats, but we only need (who could have guessed) the asciidoc version.
+
+The tempalte is available as English and German version, so I just copied both version into the docToolchain project. They both reside in their own folder with their own main template in `/src/docs`. Feel free to just delete the language version you don't need.
+
+In order to make it look good, I had to fix the `imagesDir` and add some rendering options: 
+
+- **:toc: left** displays a table of contents on the left
+- **:icons: font** displays the so called admonitions with a nice looking icon
+- **:source-highlighter: coderay** will render source code in a nice way
+
+The result should look like this:
+
+image::oldblog/arc42_sample.png[]
+
+The current version of the build should already cover most problems when you start to document your software architecture. But the next blog posts will still add some spice - follow me on twitter if you want to get updates!
+
+The updated docToolchain project can be found here:  https://github.com/docToolchain/docToolchain/tree/8cc79e8ee36fe67ebd82c99628c38cef425f4749[https://github.com/docToolchain/docToolchain]

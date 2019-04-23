@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Enterprise Asciidoctor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Enterprise Asciidoctor</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Fri Apr 07 00:00:00 GMT 2017)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Last time I wrote about how to configure Gradle to run behind a proxy with a local binary repository.</p>
+</div>
+<div class="paragraph">
+<p>First, I have to say that I love twitter, because not long after I tweeted about the new blog post, <a href="https://twitter.com/StuafOdiug">Guido Faust</a> reminded me that "The usage of a tool like nexus, artifactory or others is also usefull to save time, traffic and ensure availability" - full ack. People like me tend to speak of a firewall and local binary repository as an annoyance, but it is true that these are tools which help to create a stable environment! I had to learn this the hard way when I wanted to rebuild some sandbox projects after codehaus left the scene.</p>
+</div>
+<div class="paragraph">
+<p>But after playing around with me new build file, I also noticed a flaw - all java dependencies where resolved through the local repository, but the ruby gems where still resolved directly through the internet.</p>
+</div>
+<div class="paragraph">
+<p>Since I couldn&#8217;t find out how to change this jRuby behaviour, I just decided not to use the jRuby dependency resolution anymore and switched to the <a href="https://github.com/asciidoctor/asciidoctorj">asciidoctorj bindings</a>. All extensions which I use are available and these bindings can be resolved as simple java dependencies.</p>
+</div>
+<div class="paragraph">
+<p>So I refactored my build file (the comments still show how to switch back) and solved a small problem with the groov extension DSL: I had to add a dependency to <code>asciidoctorj-groovy-dsl</code> - don&#8217;t ask me why it worked before :-)</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whats_the_drawback">What&#8217;s the drawback?</h4>
+<div class="paragraph">
+<p>The versions of the java bindings seem the be a little bit behind the jRuby versions, but all features which I need are already available.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_why_didnt_i_try_to_resolve_the_jruby_dependencies_through_the_local_binary_repository">Why didn&#8217;t I try to resolve the jRuby dependencies through the local binary repository?</h4>
+<div class="paragraph">
+<p>The java bindings are resolved through the standard java repositories. These are very likely to be already configured in your local binary repository. The jRuby dependency are not so likely to be already available.</p>
+</div>
+<div class="paragraph">
+<p>The details of my changes can be viewed in the commit diff: <a href="https://github.com/docToolchain/docToolchain/commit/4e1ee93bf942492c55e303da8b23e13e517049a6">https://github.com/docToolchain/docToolchain/</a></p>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

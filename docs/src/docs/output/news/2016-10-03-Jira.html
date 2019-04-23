@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Living Documents for Agile Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Living Documents for Agile Projects</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Oct 03 00:00:00 GMT 2016)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you describe a solution architecture, your document will be in an unfinished state for a long time. If you are on an agile project, your document will be a living one. There will be always open questions which need to be tracked. A good idea to track them is the issue tracker which you already use for the code of your project. It not only allows you to track the progress on the open issue, it also allows you to assign the open issue to those people who will give you the right answer.</p>
+</div>
+<div class="paragraph">
+<p>Today I will show you how you can turn your asciidoc documentation into a living document by linking it to Jira.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_idea">The Idea</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most trivial way to link to jira is to just add the url of your issue to your text:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://example.atlassian.net/browse/DOC-51</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can add the issue id as name of the link in order to just get the issue id linked to your issue</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://example.atlassian.net/browse/DOC-51[DOC-51]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Trivial, but you always have to paste the base URL from somewhere. To make it more convenient, an asciidoctor plugin could make sense. <a href="https://twitter.com/mrhaki">mrhaki</a> describes in his awesome blog exactly this: <a href="http://mrhaki.blogspot.de/2015/03/awesome-asciidoctor-use-inline.html">Awesome Asciidoctor: Use Inline Extension DSL with Gradle</a>. A detailed description on how to write asciidoctor extensions can be found <a href="http://asciidoctor.org/docs/asciidoctor-gradle-plugin/#adding-custom-extensions">in the documentation of the asciidoctor gradle plugin</a>.</p>
+</div>
+<div class="paragraph">
+<p>So, I&#8217;ve added the code from mrhaki to the docToolchain project in a slightly modified version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">asciidoctor {
+    // Here we can add the code for extensions we write.
+    extensions {
+        inlinemacro (name: "jira") {
+            parent, target, attributes -&gt;
+
+                options = [
+                        "type": ":link",
+                        "target": "https://jira-instance/browse/${target}".toString(),
+                        "id": "${target}"
+                ]
+
+                // Create the link to the issue.
+                createInline(parent, "anchor", target, attributes, options).render()
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do you seen the <code>"id"</code>-key in the list of options? That lets us do an additional trick which I will explain further down the article&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The extension lets us now link to our issues by just writing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jira:DOC-51[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>don&#8217;t forget the <code>[]</code> - otherwise it will not work.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_open_issues">List of open Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>But wouldn&#8217;t it be nice to have also a list of all open issues at the end of the document? Now that we know how to write an inline plugin, I would like to use this mechanism to create a table. Unfortunately, I couldn&#8217;t finde an example on how to write an extension which creates a table, so I do a simple fallback to just create a file which can be included&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Jira has a nice REST api. IMHO, this is even easier to use than the Java-API. This little code snipped shows how to retrieve all open issues of a given project with a given label assigned:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportJiraIssues(
+        description: 'exports all jira issues from a given search'
+) &lt;&lt; {
+        def user = jiraUser
+        def pass = jiraPass
+        if (!pass) {
+            System.console().readPassword("Jira password for user '$user': ")
+        }
+
+        def stats = [:]
+        def jira = new groovyx.net.http.RESTClient( jiraRoot+'/rest/api/2/' )
+        jira.encoderRegistry = new groovyx.net.http.EncoderRegistry( charset: 'utf-8' )
+        def headers = [
+                'Authorization':"Basic " + "${user}:${pass}".bytes.encodeBase64().toString(),
+                'Content-Type':'application/json; charset=utf-8'
+        ]
+        def openIssues = new File('./build/docs/openissues.adoc')
+        openIssues.write("",'utf-8')
+        println jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel)
+        jira.get(path:'search',
+                query:['jql': jiraJql.replaceAll('%jiraProject%',jiraProject).replaceAll('%jiraLabel%',jiraLabel),
+                       'maxResults':1000,
+                       'fields':'created,resolutiondate,priority,summary,timeoriginalestimate, assignee'
+                ],
+                headers:headers
+        ).data.issues.each { issue -&gt;
+            openIssues.append("| &lt;&lt;${issue.key}&gt;&gt; ",'utf-8')
+            openIssues.append("| ${issue.fields.priority.name} ",'utf-8')
+            openIssues.append("| ${Date.parse("yyyy-MM-dd'T'H:m:s.000z",issue.fields.created).format('dd.MM.yy')} ",'utf-8')
+            openIssues.append("| ${issue.fields.assignee?issue.fields.assignee.displayName:'not assigned'} ",'utf-8')
+            openIssues.append("| ${jiraRoot}/browse/${issue.key}[${issue.fields.summary}]\n",'utf-8')
+        }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to use it, you have to set some properties in <code>gradle.properties</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-properties" data-lang="properties">// settings to link to open issues
+
+jiraRoot = 'https://jira-instance'
+jiraUser = 'username'
+jiraPass = '' // leave empty to get a prompt
+jiraProject = '' // the key of the project
+jiraLabel = '' // the label to restrict search to
+
+jiraJql  = project='%jiraProject%' AND resolution='Unresolved' AND labels='%jiraLabel%' ORDER BY priority DESC, duedate ASC</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates the content for an asciidoc table which then can be included like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-asciidoc" data-lang="asciidoc">.Open Issues
+[options="header",cols="2,1,1,2,6"]
+|====
+|ID | Priority | Created | Assignee | Summary
+
+Unresolved directive in &lt;stdin&gt; - include::../../../../build/docs/openissues.adoc[]
+
+|====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve also added this asciidoc snippet to the arc42 template of docToolchain as appendix.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linking_the_issues">Linking the Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Getting back to the neat little trick I did with the <code>id</code>-option in the asciidoc jira extension above: since all inline references to an jira issue are now linked with the issue-key as ID, it is easy to link to them as anchor. This can be done with the <code><a href="#anchor-id">[anchor-id]</a></code>-syntax in asciidoc and that&#8217;s also exactly what I did in the script which creates the table with all open issues:</p>
+</div>
+<div class="paragraph">
+<p>The ID of each row links to the reference within the document. This let&#8217;s you easily check the context of the open issue.</p>
+</div>
+<div class="paragraph">
+<p>The summary of each row links to the configured jira system. This let&#8217;s you easily check the current status of the issue and edit it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/jira-open-issues.png" alt="jira open issues">
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>The current version of docToolchain is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/5bf544c7d6eecf6031398573f5abe21e89feeaba">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

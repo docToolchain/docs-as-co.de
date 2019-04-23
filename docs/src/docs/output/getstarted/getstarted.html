@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+    <meta charset="utf-8"/>
+    <title>JBake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+    <body onload="prettyPrint()">
+        <div id="wrap">
+
+            >>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+            <div class="container">
+                <p><div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+Give someone a fish and she is hungry again in an hour,
+teach someone how to fish and she has food for a lifetime.
+</blockquote>
+<div class="attribution">
+&#8212; (presumably) Anne Isabella Thackeray Ritchie (1885)
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_started_quickly">Get Started&#8230;&#8203; Quickly</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are several ways to getting started with the Docs-as-Code approach.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll show you how to create and render a simple AsciiDoc document:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[Zero-Dependency Approach]<br>
+try it out without installing anything using an online-editor</p>
+</li>
+<li>
+<p>The Editor Approach</p>
+</li>
+<li>
+<p>The Build Tool Approach: Integrate Docs-As-Code into your build process.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_the_zero_dependencies_approach">The Zero-Dependencies Approach</h3>
+<div class="paragraph">
+<p>You just want to give AsciiDoc a try without installing anything?</p>
+</div>
+<div class="paragraph">
+<p>Go to <a href="https://asciidoclive.com">AsciiDocLIVE</a> to try an online editor with preview.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_editor_approach">The Editor Approach</h3>
+<div class="paragraph">
+<p>If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://asciidocfx.com/">AsciiDocFX</a>, a full blown AsciiDoc editor.</p>
+</li>
+<li>
+<p><a href="https://atom.io/users/asciidoctor">Atom</a> editor with AsciiDoc plugin.</p>
+</li>
+<li>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode">Visual Studio Code</a> with AsciiDoc support.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/7391-asciidoc">IntelliJ</a> with AsciiDoc support.</p>
+</li>
+<li>
+<p><a href="https://marketplace.eclipse.org/content/asciidoctor-editor">Eclipse</a> with AsciiDoc support.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8658; see also our (German) article about <a href="https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828">Tools for AsciiDoc</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_build_tool_approach">The Build-Tool Approach</h3>
+<div class="paragraph">
+<p>"You are standing in an open field west of a white house, with a boarded front door."<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>There is a <strong>Maven</strong>, a <strong>Gradle</strong> and a <strong>Command-Line-Tool</strong> nearby.</p>
+</div>
+<div class="paragraph">
+<p>What will you choose?</p>
+</div>
+<div class="openblock primary">
+<div class="title">Command-Line</div>
+<div class="content">
+<div class="paragraph">
+<div class="title">&gt; use Command-Line-Tool</div>
+<p>You install <strong>asciidoctorj</strong> via <a href="https://sdkman.io">sdkman</a> and write your first simple AsciiDoc document</p>
+</div>
+<div class="listingblock">
+<div class="title">test.adoc</div>
+<div class="content">
+<pre class="prettyprint highlight"><code>== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You then convert it via</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>asciidoctorj test.adoc</pre>
+</div>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="512px" height="384px" src="https://www.youtube.com/embed/ZXYbN8bHq0A?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock secondary">
+<div class="title">Maven</div>
+<div class="content">
+<div class="paragraph">
+<div class="title">&gt; use Maven</div>
+<p>You are likely to be eaten by a grue.</p>
+</div>
+<div class="paragraph">
+<p>You install <strong>Maven</strong> via <a href="https://sdkman.io">sdkman</a> and write your first simple AsciiDoc document</p>
+</div>
+<div class="listingblock">
+<div class="title">test.adoc</div>
+<div class="content">
+<pre class="prettyprint highlight"><code>== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You then download the build file from github, because it is too big to be just typed in:</p>
+</div>
+<div class="listingblock">
+<div class="title">maven.pom <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></div>
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">Unresolved directive in &lt;stdin&gt; - include::_pages/getstarted/maven.pom[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;and convert your document via</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mvn</pre>
+</div>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="512px" height="384px" src="https://www.youtube.com/embed/VCaI8DGb0vU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock secondary">
+<div class="title">Gradle</div>
+<div class="content">
+<div class="paragraph">
+<div class="title">&gt; use Gradle</div>
+<p>Good choice!
+A fairy appears and grants you a wish.
+You wish for a very simple build file and the following line of text appears:</p>
+</div>
+<div class="listingblock">
+<div class="title">gradle.build</div>
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">plugins { id "org.asciidoctor.convert" version "1.5.3" }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>you write your very first AsciiDoc document and put it in <code>/src/docs/asciidoc/</code></p>
+</div>
+<div class="listingblock">
+<div class="title">test.adoc</div>
+<div class="content">
+<pre class="prettyprint highlight"><code>== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You install Gradle via <a href="https://sdkman.io">sdkman</a>
+and convert the file with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gradle asciidoc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>a nicely styled html file appears in <code>/build/asciidoc/html5/.</code></p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="512px" height="384px" src="https://www.youtube.com/embed/BLsO_lBxwmU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. If you are born after 1980 - this is a famous quote from Zork-1, a text adventure created by Infocom
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. taken from <a href="https://raw.githubusercontent.com/asciidoctor/asciidoctor-maven-examples/master/asciidoc-to-html-example/pom.xml" class="bare">https://raw.githubusercontent.com/asciidoctor/asciidoctor-maven-examples/master/asciidoc-to-html-example/pom.xml</a>
+</div>
+</div></p>
+            </div>
+
+            <div id="push"></div>
+        </div>
+
+        
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+    </body>
+</html>

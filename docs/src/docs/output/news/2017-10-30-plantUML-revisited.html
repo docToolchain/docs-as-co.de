@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>plantUML revisited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>plantUML revisited</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Oct 30 00:00:00 GMT 2017)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Two days ago, a plantUML tweet caught my attention:</p>
+</div>
+<div class="paragraph">
+<p>Someone is willing to pay for a plantUML diagram.
+That&#8217;s something I haven&#8217;t seen before, so I checked what it was all about:
+the following diagram needed to be implemented as plantUML…</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS-architecture.png" alt="ActionFPS architecture">
+</div>
+</div>
+<div class="paragraph">
+<p>The money caught my attention, but what made me to do the work was the following.
+When I advise about plantUML, I always tell people that - because you don&#8217;t have control over the layout - is great for sequence diagrams but hard to use for complex diagrams of other types.</p>
+</div>
+<div class="paragraph">
+<p>Now, here it was - a complex architecture diagram and the chance to give it a try for the value of three beers! 🍺🍺🍺</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS.png" alt="ActionFPS">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/ActionFPS2.png" alt="ActionFPS2">
+</div>
+</div>
+<div class="paragraph">
+<p>Here is what I&#8217;ve learned from this:</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_different_tools_use_a_different_visual_language">different tools use a different visual language</h3>
+<div class="paragraph">
+<p>plantUML has no icon saying "these are multiple instances".
+But from the names of the elements, I deducted that I could use the database symbol for the repositories and the file symbol for the csv elements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_was_missing_a_visual_legend">I was missing a visual legend</h3>
+<div class="paragraph">
+<p>while the meaning of the csv and repository elements is clear to me, I have no clue about the color codes or the rounded shapes of the diagram.
+I guess others have the same problem with my diagrams.
+So always try to create a legend which explains the visual hints.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_you_have_an_existing_diagram_you_can_easily_describe_your_plantuml_code_to_look_like_the_original_diagram">when you have an existing diagram, you can easily describe your plantUML code to look like the original diagram</h3>
+<div class="paragraph">
+<p>By only using the <code>-&gt;</code> (right) and <code>--&gt;</code> (down) arrows, I already achieved most of the layout.
+Sometimes I had to reverse the arrow direction <code>&lt;--</code> to keep the meaning "down" but draw the arrow the other direction (I normally switch the two elements and do not reverse the arrow).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_but_the_layout_can_be_a_beast">but the layout can be a beast…</h3>
+<div class="paragraph">
+<p>Have you noticed that the plantUML consists of two images? That is because even with hidden lines, I didn&#8217;t manage to put those diagrams underneath each other. PlantUML always rendered them side by side.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While I managed to redraw the given diagram with plantUML, I wouldn&#8217;t want to design such a diagram from scratch with plantUML, since it doesn&#8217;t give you enough degrees of freedom.</p>
+</div>
+<div class="paragraph">
+<p>While this is true for component-, class- and deployment-diagrams of a certain complexity, I really enjoy using plantUML for sequence diagrams. For sequence diagrams, it is a blessing that plantUML takes care of the layout, no matter how I change the diagram!</p>
+</div>
+<div class="paragraph">
+<p>PS: here is a copy of the plantUML source: <a href="https://github.com/rdmueller/rdmueller.github.io/blob/master/images/ActionFPS.puml">https://github.com/rdmueller/rdmueller.github.io/blob/master/images/ActionFPS.puml</a></p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

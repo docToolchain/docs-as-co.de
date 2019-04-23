@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+	  <head>
+    <meta charset="utf-8"/>
+    <title>JBake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/asciidoctor.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+
+	<body onload="prettyPrint()" >
+		<div id="wrap">
+
+			>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="about/">About</a></li>
+                      
+                        <li><a href="about/contact.html">Contact</a></li>
+                      
+                        <li><a href="about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+			<div class="container">
+	<div class="page-header">
+		<h1>Blog Archive</h1>
+	</div>
+	
+	<!--<ul>-->
+		
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Wed Jan 23 00:00:00 GMT 2019)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Wed Jan 23 00:00:00 GMT 2019)</h4>
+				<ul>
+			< }>
+			
+			<li>23 - <a href="news/2019-01-23-JAX.html">Docs-as-Code at JAX conference</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Jan 22 00:00:00 GMT 2019)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Jan 22 00:00:00 GMT 2019)</h4>
+				<ul>
+			< }>
+			
+			<li>22 - <a href="news/2019-01-22-OOP.html">HtmlSanityCheck at OOP conference</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jan 14 00:00:00 GMT 2019)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jan 14 00:00:00 GMT 2019)</h4>
+				<ul>
+			< }>
+			
+			<li>14 - <a href="news/2019-01-14-arc42-by-example.html">arc42 by Example</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 29 00:00:00 GMT 2018)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 29 00:00:00 GMT 2018)</h4>
+				<ul>
+			< }>
+			
+			<li>29 - <a href="news/2018-10-29-sparkling-wine.html">Sparxling Wine</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Sep 21 00:00:00 GMT 2018)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Sep 21 00:00:00 GMT 2018)</h4>
+				<ul>
+			< }>
+			
+			<li>21 - <a href="news/2018-09-21-tabs-asciidoc.html">How to use tabs in AsciiDoc</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Jul 31 00:00:00 GMT 2018)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Jul 31 00:00:00 GMT 2018)</h4>
+				<ul>
+			< }>
+			
+			<li>31 - <a href="news/2018-07-31-asciidoc-image-size.html">AsciiDoc Image Size</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Thu Jun 14 00:00:00 GMT 2018)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Thu Jun 14 00:00:00 GMT 2018)</h4>
+				<ul>
+			< }>
+			
+			<li>14 - <a href="news/2018-06-14-colorful-gradle.html">Colorful Gradle</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 30 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 30 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>30 - <a href="news/2017-10-30-plantUML-revisited.html">plantUML revisited</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun May 07 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun May 07 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>07 - <a href="news/2017-05-07-PPT-as-asciidoc-editor.html">Do more with Slides</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri May 05 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri May 05 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>05 - <a href="news/2017-05-05-create-epub.html">Turn your Document into an Audio-Book</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Thu May 04 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Thu May 04 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>04 - <a href="news/2017-05-04-create-docx.html">Render Asciidoc to docx (MS Word)</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Apr 07 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Apr 07 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>07 - <a href="news/2017-04-07-enterprise-edition2.html">Enterprise Asciidoctor</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Apr 03 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Apr 03 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>03 - <a href="news/2017-04-03-enterprise-edition.html">Behind the great Firewall</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Apr 02 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Apr 02 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>02 - <a href="news/2017-04-02-dependency-update.html">Handle Dependency Updates the easy Way</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Jan 13 00:00:00 GMT 2017)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Fri Jan 13 00:00:00 GMT 2017)</h4>
+				<ul>
+			< }>
+			
+			<li>13 - <a href="news/2017-01-13-htmlSanityCheck.html">Automated Quality-Checks</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Nov 27 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Nov 27 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>27 - <a href="news/2016-11-27-jria2eac.html">Jira to Sparx EA</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Wed Nov 23 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Wed Nov 23 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>23 - <a href="news/2016-11-23-single-file-html.html">Single-File HTML</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 03 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Oct 03 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>03 - <a href="news/2016-10-03-Jira.html">Living Documents for Agile Projects</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 19 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 19 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>19 - <a href="news/2016-09-19-changelog.html">The only constant in life is change</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 12 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 12 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>12 - <a href="news/2016-09-12-pdf-output.html">Beyond HTML</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 05 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Sep 05 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>05 - <a href="news/2016-09-05-awesome-asciidoc.html">More about AsciiDoc</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 29 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 29 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>29 - <a href="news/2016-08-29-sparx-ea.html">Did you ever wish you had better Diagrams?</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 22 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 22 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>22 - <a href="news/2016-08-22-arc42.html">Let&#8217;s add Content!</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 08 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Aug 08 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>08 - <a href="news/2016-08-08-plantuml-maven.html">PlantUML with Maven</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Aug 02 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Tue Aug 02 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>02 - <a href="news/2016-08-02-plantuml-without-graphviz.html">How to use PlantUML without Graphviz</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 25 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 25 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>25 - <a href="news/2016-07-25-plantuml-gradle.html">Next Level: PlantUML with Gradle</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 18 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 18 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>18 - <a href="news/2016-07-18-maven-asciidoc-build.html">Simple AsciiDoc Build with Maven</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 11 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon Jul 11 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>11 - <a href="news/2016-07-11-gradle-asciidoc-build.html">Simple AsciiDoc Build with Gradle</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Jul 03 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Sun Jul 03 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>03 - <a href="news/2016-07-03-why-asciidoc.html">Why you should use AsciiDoc to document your Software Solution</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+			<if (last_month) {>
+				<if (new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date) != last_month) {>
+					</ul>
+					<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon May 16 00:00:00 GMT 2016)</h4>
+					<ul>
+				<}>
+			< } else { >
+				<h4>new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(Mon May 16 00:00:00 GMT 2016)</h4>
+				<ul>
+			< }>
+			
+			<li>16 - <a href="news/2016-05-16-why-no-word.html">Why I don&#8217;t like Word to write documentation</a></li>
+			<last_month = new java.text.SimpleDateFormat("MMMM yyyy", Locale.ENGLISH).format(post.date)>
+		
+	</ul>
+
+		</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+    
+
+
+</body>
+</html>

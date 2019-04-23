@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Behind the great Firewall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Behind the great Firewall</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Apr 03 00:00:00 GMT 2017)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The open internet is a great place to code, but sometimes you are sitting behind a great firewall in a corporate environment.
+Your are not allowed to just pull the hottest stuff from the internet, but have to go through an internal binary artifact repository like nexus or artifactory.</p>
+</div>
+<div class="paragraph">
+<p>So, how do you configure your gradle installation in such a way that you don&#8217;t have to always change the build file?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_set_a_proxy">Set a Proxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That one is easy.</p>
+</div>
+<div class="paragraph">
+<p>Gradle uses the standard proxy configuration the same way other java apps do. You can set the proxy in your <code>gradle.properties</code> as described <a href="https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy">in the userguide</a>.
+To configure the proxy for all your builds, just put the config into your <a href="http://mrhaki.blogspot.de/2010/09/gradle-goodness-different-ways-to-set.html"><code>&lt;USER_HOME&gt;/.gradle/gradle.properties</code></a> file instead of the project local one.</p>
+</div>
+<div class="paragraph">
+<p>BTW: if your settings seem to be ignored, you might created the <code>gradle.properties</code> file in the wrong location.
+In this case, start your build with the <code>--debug</code> option and check the start of the output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>PS C:\demo&gt; .\gradlew.bat --debug
+13:27:38.010 [INFO] [org.gradle.BuildLogger] Starting Build
+13:27:38.017 [DEBUG] [org.gradle.BuildLogger] Gradle user home: C:\Users\ralf\.gradle</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_repositories">Configure Repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, if a proxy is not enough but you need to fetch dependencies from an internal nexus or artifactory, you can easily specify it in the repositories section of your build file.
+But you have to do this for each project… do you?
+No! There is a better solution:</p>
+</div>
+<div class="paragraph">
+<p>Create a <a href="https://docs.gradle.org/current/userguide/init_scripts.html"><code>init.gradle</code></a> file in your local <code>&lt;USER_HOME&gt;/.gradle</code> folder with a <code>allprojects</code> section in which you specify the internal repositories for dependency resolution:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">allprojects {
+  buildscript {
+    repositories {
+      maven {
+        url = "https://intranet/..."
+      }
+    }
+  }
+  repositories {
+    maven {
+      url = "https://intranet/..."
+      credentials {
+        username = "${repo_user}"
+        password = "${repo_password}"
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you need to specify credentials for the repository, just specify them as shown in the second example.
+This way, the <code>repo_user</code> and <code>repo_password</code> can be specified in the <code>gradle.properties</code> file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_the_gradle_wrapper">Configure the Gradle-Wrapper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With the above configuration, all dependencies are resolved through the internal repository. Dependencies not in the internal repositories are resolved from the internet through the proxy. If you don&#8217;t want this, just specify no proxy :-)</p>
+</div>
+<div class="paragraph">
+<p>But what about Gradle itself?
+Best practice is to use the <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html">Gradle wrapper</a> but the wrapper is configured to fetch Gradle from external sources.</p>
+</div>
+<div class="paragraph">
+<p>There is also a config for that: <code>&lt;your project&gt;/gradle/wrapper/gradle-wrapper.properties</code>.
+Just replace the line</p>
+</div>
+<div class="paragraph">
+<p><code>distributionUrl=https\://services.gradle.org/distributions/gradle-2.12-bin.zip</code></p>
+</div>
+<div class="paragraph">
+<p>With your internal distribution location…</p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

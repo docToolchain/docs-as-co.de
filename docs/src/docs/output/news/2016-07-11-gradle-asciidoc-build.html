@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Simple AsciiDoc Build with Gradle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Simple AsciiDoc Build with Gradle</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Jul 11 00:00:00 GMT 2016)</em></p>
+
+	<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>So I told you to use AsciiDoc to write technical documents because of all the great features.</p>
+</div>
+<div class="paragraph">
+<p>Today I want to show you how to unleash the power and get started.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gradle_integration">Gradle Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s first start with Gradle. I like Gradle much because it is modern and avoids unwanted complexity. But I am far from being a Gradle expert. Everytime I need a feature, I have to google it. I guess that&#8217;s ok, since I want to code and document and not spend too much time with the build system :-)</p>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s get started. If you don&#8217;t have already Gradle installed on your machine, you should give <a href="http://sdkman.io">SDKMan</a> a try. It manages the installation, upgrade and switch between versions of not only Gradle but all the tools a java developer needs - all but the JDK :-(. If you are on a Windows machine like me, you have to use <a href="https://github.com/flofreud/posh-gvm">posh-GVM</a> instead of SDKMan. It&#8217;s a bit harder to install but will yield the same results - as long as you use the powershell :-)</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s first create a fresh working dir</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">mkdir docToolchain
+cd docToolchain</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and init Git and Gradle</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">gradle init
+git init</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This created a simple <code>build.gradle</code> file and also added <code>gradlew</code> the Gradle-wrapper. It’s a best-practice-thing. The Gradle-wrapper makes sure that everybody who checks out the project will be able to just build your project. Only the proxy has to be configured - Gradle will be automatically installed. To use the wrapper type <code>gradlew</code> instead of <code>gradle</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>build.gradle</code> file might be a good starting point for a normal project, but in this case, I just replace it with the following one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it. It&#8217;s basically all we need to convert our first asciidoc file. (If you wonder about the notation - it&#8217;s the new way to reference plugins which works from Gradle v2.1 on.)</p>
+</div>
+<div class="paragraph">
+<p>To get a slightly more challenging document than a simple "Hello World", let&#8217;s copy the one provided by <a href="https://www.twitter.com/mojavelinux">@mojavelinux</a> as  <a href="https://gist.github.com/mojavelinux/4402636">gist</a>. Just put the three files <code>include.asciidoc.txt</code> and <code>test.asciidoc.txt</code>  in the project&#8217;s subfolder <code>/src/docs/asciidoc</code> and <code>tiger.png</code> into <code>/src/docs/asciidoc/images</code> . In order to make it work, remove the <code>.txt</code> extension of the two files and also in the <code>test.asciidoc</code> file on line 141.</p>
+</div>
+<div class="paragraph">
+<p>The <code>test.asciidoc</code> file is configured to use an external style sheet which is missing in our setup. So to use the internal stylesheet, change the beginning of the file to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>//:stylesheet: asciidoc.css
+:imagesdir: images
+//:backend: docbook45
+:backend: html5</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The reference to the external style sheet is <code>/src/docs/asciidoc</code> is the standard location where the plugin searches for asciidoc files. It will convert all files it finds.</p>
+</div>
+<div class="paragraph">
+<p>We are now ready to create our first HTML document from the example files. Just run</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-bash" data-lang="bash">gradle asciidoctor</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>from the command line and check out the result in <code>/build/asciidoc/html5/test.html</code></p>
+</div>
+<div class="paragraph">
+<p>The result should look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/renderedHtml.png" alt="renderedHtml">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;ve followd all the steps above, you&#8217;ve just created your first asciidoc project to write technical documentation!</p>
+</div>
+<div class="paragraph">
+<p>You are not ready to unleash the power of asciidoc&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>PS: the docToolchain project greated above is available on github: <a href="https://github.com/docToolchain/docToolchain/tree/acb67f4db20a3285cbe18ebd07c8a03f0d50c5a7">https://github.com/docToolchain/docToolchain</a></p>
+</div>
+</div>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

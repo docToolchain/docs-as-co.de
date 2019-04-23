@@ -2,3 +2,6 @@ docs/_site
 /docs/.gradle/**
 docs/build
 .idea
+
+**/*.iml
+docs/out

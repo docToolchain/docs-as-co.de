@@ -1,7 +1,0 @@
-= News test2
-:page-layout: posts
-:page-title: News & Blog
-:page-permalink: /news/
-:page-liquid: true
-
-

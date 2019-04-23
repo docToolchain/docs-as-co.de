@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>The only constant in life is change</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/asciidoctor.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/prettify.css" rel="stylesheet">
+      <style>
+      @media only screen and (min-width:768px){
+          #toctitle{font-size:1.375em}
+          #toc.toc{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto; padding-top: 60px;}
+          #toc.toc #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+          #toc.toc>ul{font-size:.9em;margin-bottom:0}
+          #toc.toc ul ul{margin-left:0;padding-left:1em}
+          #toc.toc ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+      }
+      @media only screen and (min-width:1280px){
+          body.toc2{padding-left:20em;padding-right:0}
+          #toc.toc{width:20em; padding-top: 60px;}
+          #toc.toc #toctitle{font-size:1.375em}
+          #toc.toc>ul{font-size:.95em}
+          #toc.toc ul ul{padding-left:1.25em}
+      }
+      </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="../favicon.ico">
+  </head>
+
+<body onload="prettyPrint()" >
+<div id="wrap">
+
+	>>>>>>>/c/Users/ralfd/projects/github/docs-as-co.de/docs-jbake/src/docs/src/docs/content
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Docs-as-Co.de</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../getstarted/getstarted.html">Get Started</a></li>
+                      
+                        <li><a href="../getstarted/tutorial2.html">Full Example</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../docs/">Docs</a></li>
+                
+              
+                
+                  <li><a href="../examples/">Examples</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Further Reading<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../furtherreading/blogs.html">Blogs</a></li>
+                      
+                        <li><a href="../furtherreading/articles.html">Articles</a></li>
+                      
+                        <li><a href="../furtherreading/talks.html">Talks</a></li>
+                      
+                        <li><a href="../furtherreading/books.html">Books</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+                
+                  <li><a href="../news/">News</a></li>
+                
+              
+                
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                        <li><a href="../about/">About</a></li>
+                      
+                        <li><a href="../about/contact.html">Contact</a></li>
+                      
+                        <li><a href="../about/imprint.html">Imprint</a></li>
+                      
+                        <li><a href="../about/site.html">This Site</a></li>
+                      
+                    </ul>
+                  </li>
+                
+              
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>The only constant in life is change</h1>
+	</div>
+
+	<p><em>new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(Mon Sep 19 00:00:00 GMT 2016)</em></p>
+
+	<p><div class="paragraph">
+<p>Today I will show how to add a change log to your documents. Git is quite good when it comes to log changes, so why not use git to add a table of changes to your document? If your version your documents along with your code, you don&#8217;t want to see all code commits in the change log of your documents. But git can handle this.</p>
+</div>
+<div class="paragraph">
+<p>If you type <code>git log src/docs/arc42</code>, it will only output the changes made to the files in <code>src/docs/arc42</code>. That&#8217;s already a great feature, but not enough to include it into the asciidoc template.</p>
+</div>
+<div class="paragraph">
+<p>First, the changes have to be parsed and re-formatted to asciidoc. There are git libraries somewhere which let you do this programatically, but I am a bit more practical. I used nearly the same approach I used for <a href="https://rdmueller.github.io/sparx-ea/">exporting the Sparx EA diagrams</a>: I just use groovy to execute a shell command. In this case, I only need the output and don&#8217;t care to see what happens during the process. Since fetching the changes is quite fast, a simpel groovy statement like this is enough:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>def res = "git log ./src/docs/arc42".execute().text</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This executes the command and returns the whole change log as string:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>commit f811ed51fd21c089bc6ee7853dcf5284eaa2ae88
+Author: Ralf D. Mueller &lt;ralf.d.mueller@gmail.com&gt;
+Date:   Sun Aug 21 23:14:14 2016 +0200</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>added arc42 template as content</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the language features provided by Groovy, it is easy to parse this and render it as asciidoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">task exportChangeLog(
+        dependsOn: [streamingExecute],
+        description: 'exports the change log from a git subpath'
+) &lt;&lt; {
+    def res = "git log ./src/docs/arc42".execute().text
+    def changes = []
+    def change = null
+    res.eachLine { line -&gt;
+        switch (line) {
+            case ~/^commit.*/:
+                if (change!=null) {
+                    changes &lt;&lt; change
+                }
+                change = [commit:line-'commit ',log:'']
+                break;
+            case ~/^Author:.*/:
+                change['author'] = line-'Author: '
+                break;
+            case ~/^Date:.*/:
+                change['date'] = line-'Date: '
+                break;
+            default:
+                change['log'] += (line ? line.trim()+ "\n" : '')
+        }
+    }
+    changes &lt;&lt; change
+    def changelog = new File('./build/docs/changelog.adoc')
+    changelog.write("")
+
+    changes.each { c -&gt;
+        changelog.append """| ${new Date(Date.parse(c.date)).format("dd.MM.yyyy")}
+| ${c.author.replaceAll('&lt;[^&gt;]*&gt;','')}
+| ${c.log}
+"""
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting file can easily embedded in asciidoc:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code>    .Changes
+    [options="header",cols="1,2,6"]
+    |====
+    | Date
+    | Author
+    | Comment
+
+    include::../../build/docs/changelog.adoc[]
+
+    |====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The table name and heading are part of the asciidoc template and not the <code>changelog.adoc</code> file in order to make it easy to translate. And indeed, the docToolchain project contains the <a href="https://arc42.github.io">arc42</a> template in two languages :-)</p>
+</div>
+<div class="paragraph">
+<p>So, if you now run <code>gradle exportChangeLog</code> and then just <code>gradle</code> the docToolchain build will render a nice changelog for you:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/oldblog/changelog.png" alt="changelog">
+</div>
+</div>
+<div class="paragraph">
+<p>As always, the updated docToolchain build is available on <a href="https://github.com/docToolchain/docToolchain/tree/b2b011caee933b8d7c764bb62c6bb00b5431c583">github</a></p>
+</div></p>
+
+</div>
+
+</div>
+<div id="push"></div>
+</div>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.6.4</a></p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

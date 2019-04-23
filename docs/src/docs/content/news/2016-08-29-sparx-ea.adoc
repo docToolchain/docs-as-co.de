@@ -1,0 +1,280 @@
+= Did you ever wish you had better Diagrams?
+:jbake-type: post
+:jbake-date: 2016-08-29
+:jbake-status: published
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/sparx-ea/
+:page-tags: [sparx, doc, arc42]
+:imagesdir: /images
+
+Let's recap what we did so far: in order to kickstart a documentation project, we've created a dual gradle / maven asciidoc build with included arc42 template in two languages and easy textual diagram drawing with planUML. That's already quite a feature list!
+
+But what if plantUML diagrams are not enough for your needs? What if you can't rely on the auto-layout feature of plantUML?
+
+One solution would be to just start up your favourite diagramming tool, draw your diagrams, export them and reference them from asciidoc. No problem. But what if you need to update one of the diagrams? Or you just worked the whole day on some diagrams and you don't know anymore which ones to re-export?
+
+## Wouldn't it be nice if your build just takes care of it? 
+
+It could just search for your diagrams files and export them.
+
+That's exactly what we will add today. Since there are two many diagramming tools on the market to include them all in one post, I will stick to http://www.sparxsystems.com/[Sparx Enterprise Architect]. Enterprise Architect - or short jsut EA - is a powerful but yet affordable tool which can be easily scripted.
+
+There are several options for scripting like internal scripts written in http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/the_scripter_window.html[JavaScript, JScript and VBScript]. These scripts have to be invoked manually from within the application. Another option is to use the http://www.sparxsystems.com/enterprise_architect_user_guide/12.1/automation_and_scripting/usingtheautomationinterface.html[automation interface] and "remote control" the application from outside. This can be done in various languages (all which have access to the ActiveX COM interface). There is a java bridge included and VBS would be the native approach.
+
+In the past I already played around with the included java interface and had the feeling that it is a little bit incomplete or buggy. That's why I soon switched to VisualBasic as scripting for EA - this avoids an additional layer between me and the application.
+
+## Features
+
+The script I want to include into our build will have several tasks:
+
+* find all EA repositories within the project
+* open the found repositories through EA
+* export all diagrams and save them with their given name as file name
+* as bonus, check all element notes and export those which start with {adoc: filename}
+
+I've chose to use the given name of a diagram for the file name because I think it is easier to handle and speaks for itself. Drawback is that you have to make sure that the name is a valid file name and it is unique. Another aproach would be to use the quite cryptic object ID (GUID)
+
+What's up with the bonus tasks? Working with EA, I like to directly write my comments and descriptions in the note fields of the diagram elements. By prefixing them with {adoc: filename}, I can decide to export and easily include them into my documentation. This way, the written documentation for a diagram can be directly maintained within EA.
+
+## Code
+
+The following is the VB-Script code which does all the hard work:
+
+```visualbasic
+    ' based on the "Project Interface Example" which comes with EA
+    ' http://stackoverflow.com/questions/1441479/automated-method-to-export-enterprise-architect-diagrams
+
+    Dim EAapp 'As EA.App
+    Dim Repository 'As EA.Repository
+    Dim FS 'As Scripting.FileSystemObject
+
+    Dim projectInterface 'As EA.Project
+
+    ' Helper
+    ' http://windowsitpro.com/windows/jsi-tip-10441-how-can-vbscript-create-multiple-folders-path-mkdir-command
+    Function MakeDir (strPath)
+      Dim strParentPath, objFSO
+      Set objFSO = CreateObject("Scripting.FileSystemObject")
+      On Error Resume Next
+      strParentPath = objFSO.GetParentFolderName(strPath)
+
+      If Not objFSO.FolderExists(strParentPath) Then MakeDir strParentPath
+      If Not objFSO.FolderExists(strPath) Then objFSO.CreateFolder strPath
+      On Error Goto 0
+      MakeDir = objFSO.FolderExists(strPath)
+
+    End Function
+
+    '
+    ' Recursively saves all diagrams under the provided package and its children
+    '
+    Sub DumpDiagrams(thePackage,currentModel)
+
+        Set currentPackage = thePackage
+        Const   ForAppending = 8
+
+        For Each currentElement In currentPackage.Elements
+            If (Left(currentElement.Notes, 6) = "{adoc:") Then
+                strFileName = Mid(currentElement.Notes,7,InStr(currentElement.Notes,"}")-7)
+                strNotes = Right(currentElement.Notes,Len(currentElement.Notes)-InStr(currentElement.Notes,"}"))
+                set objFSO = CreateObject("Scripting.FileSystemObject")
+		            If (currentModel.Name="Model") Then
+    	            ' When we work with the default model, we don't need a sub directory
+      	          path = "./src/docs/ea/asciidoc/"
+      	        Else
+      	          path = "./src/docs/ea/asciidoc/"&currentModel.Name&"/"
+      	      	End If
+                MakeDir(path)
+                WScript.echo path&strFileName
+                set objFile = objFSO.OpenTextFile(path&strFileName&".ad",ForAppending, True)
+                objFile.WriteLine(vbCRLF&vbCRLF&"."&currentElement.Name&vbCRLF&strNotes)
+                objFile.Close
+            End If
+        Next
+        ' Iterate through all diagrams in the current package
+        For Each currentDiagram In currentPackage.Diagrams
+
+            ' Open the diagram
+            Repository.OpenDiagram(currentDiagram.DiagramID)
+
+            ' Save and close the diagram
+            If (currentModel.Name="Model") Then
+                ' When we work with the default model, we don't need a sub directory
+                path = "/src/docs/ea/images/"
+            Else
+                path = "/src/docs/ea/images/" & currentModel.Name & "/"
+            End If
+            filename = path & currentDiagram.Name & ".png"
+            MakeDir("." & path)
+            projectInterface.SaveDiagramImageToFile(fso.GetAbsolutePathName(".")&filename)
+            WScript.echo " extracted image to ." & filename
+            Repository.CloseDiagram(currentDiagram.DiagramID)
+        Next
+
+        ' Process child packages
+        Dim childPackage 'as EA.Package
+        For Each childPackage In currentPackage.Packages
+            call DumpDiagrams(childPackage, currentModel)
+        Next
+
+    End Sub
+
+    Function SearchEAProjects(path)
+    
+      For Each folder In path.SubFolders
+        SearchEAProjects folder
+      Next
+      
+      For Each file In path.Files
+        If fso.GetExtensionName (file.Path) = "eap" Then
+          WScript.echo "found "&file.path
+          OpenProject(file.Path)          
+        End If
+      Next
+		
+    End Function
+
+    Sub OpenProject(file)
+      ' open Enterprise Architect
+      Set EAapp = CreateObject("EA.App")
+      WScript.echo "opening Enterprise Architect. This might take a moment..."
+      ' load project
+      EAapp.Repository.OpenFile(file)
+      ' make Enterprise Architect to not appear on screen
+      EAapp.Visible = False
+
+      ' get repository object
+      Set Repository = EAapp.Repository
+      ' Show the script output window
+      ' Repository.EnsureOutputVisible("Script")
+
+      Set projectInterface = Repository.GetProjectInterface()
+
+      ' Iterate through all model nodes
+      Dim currentModel 'As EA.Package
+      For Each currentModel In Repository.Models
+        ' Iterate through all child packages and save out their diagrams
+        Dim childPackage 'As EA.Package
+        For Each childPackage In currentModel.Packages
+          call DumpDiagrams(childPackage,currentModel)
+        Next
+      Next
+      EAapp.Repository.CloseFile()
+    End Sub
+
+  set fso = CreateObject("Scripting.fileSystemObject") 
+  WScript.echo "Image extractor"
+  WScript.echo "looking for .eap files in " & fso.GetAbsolutePathName(".") & "/src"
+  'Dim f As Scripting.Files
+  SearchEAProjects fso.GetFolder("./src")
+  WScript.echo "finished exporting images"
+
+```
+
+## add it to the Build
+
+Gradle uses Groovy and Groovy is able to easily execute shell scripts. But the standard execution mechanism has some drawbacks (regarding getting the output/error messages from the shell script and also regarding parameters). So I wrote my own streaming execute code which I add through meta programming to the string class. The code which adds the method has also to be executed, so I wrote a special task for this:
+
+```groovy
+task streamingExecute(
+    dependsOn: [],
+    description: 'extends the String class with a better .executeCmd'
+) << {
+    //I need a streaming execute in order to export from EA
+    String.metaClass.executeCmd = {
+        //make sure that all paramters are interpreted through the cmd-shell
+        //TODO: make this also work with *nix
+        def p = "cmd /c ${delegate.value}".execute()
+        def result=[std:'',err:'']
+        def ready = false
+        Thread.start{
+            def reader = new BufferedReader(new InputStreamReader(p.in))
+            def line = ""
+            while ((line = reader.readLine()) != null) {
+                println ""+line
+                result.std+=line+"\n"
+            }
+            ready=true
+            reader.close()
+        }
+        p.waitForOrKill(30000)
+        def error = p.err.text
+        if (error.isEmpty()) {
+            return result
+        } else {
+            throw new RuntimeException("\n"+error)
+        }
+    }
+}
+```
+
+## Windows? Linux?
+
+This code fragment currently only works for Windows, but I guess if you use EA, you are not running Linux or MacOS, so I guess this will be fine. If you use Ea on Linux or MaxOS, please contact me - it would be great to make this work on Linux!
+
+Now you might think, that if this only runs on Windows, I can't use it on a build server. Take a closer look at the VBScript above. I've configured it in such a way that it exports everything to `/src/docs/es` and not to the `/build` folder. This is because I normally export the EA content on my dev machine and check in the results. This makes it even easier to get a diff of the work you've done in EA. The remaining build process can rely on the exported data and thus even runs on Linux.
+
+## final task
+
+In order to use the streaming execute and run the VBScript, I just added another small task to the Gradle build file:
+
+```groovy
+task exportEA(
+    dependsOn: [streamingExecute],
+    description: 'exports all diagrams and some texts from EA files'
+) << {
+		new File('src/docs/ea/.').mkdirs()
+    //execute through cscript in order to make sure that we get WScript.echo right
+    "%SystemRoot%\\System32\\cscript.exe //nologo scripts/exportEAP.vbs".executeCmd()
+    //the VB Script is only capable of writing iso-8859-1-Files.
+    //we now have to convert them to UTF-8	
+    new File('src/docs/ea/.').eachFileRecurse { file ->
+    	if (file.isFile()) {
+	    	println "exported notes "+file.canonicalPath
+	    	file.write(file.getText('iso-8859-1'),'utf-8')
+    	}
+    }
+}
+```
+
+So, to export all diagrams and notes from EA, you simply run `gradle exportEA` in the shell: (I've included a small sample EA file)
+
+    > gradle exportEA
+    :streamingExecute
+    :exportEA
+    Image extractor
+    looking for .eap files in .\docToolchain/src
+    found .\src\docs\Models.eap
+    opening Enterprise Architect. This might take a moment...
+     extracted image to ./src/docs/images/ea/Use Cases.png
+    finished exporting images
+    exported notes .\src\docs\ea\UseCases.ad
+    
+    BUILD SUCCESSFUL
+    
+    Total time: 14.228 secs
+
+## Give it a Try...
+
+So, if you want to test it, you can use the sample EA file included in the docToolchain project and add a small asciidoc file like the following:
+
+    image::ea/Use{sp}Cases.png[width=25%]
+    include::ea/UseCases.ad[]
+
+Notice the `{sp}` in the filename? This is in asciidoc the workaround for spaces in a filename.
+
+The EA sample diagram looks like this:
+
+image::oldblog/EA_screenshot.png[]
+
+and our build turns renders it like this:
+
+image::oldblog/EA_rendered.png[]
+
+## Conclusion
+
+Today we extended our build with the feature to extract Diagrams and Notes from the Sparxsystems Enterprise Architect UML Modeller. This feature is quite helpful when you have to deal with Diagrams where plantUML is not enough but it does not replace plantUML. PlantUML is still quite useful when you need a simple diagram or a diagram - like a sequence diagram - where the auto-layout of plantUML is quite useful.
+
+The updated docTool project can be found here:  https://github.com/docToolchain/docToolchain/tree/8cc79e8ee36fe67ebd82c99628c38cef425f4749[https://github.com/docToolchain/docToolchain]

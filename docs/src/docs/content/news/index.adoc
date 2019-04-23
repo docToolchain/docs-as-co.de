@@ -1,0 +1,6 @@
+= About us
+:jbake-title: About
+:jbake-type: blog
+:jbake-status: published
+:page-header: { overlay_image: /images/splash/unsplash-contact-pavan-trikutam.jpg, caption: "[**Pavan Trikutam**](https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo)" }
+:icons: font
