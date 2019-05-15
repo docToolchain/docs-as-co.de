@@ -73,3 +73,18 @@ Just replace the line
 `distributionUrl=https\://services.gradle.org/distributions/gradle-2.12-bin.zip`
 
 With your internal distribution location…
+
+**15.05.2019 Update**
+
+The above settings still miss one configuration.
+Plugins specified with the "new" https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block[plugin DSL] are still not resolved against the configured repositories but against the external gradle plugin repository.
+In order to change this, add the following line on top of your project's `settings.gradle`:
+
+[source, groovy]
+----
+pluginManagement {
+    repositories {
+        maven { url = ... }
+    }
+}
+----
