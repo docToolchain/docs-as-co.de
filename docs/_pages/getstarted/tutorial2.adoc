@@ -94,6 +94,8 @@ Just first add docToolchain as submodule (next step) and then do
 Alternatively use https://sdkman.io[sdkman]
 ****
 
+INFO: if you need to configure proxies and repository caches (artifactory) for Gradle to fetch external dependencies, please take a look at this blog post: https://docs-as-co.de/news/enterprise-edition/[Behind the great Firewall]
+
 For a real project, you now would add some source code and more build instructions.
 To render the document with docToolchain, we only need the document itself.
 
