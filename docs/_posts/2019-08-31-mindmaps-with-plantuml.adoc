@@ -1,4 +1,4 @@
-= Excuses
+= Mind-Maps with PlantUML
 :page-layout: single
 :page-author: ralf
 :page-liquid: true
