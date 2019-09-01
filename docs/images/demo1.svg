@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="308px" preserveAspectRatio="none" style="width:838px;height:308px;" version="1.1" viewBox="0 0 838 308" width="838.25px" zoomAndPan="magnify"><defs><filter height="300%" id="f1vjl0ho03s4uc" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="3.5"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="7.0" dy="7.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="157.5" x="239.75" y="131.4141"/><text fill="#000000" font-family="sans-serif" font-size="21" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="122.5" x="257.25" y="170.7139">myThoughts</text><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="131.25" x="484.75" y="35"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="96.25" x="502.25" y="74.2998">Thought 1</text><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="108.5" x="708.75" y="59.3428">Though 1.1</text><path d="M616,65.707 L633.5,65.707 C659.75,65.707 659.75,50.75 686,50.75 L703.5,50.75 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="108.5" x="708.75" y="89.2568">Though 1.2</text><path d="M616,65.707 L633.5,65.707 C659.75,65.707 659.75,80.6641 686,80.6641 L703.5,80.6641 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><path d="M397.25,162.1211 L414.75,162.1211 C441,162.1211 441,65.707 467.25,65.707 L484.75,65.707 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="131.25" x="484.75" y="131.4141"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="96.25" x="502.25" y="170.7139">Thought 2</text><path d="M397.25,162.1211 L414.75,162.1211 C441,162.1211 441,162.1211 467.25,162.1211 L484.75,162.1211 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="131.25" x="484.75" y="227.8281"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="96.25" x="502.25" y="267.1279">Thought 3</text><path d="M397.25,162.1211 L414.75,162.1211 C441,162.1211 441,258.5352 467.25,258.5352 L484.75,258.5352 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="131.25" x="21" y="35"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="96.25" x="38.5" y="74.2998">Thought A</text><path d="M239.75,162.1211 L222.25,162.1211 C196,162.1211 196,65.707 169.75,65.707 L152.25,65.707 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="133" x="19.25" y="131.4141"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="98" x="36.75" y="170.7139">Thought B</text><path d="M239.75,162.1211 L222.25,162.1211 C196,162.1211 196,162.1211 169.75,162.1211 L152.25,162.1211 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><rect fill="#FEFECE" filter="url(#f1vjl0ho03s4uc)" height="61.4141" rx="21.875" ry="21.875" style="stroke: #A80036; stroke-width: 2.625;" width="134.75" x="17.5" y="227.8281"/><text fill="#000000" font-family="sans-serif" font-size="21" lengthAdjust="spacingAndGlyphs" textLength="99.75" x="35" y="267.1279">Thought C</text><path d="M239.75,162.1211 L222.25,162.1211 C196,162.1211 196,258.5352 169.75,258.5352 L152.25,258.5352 " fill="none" style="stroke: #A80036; stroke-width: 1.75;"/><!--
+@startmindmap
+
++ **myThoughts**
+++ Thought 1
++++_ Though 1.1
++++_ Though 1.2
+++ Thought 2
+++ Thought 3
+
+- - Thought A
+- - Thought B
+- - Thought C
+
+@endmindmap
+
+PlantUML version 1.2019.08(Sat Jul 13 21:25:14 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_202-release-1483-b58
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: de
+Country: DE
+--></g></svg>

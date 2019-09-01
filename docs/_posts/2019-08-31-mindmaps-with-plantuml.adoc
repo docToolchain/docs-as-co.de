@@ -21,17 +21,14 @@ Put a List between `@startmindmap` and `@endmindmap` tags and it will be rendere
 .Source Code of a Mind-Map
 [source, plantuml]
 ----
-include::demo.puml[]
+include::_posts/demo.puml[]
 ----
 
 `+`-bullets will be rendered as thoughts to the right, `-`-bullets to the left, add an underscore `_` to omit the box.
 Take care that there is only one root-element, because PlantUML doesn't know how to handle two roots (me either).
 
 .Rendered Mind-Map
-[plantuml,mindmap,svg]
-----
-include::demo.puml[]
-----
+image::demo1.svg[]
 
 These Mind-Maps quickly grow.
 This results in boxes getting smaller and smaller.
@@ -39,13 +36,24 @@ But as you can already see from the source above, there is a solution.
 Tag some detail levels or parts of your Mind-Map and instruct Asciidoctor to render only the main part.
 
 .Only the right part of my map
+[source,plantuml]
+-----
 [plantuml,mindmap2,svg]
 ----
-include::demo.puml[tags=!left]
+\include::demo.puml[tags=!left]
 ----
+-----
+
+image::demo2.svg[]
 
 .2nd Level omitted
+[source,plantuml]
+-----
 [plantuml,mindmap3,svg]
 ----
-include::demo.puml[tags=!details]
+\include::demo.puml[tags=!details]
 ----
+-----
+
+image::demo3.svg[]
+
