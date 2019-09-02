@@ -1,0 +1,19 @@
+@startmindmap
+
++ **myThoughts**
+++ Thought 1
+'tag::details[]
++++_ Though 1.1
++++_ Though 1.2
+'end::details[]
+++ Thought 2
+++ Thought 3
+
+'tag::left[]
+-- Thought A
+-- Thought B
+-- Thought C
+'end::left[]
+
+@endmindmap
+

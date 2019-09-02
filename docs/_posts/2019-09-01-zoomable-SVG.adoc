@@ -5,6 +5,7 @@
 :page-permalink: /news/mind-maps/
 :page-tags: [doc, plantuml]
 
+== Mind-Maps with PlantUML
 
 When you work with http://plantuml.com[PlantUML], you propably already noticed that it has some surprises deep down in its code.
 Some are experimental and some are quite useful.
