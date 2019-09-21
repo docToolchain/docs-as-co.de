@@ -107,13 +107,7 @@ In order to add docToolchain as submodule, you just have to execute the followin
 
 TIP: use https and not the ssh to clone the submodule. This enables anonymous clones.
 
-To checkout the first release version of docToolchain, switch to the submodule and checkout the tag `V1.0.0`
-
-    cd docToolchain
-    git checkout tags/V1.0.0
-    cd ..
-
-add docToolchain as sub-project to your main project by adding an include to the `settings.gradle` file
+Add docToolchain as sub-project to your main project by adding an include to the `settings.gradle` file
 
     echo "include 'docToolchain'" >> settings.gradle
 
