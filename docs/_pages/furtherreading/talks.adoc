@@ -35,6 +35,14 @@ sidebar:
 ==== Docs-as-Code with docToolchain by Ralf Müller @ https://gr8conf.eu/[Gr8conf Europe 2018] (English)
 video::qr3NJzeKiCI[youtube]
 
+[[JUGKA]]
+==== Docs-as-Code - arc42, AsciiDoc, Gradle & Co. im Einsatz by Ralf Müller @ JUG Karlsruhe (German)
+video::SZMkWAFtrz0[youtube]
+
+[[vdm19]]
+==== Asciidoctor: because writing docs does not have to suck by Adres Almiray @ voxxed days milan 2019 (English)
+video::290zVUmSEJQ[youtube]
+
 [[greach]]
 ==== Docs-as-Code with docToolchain by Ralf Müller @ https://www.greachconf.com/[Greach 2018] (English)
 video::GkXpe-tZtNg[youtube]
