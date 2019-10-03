@@ -39,6 +39,10 @@ video::qr3NJzeKiCI[youtube]
 ==== Docs-as-Code - arc42, AsciiDoc, Gradle & Co. im Einsatz by Ralf Müller @ JUG Karlsruhe (German)
 video::SZMkWAFtrz0[youtube]
 
+[[ahus]]
+==== Asciidoctor Deep Dive by Alexander Schwartz @ JavaZone Oslo 2019
+video::362759622[vimeo]
+
 [[vdm19]]
 ==== Asciidoctor: because writing docs does not have to suck by Adres Almiray @ voxxed days milan 2019 (English)
 video::290zVUmSEJQ[youtube]
