@@ -240,3 +240,58 @@ project('docToolchain') {                                   // <1>
 <3> outputs a hint if subproject has not been initialized
 <4> moves the base folder for docToolchain to the main project folder
 <5> this enables you to point docToolchain to your own config file
+
+== all steps within Docker
+
+get / clone https://github.com/docToolchain/docs-as-co.de , then
+
+cd into appropriate directory
+---
+cd docs/_pages/getstarted/tutorial2
+---
+
+create docker image: run
+----
+docker build --force-rm -t stephan.praetsch:doctoolchain-tutorial1 .
+----
+
+determine docker image id
+----
+docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8
+----
+
+run this docker image:
+Which environment?
+----
+> docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) gradle --version
+
+------------------------------------------------------------
+Gradle 3.2.1
+------------------------------------------------------------
+
+Build time:   2012-12-21 00:00:00 UTC
+Revision:     none
+
+Groovy:       2.4.8
+Ant:          Apache Ant(TM) version 1.9.9 compiled on July 22 2018
+JVM:          1.8.0_222 (Oracle Corporation 25.222-b10)
+OS:           Linux 4.15.0-64-generic amd64
+----
+
+Execute doctoolchain
+----
+> docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) gradle publishToConfluence
+...
+Converting /tmp/tutorial1/src/docs/test.adoc
+:docToolchain:publishToConfluence
+
+BUILD SUCCESSFUL
+----
+
+extract created `test.html` doc to local directory
+---
+docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) cat build/docs/html5/test.html > test.html
+----
+
+now you can view `test.html`
+
