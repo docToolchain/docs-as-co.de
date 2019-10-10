@@ -247,9 +247,9 @@ get / clone https://github.com/docToolchain/docs-as-co.de , then
 
 cd into appropriate directory
 
----
+----
 cd docs/_pages/getstarted/tutorial2
----
+----
 
 create docker image: run
 
@@ -295,7 +295,7 @@ BUILD SUCCESSFUL
 
 extract created `test.html` doc to local directory
 
----
+----
 docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) cat build/docs/html5/test.html > test.html
 ----
 
