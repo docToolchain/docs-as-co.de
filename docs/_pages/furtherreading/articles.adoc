@@ -16,6 +16,7 @@ sidebar:
 
 # Articles
 
+* https://www.heise.de/hintergrund/Documentation-as-Code-mit-Asciidoctor-4642013.html?seite=all[German Article about Docs-as-Code with AsciiDoc] by Alexander Schwartz
 * https://blog.jdriven.com/2018/10/lightweight-architecture-decision-records/[Lightweight Architecture Decision Records]
 * https://twitter.com/dataandme/status/1047471853021876224/photo/1[What nobody tells you about documentation]
 
