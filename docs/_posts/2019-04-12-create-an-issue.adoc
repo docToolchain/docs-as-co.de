@@ -5,7 +5,7 @@
 :page-permalink: /news/create-an-issue/
 :page-tags: [doc]
 
-:url-1: https://docs-a-sco.de/news/improve-this-doc/
+:url-1: https://docs-as-co.de/news/improve-this-doc/
 :url-2: https://stackoverflow.com/questions/55118885/gitlab-pre-fill-issue-form-through-hyperlink/55628516
 :url-3: https://docs.gitlab.com/ee/user/project/issues/create_new_issue.html#new-issue-via-url-with-prefilled-fields
 :url-4: https://docs.microsoft.com/en-us/teamblog/a-new-feedback-system-is-coming-to-docs
