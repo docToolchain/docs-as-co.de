@@ -1,0 +1,12 @@
+= Static Site Generators with Asciidoc
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/mind-maps/
+:page-tags: [asciidoc, ssg]
+
+Did you know? 
+
+https://twitter.com/_codewriter[Brian Dominik] maintains a https://gist.github.com/briandominick/e5754cc8438dd9503d936ef65fffbb2d[list of static site generators] (SSG) which support AsciiDoc.
+
+In addition, there is this https://www.staticgen.com/[huge list of open source site generators] - unfortunately without infos about the markup language
