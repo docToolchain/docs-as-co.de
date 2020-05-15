@@ -2,7 +2,7 @@
 :page-layout: single
 :page-author: ralf
 :page-liquid: true
-:page-permalink: /news/mind-maps/
+:page-permalink: /news/ssg-with-asciidoc/
 :page-tags: [asciidoc, ssg]
 
 Did you know? 
