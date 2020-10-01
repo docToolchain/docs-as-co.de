@@ -11,7 +11,7 @@ But when you want to document your project, you also need content. Wouldn't it b
 
 If you want to document your solution architecture, this template already exists. It's called **arc42** and additional information about it is available at https://arc42.github.io[https://arc42.github.io]. On this page, you will find downloads for several source formats, but we only need (who could have guessed) the asciidoc version.
 
-The tempalte is available as English and German version, so I just copied both version into the docToolchain project. They both reside in their own folder with their own main template in `/src/docs`. Feel free to just delete the language version you don't need.
+The template is available as English and German version, so I just copied both version into the docToolchain project. They both reside in their own folder with their own main template in `/src/docs`. Feel free to just delete the language version you don't need.
 
 In order to make it look good, I had to fix the `imagesDir` and add some rendering options: 
 
