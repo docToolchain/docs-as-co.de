@@ -13,3 +13,7 @@ It is based on
 Since github does not support AsciiDoc for github pages, the website is hosted at https://netlify.com .
 
 Start in https://gitpod.io#https://github.com/docToolchain/docs-as-co.de[gitpod.io]
+
+command to build docs:
+
+```cd docs && bundle install && jekyll build && ./gradlew htmlSanityCheck```
