@@ -1,0 +1,33 @@
+= Easy Diagrams with Kroki
+:page-layout: single
+:page-author: ralf
+:page-liquid: true
+:page-permalink: /news/diagrams-with-kroki/
+:page-tags: [asciidoc, kroki]
+
+The https://docs.asciidoctor.org/diagram-extension/latest/[diagrams extension for asciidoctor] is with https://plantuml.com[plantuml] a nice add-on which can be even considered as a standard extension to AsciiDoc.
+
+To use it, you not only need to configure the diagrams plugin but also to install graphviz on your system.
+If you want to use one of the other text-2-diagram tools supported by the plugin (like mermaid), you also have to install this one.
+
+With https://kroki.io[kroki.io], there is an easier way to solve this.
+The dev-team behind kroki has taken the idea of the http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000[plantuml server] to the next level.
+It takes an optionally zipped and base64 encoded diagram definition and returns the rendered diagram.
+And it does so not only for plantuml, but also for all the other diagram types supported by the asciidoctor diagram extension!
+
+== But I don't want to use a public server!
+
+Yes, if you don't work on an open-source problem, this might be a concern, but the kroki team has also taken care of this.
+Kroki not only comes as ready to use public server, but you can also use it ready to run https://docs.kroki.io/kroki/setup/install/[as a fat jar or as docker image].
+
+To switch to kroki, you only have to point your diagram extension to the server https://docs.asciidoctor.org/diagram-extension/latest/#diagram-attributes[by adding two attributes] to your document:
+
+[source, asciidoc]
+----
+:diagram-server-url: https://yourserver
+:diagram-server-type: kroki_io
+----
+
+Happy documenting!
+
+PS: if you've used the plantuml server in the past - kroki even works as a replacement for it.
