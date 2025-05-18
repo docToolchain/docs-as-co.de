@@ -38,6 +38,10 @@ about:
 getstarted:
   - title: Get Started
     children:
+        - title: "Quickstart"
+          url: /getstarted/quickstart
+        - title: "docToolchain Wrapper (dtcw)"
+          url: /getstarted/dtcw-wrapper
         - title: "Full Example"
           url: /getstarted/tutorial2
         - title: "Tutorials"
