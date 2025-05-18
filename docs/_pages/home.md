@@ -5,8 +5,8 @@ permalink: /
 header:
   overlay_image: /images/splash/hhgdac-splash.jpg
   overlay_filter: 0.5
-  #cta_label: "Overview"  # cta (== call-to-action) shows a button
-  #cta_url: "/overview"
+  cta_label: "Get Started" 
+  cta_url: "/getstarted/quickstart"
   caption: "[**Artem Sapegin**](https://unsplash.com/photos/b18TRXc8UPQ)"
 excerpt: "Code and documentation, created and maintained equally.
 developers love it, as it's effective and **takes the pain out of documentation**."
@@ -31,12 +31,22 @@ feature_row:
     excerpt: "Easily create and maintain various kinds of documentation, from architecture
     overviews, implementation guides to operations manuals."
 
+feature_row2:
+  - title: "docToolchain Wrapper (dtcw)"
+    # image_path: /images/wrapper-icon.svg
+    # alt: "wrapper-icon"
+    excerpt: "The easiest way to get started with docToolchain is to use the dtcw wrapper script, which handles installation and provides a consistent interface."
+    url: "/getstarted/dtcw-wrapper"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
 ---
 
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+{% include feature_row id="feature_row2" type="left" %}
 
 ## Why docs-as-code?
 
