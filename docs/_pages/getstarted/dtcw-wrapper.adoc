@@ -1,0 +1,123 @@
+= docToolchain Wrapper (dtcw)
+:page-layout: single
+:page-permalink: /getstarted/dtcw-wrapper
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: getstarted}
+
+== The docToolchain Wrapper (dtcw)
+
+The docToolchain wrapper is a script that simplifies the installation and usage of docToolchain. It provides a consistent interface regardless of your operating system and eliminates the need to manually install and configure docToolchain.
+
+=== Benefits of the dtcw Wrapper
+
+* **Easy Installation**: Install docToolchain with a single command
+* **Environment Detection**: Automatically detects available environments (local, Docker, SDKMAN)
+* **Cross-Platform**: Works on Linux, macOS, and Windows
+* **Version Management**: Easily switch between different docToolchain versions
+* **Simplified Commands**: Run docToolchain commands without worrying about paths
+
+=== Installing the dtcw Wrapper
+
+To install the dtcw wrapper in your project, follow these steps:
+
+==== For Linux/macOS:
+
+[source,bash]
+----
+cd <your project>
+curl -Lo dtcw https://doctoolchain.org/dtcw
+chmod +x dtcw
+----
+
+If you don't have curl installed, you can also use wget:
+
+[source,bash]
+----
+cd <your project>
+wget doctoolchain.org/dtcw
+chmod +x dtcw
+----
+
+==== For Windows (PowerShell):
+
+[source,powershell]
+----
+cd <your project>
+Invoke-WebRequest doctoolchain.org/dtcw.ps1 -OutFile dtcw.ps1
+----
+
+=== Running docToolchain
+
+Once the wrapper is installed, you can run docToolchain commands directly. The wrapper will automatically install docToolchain if it's not already installed.
+
+==== Available Environments
+
+The dtcw wrapper supports multiple environments:
+
+* **local**: Installs docToolchain in the user's home directory ($HOME/.doctoolchain)
+* **docker**: Uses docToolchain from a Docker container (no local installation needed)
+* **sdk**: Uses SDKMAN! to manage docToolchain installation (if SDKMAN! is installed)
+
+You can specify which environment to use by adding it as the first argument:
+
+[source,bash]
+----
+# Use local installation
+./dtcw local generateHTML
+
+# Use Docker container
+./dtcw docker generateHTML
+
+# Use SDKMAN! installation
+./dtcw sdk generateHTML
+----
+
+If no environment is specified, the wrapper will automatically choose the best available environment.
+
+==== Common Commands
+
+Here are some common commands you can use with dtcw:
+
+[source,bash]
+----
+# Show available tasks
+./dtcw tasks --group=doctoolchain
+
+# Download the arc42 template
+./dtcw downloadTemplate
+
+# Generate HTML documentation
+./dtcw generateHTML
+
+# Generate PDF documentation
+./dtcw generatePDF
+
+# Publish to Confluence
+./dtcw publishToConfluence
+----
+
+=== Configuration
+
+When you first run a docToolchain command, the wrapper will create a `docToolchainConfig.groovy` file in your project directory. This file contains configuration options for docToolchain.
+
+You can modify this file to change how docToolchain processes your documentation. Common configurations include:
+
+* Setting input and output paths
+* Configuring which files to process
+* Setting up Confluence publishing options
+
+=== Updating docToolchain
+
+To update to a new version of docToolchain, edit the dtcw script and change the VERSION variable to the desired version number.
+
+For example, to update to version 2.1.0:
+
+1. Open the dtcw script in a text editor
+2. Look for a line like `DTC_VERSION=2.0.0` or `VERSION=2.0.0`
+3. Change it to `DTC_VERSION=2.1.0` or `VERSION=2.1.0`
+4. Save the file
+5. Run any dtcw command, and the new version will be installed automatically
+
+=== Further Information
+
+For more detailed information about docToolchain and the dtcw wrapper, visit the [official documentation](https://doctoolchain.github.io/docToolchain/v2.0.x/010_manual/20_install.html).
