@@ -60,8 +60,10 @@ docs:
           url: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
   - title: docToolchain
     children:
-        - title: "User Manual"
-          url: https://doctoolchain.github.io/docToolchain
+        - title: "Current Documentation"
+          url: https://doctoolchain.org/docToolchain/v2.0.x/
+        - title: "GitHub Repository"
+          url: https://github.com/docToolchain/docToolchain
   - title: htmlSanityCheck
     children:
         - title: "Quick Guide"
