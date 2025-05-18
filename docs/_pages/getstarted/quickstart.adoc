@@ -14,13 +14,83 @@ The Quickstart basically consists of creating and rendering your first AsciiDoc 
 
 You just want to give AsciiDoc a try without installing anything?
 
-Go to https://asciidoclive.com/[AsciiDocLIVE] and use an online editor with preview.
+Go to https://asciidoclive.com[AsciiDocLIVE] and use an online editor with preview.
+
+=== The dtcw Wrapper Approach (recommended)
+
+The recommended way to use docToolchain is with the `dtcw` wrapper script, which simplifies installation and usage.
+
+[role='primary']
+--
+.> use dtcw Wrapper
+
+First, download the wrapper script into your project directory:
+
+For Linux/macOS:
+[source,bash]
+----
+cd <your project>
+curl -Lo dtcw https://doctoolchain.org/dtcw
+chmod +x dtcw
+----
+
+For Windows PowerShell:
+[source,powershell]
+----
+cd <your project>
+Invoke-WebRequest doctoolchain.org/dtcw.ps1 -OutFile dtcw.ps1
+----
+
+The wrapper script will handle installation of docToolchain when you run your first command.
+
+To download a template (like arc42):
+[source,bash]
+----
+./dtcw downloadTemplate
+----
+
+To see all available tasks:
+[source,bash]
+----
+./dtcw tasks --group=doctoolchain
+----
+
+To generate HTML from your AsciiDoc files:
+[source,bash]
+----
+./dtcw generateHTML
+----
+
+To generate PDF:
+[source,bash]
+----
+./dtcw generatePDF
+----
+
+If you want to create your first document, write it in AsciiDoc format:
+
+.test.adoc
+[source]
+----
+== Headline
+
+first paragraph
+
+second paragraph
+
+=== second level headline
+
+a link: https://docs-as-co.de[docs-as-co.de]
+----
+
+For more detailed information, see the [official documentation](https://doctoolchain.github.io/docToolchain/v2.0.x/010_manual/20_install.html).
+--
 
 === The Editor Approach
 
 If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
-* https://asciidocfx.com/[AsciiDocFX]
+* https://asciidocfx.com/[AsciidocFX]
 * https://atom.io/users/asciidoctor[Atom]
 * https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code]
 * https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ]
@@ -118,7 +188,7 @@ You wish for a very simple build file and the following line of text appears:
 .build.gradle
 [source,groovy]
 ----
-plugins { id "org.asciidoctor.convert" version "1.5.3" }
+plugins { id "org.asciidoctor.convert", version "1.5.3", }
 ----
 
 you write your very first AsciiDoc document and put it in `/src/docs/asciidoc/`
