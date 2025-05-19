@@ -1,11 +1,41 @@
-= Ready, Set, Go!
+= Tutorials and Learning Resources
 :page-layout: single
 :page-permalink: /getstarted/tutorials
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 :page-sidebar: { nav: getstarted}
 
-== Tutorials
+== Tutorials and Learning Resources
 
-still work in progress, but if you want to see some more details, visit https://jax.de/software-architecture/docs-as-code-anatomie-einer-realen-systemdokumentation/[our session at W-JAX 2018 in November]!
+Here you'll find various tutorials and learning resources to help you get started with docToolchain and the docs-as-code approach.
 
-If you can't wait to see a full example - even without a tutorial - then head over to the link:/examples[Examples]-Section.
+=== Getting Started
+
+* link:/getstarted/quickstart[Quickstart Guide] - A quick introduction to the docs-as-code approach and docToolchain
+* link:/getstarted/dtcw-wrapper[docToolchain Wrapper (dtcw)] - Learn how to use the recommended dtcw wrapper for easy installation and usage
+* link:/getstarted/tutorial2[Full Example] - A complete walkthrough of creating and building documentation with docToolchain
+
+=== Video Tutorials
+
+The following videos can help you understand the docs-as-code approach and docToolchain:
+
+* https://www.youtube.com/watch?v=GkXpe-tZtNg[Introduction to docToolchain] - A brief overview of docToolchain
+* https://www.youtube.com/watch?v=RL1-Jq4cyLU[Tutorial: Getting Started with docToolchain] - Step-by-step guide to setting up docToolchain
+
+=== Additional Resources
+
+* https://doctoolchain.org/docToolchain/v2.0.x/[Official docToolchain Documentation] - Detailed documentation of docToolchain
+* https://asciidoctor.org/docs/asciidoc-writers-guide/[AsciiDoc Writer's Guide] - Learn to write documents in AsciiDoc format
+* https://arc42.org/[arc42 Template] - Popular template for software architecture documentation
+
+=== Examples
+
+If you want to see real-world examples of docs-as-code in action, check out our link:/examples[Examples] section which showcases various projects using this approach.
+
+=== Need More Help?
+
+If you need additional help or have questions, check out these resources:
+
+* https://github.com/docToolchain/docToolchain/issues[GitHub Issues] - Report bugs or request features
+* https://github.com/docToolchain/docToolchain/discussions[GitHub Discussions] - Ask questions and discuss docToolchain
+
+You can also contribute to these tutorials! If you have suggestions for improvements or new tutorials, please consider creating a pull request to our https://github.com/docToolchain/docs-as-co.de[GitHub repository].
