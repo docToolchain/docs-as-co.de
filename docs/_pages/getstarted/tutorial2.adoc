@@ -1,303 +1,216 @@
 :filename: _pages/getstarted/tutorial2.adoc
-= Tutorial
-:page-layout: asciidoc
+= Full Example: Create and Build Documentation with dtcw
+:page-layout: single
 :page-permalink: /getstarted/tutorial2
 :page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+:page-sidebar: { nav: getstarted}
 :toc: right
 :icons: font 
 :imagesdir: images
 
-= Tutorial: add docToolchain as submodule
+= Full Example: Create and Build Documentation with dtcw
 include::feedback.adoc[]
 
 // numbering from here on
 :numbered:
 
-This short tutorial will show you how to add docToolchain as git submodule.
+This tutorial will show you how to set up a complete documentation project using docToolchain with the dtcw wrapper.
 
 == Motivation
 
-Git submodules are references to a certain commit of another git repository.
-This makes submodules perfect to include repositories -- on which your own project depends -- into your project without copying them.
-Since a submodule is a pointer to a certain commit, it is also easy to update this pointer when a newer version is available.
+Documentation is an essential part of any software project. Using the docs-as-code approach allows you to treat your documentation like code, applying the same workflows and tools. The docToolchain dtcw wrapper makes it easy to get started without complex setup steps.
 
 == What you'll build
 
-In this tutorial, you will create a simple gradle project with a single `.adoc` file.
-To this project, you'll add docToolchain to generate an HTML file and a PDF.
+In this tutorial, you will create a simple project with an AsciiDoc file and use docToolchain to generate HTML and PDF files from it.
 
 == What you'll need
 
-* 20(?) minutes
-* a windows or *nix based machine
-* a text editor or IDE
-* jdk 1.8 installed
-* git installed
-* gradle installed
+* 15-20 minutes
+* A Windows, macOS, or Linux machine
+* A text editor or IDE
+* Java 17 or later (optional, as dtcw can install it for you)
+* Git (optional, but recommended)
 
-the commands needed to go through this tutorial will be bash based.
-So if you are on a windows environment, please make sure that you start a bash
-or translate the commands for yourself - I am sure this will be a no-brainer.
+== Create a simple project
 
-== Create a simple project to start with
+First, create a new folder for your project:
 
-create a new folder and switch to it
-
-    mkdir tutorial1
-    cd tutorial1
-
-init git (it's a new project!) and create a simple folder structure for your documents
-
-    git init
-    mkdir src
-    mkdir src/docs
-
-create a simple `.adoc` file.
-To make it simple, just fetch one from the net via curl
-
-    curl -o src/docs/test.adoc https://gist.githubusercontent.com/mojavelinux/4402636/raw/b8b02adc3c0ddb92df505ba3eb8e625952615b7a/test.asciidoc.txt
-
-and since this great test document includes another document, let's fetch this also
-
-    curl -o src/docs/include.asciidoc.txt https://gist.githubusercontent.com/mojavelinux/4402636/raw/b8b02adc3c0ddb92df505ba3eb8e625952615b7a/include.asciidoc.txt
-
-The main file `./src/docs/test.adoc` contains a reference to a stylesheet which is not available, so please open it in your favourite editor (vi?) and remove the reference (`:stylesheet: asciidoc.css` in line 17)
-
-    vi src/docs/test.adoc
-
-Since we like Gradle projects, let's initialize the toplevel project (`tutorial1`) as gradle project.
-This will make docToolchain a subproject.
-
-    gradle init
-
-and
-
-    gradle wrapper
-
-for convenience.
-That's it!
-
-.use the wrapper, luke!
-****
-
-Don't have gradle installed?
-
-Just first add docToolchain as submodule (next step) and then do
-
-    cd docToolchain
-    ./gradlew -p .. init
-    ./gradlew -p .. wrapper
-
- This will use the gradle wrapper contained in docToolchain to initialize your main project
- and it will also install the wrapper to that you don't need to install gradle by yourself.
-
-Alternatively use https://sdkman.io[sdkman]
-****
-
-INFO: if you need to configure proxies and repository caches (artifactory) for Gradle to fetch external dependencies, please take a look at this blog post: https://docs-as-co.de/news/enterprise-edition/[Behind the great Firewall]
-
-For a real project, you now would add some source code and more build instructions.
-To render the document with docToolchain, we only need the document itself.
-
-== add docToolchain as submodule
-
-In order to add docToolchain as submodule, you just have to execute the following command
-
-    git submodule add https://github.com/docToolchain/docToolchain.git
-
-TIP: use https and not the ssh to clone the submodule. This enables anonymous clones.
-
-Add docToolchain as sub-project to your main project by adding an include to the `settings.gradle` file
-
-    echo "include 'docToolchain'" >> settings.gradle
-
-If you now list all tasks of your project, gradle will pick up the docToolchain build file from the subproject,
-download all dependencies and output the list of available tasks and fail with an exception:
-
-    ./gradlew tasks
-
-    FAILURE: Build failed with an exception.
-    * Where:
-    Script '/home/docToolchain/tutorial1/docToolchain/scripts/AsciiDocBasics.gradle' line: 25
-    * What went wrong:
-    A problem occurred evaluating script.
-    > ./Config.groovy (No such file or directory)
-
-That's correct -- docToolchain needs a configuration file!
-
-Let's create an empty one and see how this works:
-
-.bash
-[source, bash, role="primary"]
+[source,bash]
 ----
-    touch Config.groovy
-    ./gradlew tasks
+mkdir docs-example
+cd docs-example
 ----
 
-et voilá, you get a list of all available tasks:
+Initialize Git (optional, but recommended for version control):
 
-.bash
-[source, bash, role="primary"]
+[source,bash]
 ----
-> Task :tasks
-
-------------------------------------------------------------
-All tasks runnable from root project
-------------------------------------------------------------
-
-Build tasks
------------
-
-...
-
-DocToolchain tasks
-------------------
-convertToDocx - converts file to .docx via pandoc. Needs pandoc installed.
-convertToEpub - converts file to .epub via pandoc. Needs pandoc installed.
-exportChangeLog - exports the change log from a git subpath
-exportContributors - exports all contributors for all asciidoc files
-exportEA - exports all diagrams and some texts from EA files
-exportExcel - exports all excelsheets to csv and AsciiDoc
-exportJiraIssues - exports all jira issues from a given search
-exportMarkdown - exports all markdown files to AsciiDoc
-exportPPT - exports all slides and some texts from PPT files
-exportVisio - exports all diagrams and notes from visio files
-generateDeck - use revealJs as asciidoc backend to create a presentation
-generateDocbook - use docbook as asciidoc backend
-generateHTML - use html5 as asciidoc backend
-generatePDF - use pdf as asciidoc backend
-publishToConfluence - publishes the HTML rendered output to confluence
-
-Documentation tasks
--------------------
-asciidoctor - Converts AsciiDoc files and copies the output files and related resources to the build directory.
-groovydoc - Generates Groovydoc API documentation for the main source code.
-javadoc - Generates Javadoc API documentation for the main source code.
-
-...
-
-To see all tasks and more detail, run gradle tasks --all
-
-To see more detail about a task, run gradle help --task <task>
-
-BUILD SUCCESSFUL in 40s
-1 actionable task: 1 executed
-~/tutorial1$
-
+git init
 ----
 
-As you can see, you now have already a lot of documentation tasks at hand.
+Create a folder structure for your documentation:
 
-== setting up the configuration
-
-create a simple `Config.groovy` file to start with:
-
-.Config.groovy
-[source, groovy, role="primary"]
+[source,bash]
 ----
-outputPath = 'build/docs'
-
-// Path where the docToolchain will search for the input files.
-// This path is appended to the docDir property specified in gradle.properties
-// or in the command line, and therefore must be relative to it.
-inputPath = 'src/docs'
-
-inputFiles = [
-              [file: 'test.adoc',            formats: ['html','pdf']],
-             ]
-
-taskInputsDirs = ["${inputPath}/images"]
-
-taskInputsFiles = []
-
+mkdir -p src/docs/images
 ----
 
-And since we want to use our main project to be the source of the documentation, we have to tell docToolchain where it can find it. Since we don't want to touch the original docToolchain sources, we override the config via the `build.gradle` file.
-Just add the following lines to your `build.gradle`.
-Since we have an empty main project in this tutorial, you can even overwrite the whole `build.gradle` with the following lines:
+Create a simple AsciiDoc file. For this example, let's create a basic file with some common AsciiDoc features:
 
-(it instructs docToolchain to use the main project as starting point for all other configurations (like the one we just defined in `Config.groovy`))
-
-.build.gradle
-[source, groovy, role="primary"]
+.src/docs/sample.adoc
+[source,asciidoc]
 ----
-//configure docToolchain to use the main project's config
-project('docToolchain') {                                   // <1>
-    if (project.hasProperty('docDir')) {                    // <2>
-        docDir = '../.'                                     // <4>
-        mainConfigFile = 'Config.groovy'                    // <5>
-    } else {
-        println "="*80                                      // <3>
-        println "  please initialize the docToolchain submodule"
-        println "  by executing git submodule update -i"
-        println "="*80
+= Sample Documentation
+:toc: left
+:sectnums:
+:source-highlighter: highlight.js
+
+== Introduction
+
+This is a sample document to demonstrate docToolchain.
+
+== Features
+
+=== AsciiDoc Support
+
+docToolchain supports all AsciiDoc features, including:
+
+* Lists
+* Tables
+* Code blocks
+* Diagrams
+
+=== Code Example
+
+[source,java]
+----
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, docToolchain!");
     }
 }
 ----
 
-<1> changes the scope to docToolchain as subproject
-<2> checks if the subproject has been initialized
-<3> outputs a hint if subproject has not been initialized
-<4> moves the base folder for docToolchain to the main project folder
-<5> this enables you to point docToolchain to your own config file
+=== Diagram Example
 
-== all steps within Docker
-
-get / clone https://github.com/docToolchain/docs-as-co.de , then
-
-cd into appropriate directory
-
+[plantuml]
 ----
-cd docs/_pages/getstarted/tutorial2
-----
+@startuml
+class Document
+class AsciiDoc
+class PDF
+class HTML
 
-create docker image: run
-
+Document <|-- AsciiDoc
+AsciiDoc --> PDF: convert
+AsciiDoc --> HTML: convert
+@enduml
 ----
-docker build --force-rm -t stephan.praetsch:doctoolchain-tutorial1 .
 ----
 
-determine docker image id
+== Install docToolchain using dtcw
 
+Download the dtcw wrapper script based on your operating system:
+
+=== For Linux/macOS:
+
+[source,bash]
 ----
-docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8
-----
-
-run this docker image:
-Which environment?
-
-----
-> docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) gradle --version
-
-------------------------------------------------------------
-Gradle 3.2.1
-------------------------------------------------------------
-
-Build time:   2012-12-21 00:00:00 UTC
-Revision:     none
-
-Groovy:       2.4.8
-Ant:          Apache Ant(TM) version 1.9.9 compiled on July 22 2018
-JVM:          1.8.0_222 (Oracle Corporation 25.222-b10)
-OS:           Linux 4.15.0-64-generic amd64
+curl -Lo dtcw https://doctoolchain.org/dtcw
+chmod +x dtcw
 ----
 
-Execute doctoolchain
+=== For Windows (PowerShell):
 
+[source,powershell]
 ----
-> docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) gradle publishToConfluence
-...
-Converting /tmp/tutorial1/src/docs/test.adoc
-:docToolchain:publishToConfluence
-
-BUILD SUCCESSFUL
+Invoke-WebRequest -Uri https://doctoolchain.org/dtcw.ps1 -OutFile dtcw.ps1
 ----
 
-extract created `test.html` doc to local directory
+== Configure docToolchain
 
+Create a configuration file for docToolchain. This file tells docToolchain where to find your documentation files and how to process them.
+
+.docToolchainConfig.groovy
+[source,groovy]
 ----
-docker run $(docker images | grep doctoolchain-tutorial1 | cut -d " " -f 8) cat build/docs/html5/test.html > test.html
+outputPath = 'build/docs'
+inputPath = 'src/docs'
+
+inputFiles = [
+    [file: 'sample.adoc', formats: ['html', 'pdf']]
+]
+
+taskInputsDirs = ["${inputPath}/images"]
 ----
 
-now you can view `test.html`
+== Generate Documentation
 
+Now you can use docToolchain to generate your documentation in different formats:
+
+=== Generate HTML
+
+[source,bash]
+----
+./dtcw generateHTML
+----
+
+This will create HTML documentation in the `build/docs/html5/` directory.
+
+=== Generate PDF
+
+[source,bash]
+----
+./dtcw generatePDF
+----
+
+This will create PDF documentation in the `build/docs/pdf/` directory.
+
+== Exploring Advanced Features
+
+docToolchain offers many more features beyond the basics. Here are some things you might want to explore next:
+
+=== Available Tasks
+
+To see all available tasks:
+
+[source,bash]
+----
+./dtcw tasks --group=doctoolchain
+----
+
+=== Export Features
+
+docToolchain can export content from various sources:
+
+* `exportChangeLog`: Export Git change log
+* `exportJiraIssues`: Export Jira issues
+* `exportExcel`: Convert Excel files to AsciiDoc tables
+* `exportMarkdown`: Convert Markdown to AsciiDoc
+
+=== Publishing Features
+
+* `publishToConfluence`: Publish documentation to Confluence
+
+== Docker Support
+
+If you prefer to run docToolchain in a Docker container, you can use the Docker mode of the dtcw wrapper:
+
+[source,bash]
+----
+./dtcw docker generateHTML
+----
+
+This runs docToolchain in a Docker container without requiring a local installation.
+
+== Next Steps
+
+Now that you have a working documentation setup with docToolchain, consider:
+
+1. Adding more comprehensive documentation
+2. Setting up continuous integration to automatically build your documentation
+3. Exploring the export features to integrate with your existing tools
+4. Publishing your documentation to a central location like Confluence
+
+For more information, visit the [official docToolchain documentation](https://doctoolchain.github.io/docToolchain/v2.0.x/).
