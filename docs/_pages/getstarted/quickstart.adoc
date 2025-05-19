@@ -90,7 +90,7 @@ For more detailed information, see the [official documentation](https://doctoolc
 
 If you are willing to install an editor or a plugin for your favorite IDE, you can install one of the following editors with the corresponding plugins:
 
-* https://asciidocfx.com/[AsciidocFX]
+* https://asciidocfx.com/[AsciiDocFX]
 * https://atom.io/users/asciidoctor[Atom]
 * https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode[Visual Studio Code]
 * https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ]
