@@ -34,7 +34,7 @@ If you don't have curl installed, you can also use wget:
 [source,bash]
 ----
 cd <your project>
-wget doctoolchain.org/dtcw
+wget https://doctoolchain.org/dtcw
 chmod +x dtcw
 ----
 
