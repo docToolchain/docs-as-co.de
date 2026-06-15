@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Docs-as-Code works — docs-as-co.de</title>
+  <meta name="description" content="The Docs-as-Code workflow in four steps: write in plain text, commit to Git, build on CI, and publish — with docToolchain as the concrete toolchain.">
+  <link rel="canonical" href="https://docs-as-co.de/how-it-works.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26' font-family='monospace' fill='%23d8442a'>&gt;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">docs-as-co<span class="b-accent">.de</span><span class="caret">_</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">menu</button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/what-is-docs-as-code.html">what</a>
+        <a href="/how-it-works.html" aria-current="page">how</a>
+        <a href="/why-doctoolchain.html">why docToolchain</a>
+        <a href="/arc42.html">arc42</a>
+        <a href="/resources.html">resources</a>
+        <a href="https://doctoolchain.org" rel="noopener">docToolchain&nbsp;&#8599;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="wrap narrow">
+        <span class="kicker reveal reveal-1">02 &mdash; the workflow</span>
+        <h1 class="reveal reveal-2">How it works</h1>
+        <p class="lead reveal reveal-3" style="margin-top:1.25rem;">Docs-as-Code is a loop you already know from software: write, version, build, publish. Here is each step &mdash; and where docToolchain fits in.</p>
+      </div>
+    </section>
+
+    <section class="section-line">
+      <div class="wrap narrow">
+        <div class="step">
+          <span class="step-n">01</span>
+          <div>
+            <h3>Write in plain text</h3>
+            <p>Open your editor and write in <code style="font-family:var(--font-mono);background:var(--paper-2);padding:0.1em 0.4em;border-radius:3px;">AsciiDoc</code> or Markdown. Structure long documents with includes. Draw architecture diagrams as PlantUML text right next to the prose, so a diagram is reviewed and versioned like everything else.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">02</span>
+          <div>
+            <h3>Commit to Git</h3>
+            <p>Keep the source in version control &mdash; ideally in the same repository as the code it documents. Branch for substantial edits, open a pull request, and let a reviewer read the diff before it merges. Your documentation now has authorship, history, and quality gates.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">03</span>
+          <div>
+            <h3>Build on CI</h3>
+            <p>A pipeline renders the source on every commit: AsciiDoc becomes HTML and PDF, PlantUML becomes images, links get validated. Nothing is published by hand, so nothing drifts. This is the step where a toolchain earns its keep &mdash; and where <a href="/why-doctoolchain.html">docToolchain</a> does the heavy lifting.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">04</span>
+          <div>
+            <h3>Publish</h3>
+            <p>The rendered output deploys like any other build artifact &mdash; to a static host, a documentation portal, or straight into Confluence. The newest docs are always exactly one merge away from your readers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-line">
+      <div class="wrap narrow prose">
+        <span class="kicker">in practice</span>
+        <h2 style="margin-top:0.6rem;">A toolchain ties it together</h2>
+        <p>Each step has many possible tools. Assembling and maintaining them yourself &mdash; the AsciiDoc processor, the diagram renderer, the PDF theme, the Confluence exporter &mdash; is the part that quietly eats time. A ready-made toolchain removes that friction so your team works on content, not plumbing.</p>
+        <ul class="diff-list" style="margin-top:1.5rem;">
+          <li>No local install &mdash; a wrapper script pulls the right version</li>
+          <li>AsciiDoc &amp; PlantUML rendering out of the box</li>
+          <li>arc42 architecture templates ready to fill</li>
+          <li>Exports to HTML, PDF, and Confluence</li>
+          <li>Runs the same on your laptop and in CI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band-dark">
+      <div class="wrap narrow" style="text-align:center;">
+        <span class="kicker">next</span>
+        <h2 style="margin:0.8rem 0 1rem;">Skip the plumbing.</h2>
+        <p class="lead" style="margin-inline:auto;">docToolchain implements this whole workflow as one open-source toolchain. See what it gives you out of the box.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="/why-doctoolchain.html">Why docToolchain <span class="arrow">&rarr;</span></a>
+          <a class="btn btn-ghost" href="https://doctoolchain.org" rel="noopener">Get started <span class="arrow">&#8599;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <a class="brand" href="/">docs-as-co<span class="b-accent">.de</span><span class="caret">_</span></a>
+          <p style="margin-top:0.75rem; color:var(--muted); max-width:30ch; font-size:0.95rem;">The hitchhiker&rsquo;s guide to documentation as code.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="/what-is-docs-as-code.html">What is Docs-as-Code</a></li>
+            <li><a href="/how-it-works.html">How it works</a></li>
+            <li><a href="/why-doctoolchain.html">Why docToolchain</a></li>
+            <li><a href="/arc42.html">arc42</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Toolchain</h4>
+          <ul>
+            <li><a href="https://doctoolchain.org" rel="noopener">docToolchain &#8599;</a></li>
+            <li><a href="https://doctoolchain.github.io/docToolchain" rel="noopener">Documentation &#8599;</a></li>
+            <li><a href="https://github.com/docToolchain/docToolchain" rel="noopener">GitHub &#8599;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 docs-as-co.de &mdash; Ralf D. M&uuml;ller &amp; Gernot Starke</span>
+        <span class="ver"><span class="ci-dot" title="build passing"></span> v1.1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/nav.js" defer></script>
+</body>
+</html>

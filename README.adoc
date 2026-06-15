@@ -1,19 +1,42 @@
 = Docs-as-Code
 
-image::https://api.netlify.com/api/v1/badges/a19a2bf7-7316-4bff-9a85-045c1d54b7b1/deploy-status[Netlify Status,link="https://app.netlify.com/sites/docs-as-code/deploys"]
+This repository hosts the source for the https://docs-as-co.de website — a lean,
+vendor-neutral guide to *Docs-as-Code* that funnels readers towards
+https://doctoolchain.org[docToolchain].
 
+== Stack
 
-This repository hosts the source for the https://docs-as-co.de website.
-It is based on
+* Plain static HTML + CSS (no framework, no build step)
+* Progressive enhancement: the site is fully readable with JavaScript disabled
+* Deployed via *GitHub Pages* (see `.github/workflows/pages.yml`)
 
-* Jekyl as static site generator
-* AsciiDoc as markup language
-* https://jaxenter.de/hitchhikers-guide-docs-code-asciidoctor-jekyll-73753[this Java Magazin article] on how to implement it
+== Structure
 
-Since github does not support AsciiDoc for github pages, the website is hosted at https://netlify.com .
+[cols="1,3"]
+|===
+| `site/`              | The published website (HTML, `assets/`, `CNAME`).
+| `.github/workflows/` | GitHub Pages deployment workflow.
+|===
 
-Start in https://gitpod.io#https://github.com/docToolchain/docs-as-co.de[gitpod.io]
+NOTE: The previous Jekyll/AsciiDoc version of this site lives in the git history;
+see the commits before the static relaunch.
 
-command to build docs:
+== Develop locally
 
-```cd docs && bundle install && jekyll build && ./gradlew htmlSanityCheck```
+Serve the `site/` folder with any static web server, for example:
+
+[source,bash]
+----
+python3 -m http.server --directory site 4000
+----
+
+Then open http://localhost:4000 .
+
+== Deploy
+
+Pushing changes under `site/` to `master` triggers the GitHub Pages workflow,
+which publishes the `site/` folder to https://docs-as-co.de .
+
+== Authors
+
+Ralf D. Müller & Gernot Starke
