@@ -1,9 +1,7 @@
-# The Docker image to run your workspace in. Defaults to gitpod/workspace-full
-# image: "<your-workspace-image>"
-# Command to start on workspace startup (optional)
+# Gitpod workspace for the static docs-as-co.de site.
+# The site is plain static HTML in site/ — just serve it.
 tasks:
-  - command: "cd docs && bundle install && jekyll serve"
-# Ports to expose on workspace startup (optional)
+  - command: "cd site && python3 -m http.server 4000"
 ports:
   - port: 4000
     protocol: "http"
