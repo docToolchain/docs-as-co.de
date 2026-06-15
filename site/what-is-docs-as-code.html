@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Docs-as-Code? — docs-as-co.de</title>
+  <meta name="description" content="Docs-as-Code applies software-engineering practices to documentation: plain-text markup, version control, peer review, and an automated build. Here is what it means and why it works.">
+  <link rel="canonical" href="https://docs-as-co.de/what-is-docs-as-code.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26' font-family='monospace' fill='%23d8442a'>&gt;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">docs-as-co<span class="b-accent">.de</span><span class="caret">_</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">menu</button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="/what-is-docs-as-code.html" aria-current="page">what</a>
+        <a href="/how-it-works.html">how</a>
+        <a href="/why-doctoolchain.html">why docToolchain</a>
+        <a href="/resources.html">resources</a>
+        <a href="https://doctoolchain.org" rel="noopener">docToolchain&nbsp;&#8599;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="wrap narrow">
+        <span class="kicker reveal reveal-1">01 &mdash; the idea</span>
+        <h1 class="reveal reveal-2">What is Docs-as-Code?</h1>
+        <p class="lead reveal reveal-3" style="margin-top:1.25rem;">Docs-as-Code means writing and maintaining documentation with the same tools and discipline developers use for software: plain-text source, version control, peer review, and an automated build.</p>
+      </div>
+    </section>
+
+    <section class="section-line">
+      <div class="wrap narrow prose">
+        <p>For decades, documentation lived apart from the code it described &mdash; in word processors, shared drives, and wikis. It went stale the moment it was written, because keeping it current meant extra work in a separate place, with no one watching. Docs-as-Code closes that gap by moving documentation <em>into</em> the development workflow.</p>
+
+        <blockquote>If documentation is part of the product, treat it like part of the product.</blockquote>
+
+        <h2>The four pillars</h2>
+        <p>Strip away the tooling and Docs-as-Code rests on four ideas. Each one borrows a habit that software teams already trust.</p>
+
+        <h3>1. Plain-text source</h3>
+        <p>Documentation is written in a lightweight markup language &mdash; <code>AsciiDoc</code> or <code>Markdown</code> &mdash; not a binary format. Plain text diffs cleanly, merges sensibly, and survives every tool change. You can read it in any editor and grep it like code.</p>
+
+        <h3>2. Version control</h3>
+        <p>The text lives in Git, ideally next to the code it documents. Now your docs have history: who changed what, when, and why. You can branch for a big rewrite, tag a release, and roll back a mistake &mdash; exactly as you would with source.</p>
+
+        <h3>3. Peer review</h3>
+        <p>Changes arrive as pull requests. A teammate reads the diff, comments, and approves before it merges. Documentation stops being one person&rsquo;s lonely guess and becomes a reviewed, shared artifact &mdash; with quality gates built in.</p>
+
+        <h3>4. Automated build</h3>
+        <p>A pipeline turns the source into finished output &mdash; HTML, PDF, or a wiki &mdash; on every commit. Diagrams render from text. Links get checked. Publishing becomes a side effect of merging, not a manual ritual.</p>
+
+        <h2>Why it works</h2>
+        <p>The magic is not any single tool; it is the feedback loop. Because the docs are in the same repository, the same review, and the same build as the code, they are impossible to ignore. A change that breaks the docs build fails CI. A pull request that touches an API can require a matching doc edit. The cost of keeping documentation honest drops close to zero &mdash; so it actually happens.</p>
+
+        <h2>What it is not</h2>
+        <ul>
+          <li><strong>Not a single product.</strong> It is a practice. Many tool combinations satisfy it.</li>
+          <li><strong>Not Markdown-only.</strong> AsciiDoc offers richer structure for technical and architecture documentation.</li>
+          <li><strong>Not just for developers.</strong> Technical writers, architects, and product people all work in the same flow &mdash; the editor is the only prerequisite.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band-dark">
+      <div class="wrap narrow" style="text-align:center;">
+        <span class="kicker">next</span>
+        <h2 style="margin:0.8rem 0 1rem;">See the loop in motion.</h2>
+        <p class="lead" style="margin-inline:auto;">Four steps take a documentation change from your editor to a published page.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="/how-it-works.html">How it works <span class="arrow">&rarr;</span></a>
+          <a class="btn btn-ghost" href="https://doctoolchain.org" rel="noopener">See the toolchain <span class="arrow">&#8599;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <a class="brand" href="/">docs-as-co<span class="b-accent">.de</span><span class="caret">_</span></a>
+          <p style="margin-top:0.75rem; color:var(--muted); max-width:30ch; font-size:0.95rem;">The hitchhiker&rsquo;s guide to documentation as code.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="/what-is-docs-as-code.html">What is Docs-as-Code</a></li>
+            <li><a href="/how-it-works.html">How it works</a></li>
+            <li><a href="/why-doctoolchain.html">Why docToolchain</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Toolchain</h4>
+          <ul>
+            <li><a href="https://doctoolchain.org" rel="noopener">docToolchain &#8599;</a></li>
+            <li><a href="https://doctoolchain.github.io/docToolchain" rel="noopener">Documentation &#8599;</a></li>
+            <li><a href="https://github.com/docToolchain/docToolchain" rel="noopener">GitHub &#8599;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 docs-as-co.de &mdash; Ralf D. M&uuml;ller &amp; Gernot Starke</span>
+        <span class="ver"><span class="ci-dot" title="build passing"></span> v1.0.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/nav.js" defer></script>
+</body>
+</html>
