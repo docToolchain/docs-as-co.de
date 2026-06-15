@@ -14,10 +14,12 @@ https://doctoolchain.org[docToolchain].
 
 [cols="1,3"]
 |===
-| `site/`                  | The published website (HTML, `assets/`, `CNAME`).
-| `.github/workflows/`     | GitHub Pages deployment workflow.
-| `archive/legacy-jekyll/` | The retired Jekyll/AsciiDoc site, kept for reference only.
+| `site/`              | The published website (HTML, `assets/`, `CNAME`).
+| `.github/workflows/` | GitHub Pages deployment workflow.
 |===
+
+NOTE: The previous Jekyll/AsciiDoc version of this site lives in the git history;
+see the commits before the static relaunch.
 
 == Develop locally
 
