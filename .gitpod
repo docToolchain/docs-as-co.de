@@ -1,7 +1,0 @@
-# Gitpod workspace for the static docs-as-co.de site.
-# The site is plain static HTML in site/ — just serve it.
-tasks:
-  - command: "cd site && python3 -m http.server 4000"
-ports:
-  - port: 4000
-    protocol: "http"
