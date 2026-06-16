@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — docs-as-co.de</title>
+  <meta name="robots" content="noindex">
+  <!-- No-JS fallback: redirect to the start page after a short moment. -->
+  <meta http-equiv="refresh" content="4; url=https://docs-as-co.de/">
+  <!-- Absolute paths on purpose: this page is served for ANY unknown path. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26' font-family='monospace' fill='%23d8442a'>&gt;</text></svg>">
+  <link rel="preconnect" href="https://docs-as-co.de">
+  <link rel="stylesheet" href="https://docs-as-co.de/assets/fonts.css">
+  <link rel="stylesheet" href="https://docs-as-co.de/assets/styles.css">
+  <style>
+    .nf { min-height: 78vh; display: grid; place-content: center; text-align: center; gap: 0.4rem; }
+    .nf .code { font-family: var(--font-display); font-weight: 600; font-size: clamp(5.5rem, 20vw, 12rem); line-height: 0.85; color: var(--accent); }
+    .nf .lead { margin-inline: auto; }
+    .nf .cta-row { justify-content: center; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="https://docs-as-co.de/">docs-as-co<span class="b-accent">.de</span><span class="caret">_</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="nf wrap narrow">
+      <span class="kicker">error 404</span>
+      <div class="code">404</div>
+      <h1 style="margin:0.4rem 0 0.8rem;">This page drifted off.</h1>
+      <p class="lead">The page you&rsquo;re looking for doesn&rsquo;t exist &mdash; taking you back to the start&hellip;</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://docs-as-co.de/">Back to start <span class="arrow">&rarr;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Preferred redirect (replace = no extra history entry); meta refresh is the no-JS fallback.
+    setTimeout(function () { location.replace("https://docs-as-co.de/"); }, 3500);
+  </script>
+  <script>window.goatcounter = { path: function (p) { return "docs-as-co.de" + p } };</script>
+  <script data-goatcounter="https://doctoolchain.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
